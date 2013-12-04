@@ -5,10 +5,9 @@ using System.Text;
 
 namespace BookManage.Model
 {
+    [Serializable]
     public class Reader
     {
-        [Serializable]
-
         public Reader() { }
         #region 公有属性
         public int rdID { get; set; }
@@ -25,5 +24,22 @@ namespace BookManage.Model
         public string rdPwd { get; set; }
         public int rdAdminRoles { get; set; }
         #endregion
+
+        public Reader(Reader rt)
+        {
+            this.rdID = rt.rdID;
+            this.rdName = rt.rdName;
+            this.rdSex = rt.rdSex;
+            this.rdType = rt.rdType;
+            this.rdDept = rt.rdDept;
+            this.rdPhone = rt.rdPhone;
+            this.rdEmail = rt.rdEmail;
+            this.rdDateReg = rt.rdDateReg;
+            this.rdPhoto = rt.rdPhoto;
+            this.rdStatus = rt.rdStatus;
+            this.rdBorrowQty = rt.rdBorrowQty;
+            this.rdPwd = rt.rdPwd;
+            this.rdAdminRoles = rt.rdAdminRoles;
+        }
     }
 }

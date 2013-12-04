@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReaderDAL.cs" />
+    <Compile Include="ReaderTypeDAL.cs" />
+    <Compile Include="SqlHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BookManage.Model\BookManage.Model.csproj">
