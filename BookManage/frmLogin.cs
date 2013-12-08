@@ -23,7 +23,34 @@ namespace BookManage
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            loginTimes++;
+            int rdID;
+            rddID = Convert.ToInt32(txtUserID.Text.Trim());
+            reader = readerBLL.GetReader(rdID);
+
+            if (reader == null)
+            {
+                txtUserID.Focus();
+                lblReaderInfo.Text = "登录信息：查无此人..{" + loginTimes.ToString() + "}";
+            }
+            else
+            {
+                if (reader.rdPwd == txtUserPwd.Text)
+                {
+                    this.DialogResult = DialogResult.OK;//登录成功
+                }
+                else
+                {
+                    txtUserPwd.Text = "";
+                    txtUserPwd.Focus();
+                    lblReaderInfo.Text = "登录信息：..密码错误！{" + loginTimes.ToString() + "}";
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

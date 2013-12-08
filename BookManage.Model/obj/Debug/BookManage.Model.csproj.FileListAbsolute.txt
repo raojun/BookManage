@@ -1,0 +1,5 @@
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.Model\obj\Debug\ResolveAssemblyReference.cache
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.Model\bin\Debug\BookManage.Model.dll
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.Model\bin\Debug\BookManage.Model.pdb
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.Model\obj\Debug\BookManage.Model.dll
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.Model\obj\Debug\BookManage.Model.pdb

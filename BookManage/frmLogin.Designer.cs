@@ -32,7 +32,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.IbIReaderInfo = new System.Windows.Forms.Label();
+            this.lblReaderInfo = new System.Windows.Forms.Label();
             this.txtUserID = new System.Windows.Forms.TextBox();
             this.txtUserPwd = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -55,6 +55,7 @@
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "退  出";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label1
             // 
@@ -74,15 +75,15 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "密  码";
             // 
-            // IbIReaderInfo
+            // lblReaderInfo
             // 
-            this.IbIReaderInfo.AutoSize = true;
-            this.IbIReaderInfo.ForeColor = System.Drawing.Color.Red;
-            this.IbIReaderInfo.Location = new System.Drawing.Point(49, 206);
-            this.IbIReaderInfo.Name = "IbIReaderInfo";
-            this.IbIReaderInfo.Size = new System.Drawing.Size(65, 12);
-            this.IbIReaderInfo.TabIndex = 4;
-            this.IbIReaderInfo.Text = "登录信息：";
+            this.lblReaderInfo.AutoSize = true;
+            this.lblReaderInfo.ForeColor = System.Drawing.Color.Red;
+            this.lblReaderInfo.Location = new System.Drawing.Point(49, 206);
+            this.lblReaderInfo.Name = "lblReaderInfo";
+            this.lblReaderInfo.Size = new System.Drawing.Size(65, 12);
+            this.lblReaderInfo.TabIndex = 4;
+            this.lblReaderInfo.Text = "登录信息：";
             // 
             // txtUserID
             // 
@@ -98,19 +99,19 @@
             this.txtUserPwd.Size = new System.Drawing.Size(170, 21);
             this.txtUserPwd.TabIndex = 6;
             // 
-            // Form1
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 262);
             this.Controls.Add(this.txtUserPwd);
             this.Controls.Add(this.txtUserID);
-            this.Controls.Add(this.IbIReaderInfo);
+            this.Controls.Add(this.lblReaderInfo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
-            this.Name = "Form1";
+            this.Name = "frmLogin";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -123,7 +124,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label IbIReaderInfo;
+        private System.Windows.Forms.Label lblReaderInfo;
         private System.Windows.Forms.TextBox txtUserID;
         private System.Windows.Forms.TextBox txtUserPwd;
     }

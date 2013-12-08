@@ -1,0 +1,12 @@
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\obj\Debug\ResolveAssemblyReference.cache
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\obj\Debug\BookManage.Properties.Resources.resources
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\obj\Debug\BookManage.csproj.GenerateResource.Cache
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\bin\Debug\BookManage.exe
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\bin\Debug\BookManage.pdb
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\bin\Debug\BookManage.BLL.dll
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\bin\Debug\BookManage.Model.dll
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\bin\Debug\BookManage.Model.pdb
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\bin\Debug\BookManage.BLL.pdb
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\obj\Debug\BookManage.exe
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\obj\Debug\BookManage.pdb
+D:\程序\Sql Server\LibraryManagement\BookManage\BookManage\obj\Debug\BookManage.frmLogin.resources
