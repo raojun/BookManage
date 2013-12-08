@@ -1,7 +1,9 @@
 bin/
+bin/Debug/
 obj/
 Properties/
-.sln
-.csproj
-.suo
-.resx
+
+*.dll
+*.obj
+*.exe
+*.pdb
