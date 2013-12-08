@@ -1,7 +1,0 @@
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\obj\Debug\ResolveAssemblyReference.cache
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\bin\Debug\BookManage.DAL.dll
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\bin\Debug\BookManage.DAL.pdb
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\bin\Debug\BookManage.Model.dll
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\bin\Debug\BookManage.Model.pdb
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\obj\Debug\BookManage.DAL.dll
-D:\程序\Sql Server\LibraryManagement\BookManage\BookManage.DAL\obj\Debug\BookManage.DAL.pdb
