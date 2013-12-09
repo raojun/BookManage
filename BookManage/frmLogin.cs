@@ -25,8 +25,8 @@ namespace BookManage
         {
             loginTimes++;
             int rdID;
-            rddID = Convert.ToInt32(txtUserID.Text.Trim());
-            reader = readerBLL.GetReader(rdID);
+            rdID = Convert.ToInt32(txtUserID.Text.Trim());
+           reader = ReaderAdmin.GetReader(rdID);
 
             if (reader == null)
             {

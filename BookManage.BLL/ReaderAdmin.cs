@@ -7,11 +7,11 @@ using BookManage.DAL;
 
 namespace BookManage.BLL
 {
-    class ReaderAdmin
+    public class ReaderAdmin
     {
-        public Reader GetReader(int rdID)
+        public static Reader GetReader(int rdID)
         {
-            return (DAL.ReaderDAL.GetObjectByID(rdID));
+            return (ReaderDAL.GetObjectByID(rdID));
         }
     }
 }

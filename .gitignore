@@ -1,7 +1,5 @@
 bin/
-bin/Debug/
 obj/
-Properties/
 
 *.dll
 *.obj

@@ -65,7 +65,7 @@ namespace BookManage.DAL
         }
         #endregion
 
-        private static string _strConnection = @"Data Source=LSH-SL400\SQLSERVER;Initial Catalog=Library;User ID=BookManage;Password=123;";
+        private static string _strConnection = @"Data Source=localhost;Initial Catalog=BookLibrary;User ID=BookAdmin;Password=123;";
         //private static string _strConnection =File.ReadAllText(@"..\..\ConnectionString.txt");
         //public string strConnection
         //{
