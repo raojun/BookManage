@@ -32,10 +32,9 @@
             this.图书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.新书入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.图书信息维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.读者信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.读者管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.办理借书证ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jieshuzhengxinxibiangengToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.借书证挂失与解除ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.注销借书证ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.读者类型管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,14 +45,17 @@
             this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.权限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.密码修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.图书管理ToolStripMenuItem,
-            this.读者信息ToolStripMenuItem,
+            this.读者管理ToolStripMenuItem,
             this.借阅管理ToolStripMenuItem,
             this.用户管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -83,17 +85,17 @@
             this.图书信息维护ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.图书信息维护ToolStripMenuItem.Text = "图书信息维护";
             // 
-            // 读者信息ToolStripMenuItem
+            // 读者管理ToolStripMenuItem
             // 
-            this.读者信息ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.读者管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.办理借书证ToolStripMenuItem,
             this.jieshuzhengxinxibiangengToolStripMenuItem,
             this.借书证挂失与解除ToolStripMenuItem,
             this.注销借书证ToolStripMenuItem,
             this.读者类型管理ToolStripMenuItem});
-            this.读者信息ToolStripMenuItem.Name = "读者信息ToolStripMenuItem";
-            this.读者信息ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.读者信息ToolStripMenuItem.Text = "读者信息";
+            this.读者管理ToolStripMenuItem.Name = "读者管理ToolStripMenuItem";
+            this.读者管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.读者管理ToolStripMenuItem.Text = "读者管理";
             // 
             // 办理借书证ToolStripMenuItem
             // 
@@ -106,14 +108,6 @@
             this.jieshuzhengxinxibiangengToolStripMenuItem.Name = "jieshuzhengxinxibiangengToolStripMenuItem";
             this.jieshuzhengxinxibiangengToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.jieshuzhengxinxibiangengToolStripMenuItem.Text = "借书证信息变更";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(579, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
             // 
             // 借书证挂失与解除ToolStripMenuItem
             // 
@@ -146,19 +140,19 @@
             // 借书ToolStripMenuItem
             // 
             this.借书ToolStripMenuItem.Name = "借书ToolStripMenuItem";
-            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.借书ToolStripMenuItem.Text = "借书";
             // 
             // 续借ToolStripMenuItem
             // 
             this.续借ToolStripMenuItem.Name = "续借ToolStripMenuItem";
-            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.续借ToolStripMenuItem.Text = "续借";
             // 
             // 还书ToolStripMenuItem
             // 
             this.还书ToolStripMenuItem.Name = "还书ToolStripMenuItem";
-            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.还书ToolStripMenuItem.Text = "还书";
             // 
             // 用户管理ToolStripMenuItem
@@ -173,14 +167,30 @@
             // 权限管理ToolStripMenuItem
             // 
             this.权限管理ToolStripMenuItem.Name = "权限管理ToolStripMenuItem";
-            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.权限管理ToolStripMenuItem.Text = "权限管理";
             // 
             // 密码修改ToolStripMenuItem
             // 
             this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
-            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.密码修改ToolStripMenuItem.Text = "密码修改";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssUser});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(579, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssUser
+            // 
+            this.tssUser.Name = "tssUser";
+            this.tssUser.Size = new System.Drawing.Size(131, 17);
+            this.tssUser.Text = "toolStripStatusLabel1";
             // 
             // frmMain
             // 
@@ -194,6 +204,8 @@
             this.Text = "frmMain";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,7 +218,7 @@
         private System.Windows.Forms.ToolStripMenuItem 图书管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 新书入库ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 图书信息维护ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 读者信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 读者管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 办理借书证ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jieshuzhengxinxibiangengToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 借书证挂失与解除ToolStripMenuItem;
@@ -219,5 +231,6 @@
         private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 权限管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 密码修改ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel tssUser;
     }
 }

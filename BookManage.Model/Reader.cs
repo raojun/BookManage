@@ -18,7 +18,7 @@ namespace BookManage.Model
         public string rdPhone { get; set; }
         public string rdEmail { get; set; }
         public DateTime rdDateReg { get; set; }
-        public Byte[] rdPhoto { get; set; }
+        public Byte[ ] rdPhoto { get; set; }
         public string rdStatus { get; set; }
         public int rdBorrowQty { get; set; }
         public string rdPwd { get; set; }
@@ -40,6 +40,23 @@ namespace BookManage.Model
             this.rdBorrowQty = rt.rdBorrowQty;
             this.rdPwd = rt.rdPwd;
             this.rdAdminRoles = rt.rdAdminRoles;
+        }
+
+        public bool IsReaderAdmin()
+        {
+            return ((rdAdminRoles & 1) > 0);
+        }
+        public bool IsBookAdmin()
+        {
+            return ((rdAdminRoles & 2) > 0);
+        }
+        public bool IsBorrowAdmin()
+        {
+            return ((rdAdminRoles & 4) > 0);
+        }
+        public bool IsSystemAdmin()
+        {
+            return ((rdAdminRoles & 8) > 0);
         }
     }
 }

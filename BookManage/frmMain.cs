@@ -15,6 +15,7 @@ namespace BookManage
         public frmMain()
         {
             InitializeComponent();
+            InitMenu();
         }
 
         /// <summary>
@@ -26,7 +27,12 @@ namespace BookManage
 
             //图书管理ToolStripMenuItem.Visible = true;//是否可见
             //图书管理ToolStripMenuItem.Avaiable =false;//是否活动
-            //图书管理ToolStripMenuItem.Enabled=reader.
+            图书管理ToolStripMenuItem.Enabled = reader.IsBookAdmin();//是否能用
+            读者管理ToolStripMenuItem.Enabled = (reader.IsReaderAdmin() | reader.IsSystemAdmin());
+            借阅管理ToolStripMenuItem.Enabled = reader.IsBorrowAdmin();
+            权限管理ToolStripMenuItem.Enabled = reader.IsSystemAdmin();
+
+            tssUser.Text = "登录用户：" + reader.rdName + "|" + reader.rdDept;
         }
     }
 }

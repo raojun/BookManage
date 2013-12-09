@@ -10,7 +10,7 @@ using BookManage.Model;
 namespace BookManage.DAL
 {
     //添加ReaderType表中的插入，删除，修改3个方法
-    class ReaderTypeDAL
+    public class ReaderTypeDAL
     {
         //插入
         public static int Insert(ReaderType readertype)
@@ -109,6 +109,13 @@ namespace BookManage.DAL
         {
             DataRow dr = GetDRByID(rdType);
             return SqlHelper.DataRowToT<ReaderType>(dr);
+        }
+
+
+        public static DataTable GetAll()
+        {
+            string sql = "select * from ReaderType";
+            return SqlHelper.GetDataTable(sql, null, "ReaderType");
         }
     }
 }
