@@ -8,7 +8,7 @@ using BookManage.DAL;
 
 namespace BookManage.BLL
 {
-    public class ReaderAdmin
+    public class ReaderAdmin//读者管理类
     {
         public static Reader GetReader(int rdID)
         {

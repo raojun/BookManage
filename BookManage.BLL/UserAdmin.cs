@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BookManage.BLL
 {
-    class UserAdmin
+    class UserAdmin//用户管理类
     {
     }
 }

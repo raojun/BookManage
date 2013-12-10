@@ -9,14 +9,14 @@ using BookManage.Model;
 
 namespace BookManage.DAL
 {
-    public class ReaderDAL
+    public class ReaderDAL//读者数据访问类
     {
         
         public static int Insert(Reader reader)
         {
             int rows = 0;
             string sql = "insert into Reader(rdID,rdName,rdSex,rdType,rdPhone,rdEmail,rdDateReg,rdPhoto,rdStatus,rdBorrowQty,rdPwd,rdAdminRoles)"
-                             + "value ((@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
+                             + "value (@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdID",reader.rdID),
                                            new SqlParameter("@rdName",reader.rdName),

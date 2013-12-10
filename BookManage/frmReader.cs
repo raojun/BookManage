@@ -30,9 +30,14 @@ namespace BookManage
             dt = readerBLL.GetAllReaderType();
             foreach (DataRow dr in dt.Rows)
             {
-                //cmbTypeForQry.
+                cmbTypeForQry.Items.Add(dr["rdType"].ToString()+"--"+dr["rdTypeName"].ToString());
+                cmbType.Items.Add(dr["rdType"].ToString() + "--" + dr["rdTypeName"].ToString());
             }
+
+            SetStatus(opStatus.inSelect);
+            
         }
+
         private void SetStatus(opStatus opst)
         {
             ops = opst;
@@ -109,6 +114,5 @@ namespace BookManage
         {
 
         }
-
     }
 }

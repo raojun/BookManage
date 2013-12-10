@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BookManage.BLL
 {
-    class BorrowAdmin
+    class BorrowAdmin//借阅管理类
     {
     }
 }

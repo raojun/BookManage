@@ -10,14 +10,14 @@ using BookManage.Model;
 namespace BookManage.DAL
 {
     //添加ReaderType表中的插入，删除，修改3个方法
-    public class ReaderTypeDAL
+    public class ReaderTypeDAL//读者类型数据表访问类
     {
         //插入
         public static int Insert(ReaderType readertype)
         {
             int rows = 0;
             string sql = "insert into ReadType(rdType,rdTypeName,CanLendQty,CanLendDay,CanContinueTimes,PunishRate,DateValid)"
-                             + "value ((@rdType,@rdTypeName,@CanLendQty,@CanLendDay,@CanContinueTimes,@PunishRate,@DateValid)";
+                             + "value (@rdType,@rdTypeName,@CanLendQty,@CanLendDay,@CanContinueTimes,@PunishRate,@DateValid)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdType",readertype.rdType),
                                            new SqlParameter("@rdTypeName",readertype.rdTypeName),
