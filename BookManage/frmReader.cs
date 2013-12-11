@@ -193,7 +193,7 @@ namespace BookManage
                 picboxPhoto.Image = imgPhoto;
             }
         }
-
+       
         private void btuQuerry_Click_1(object sender, EventArgs e)
         {
             int rdType;
@@ -214,11 +214,24 @@ namespace BookManage
                 {
                     rdType = Convert.ToInt32(cmbTypeForQry.Text);
                 }
+            }
                 rdDept = cmbDeptForQry.Text;
                 rdName = txtNameForQry.Text;
                 dt = readerBLL.GetReader(rdType, rdDept, rdName);
                 ShowData();
-            }
         }
+
+        private void dgvReader_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        //private void dgvReader_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    if (dgvReader.CurrentCell == null)
+        //        return;
+        //    reader = readerBLL.GetReader((int)dgvReader["rdID", dgvReader.CurrentCell.RowIndex].Value);
+        //    SetReaderToText();
+        //}
+        
     }
 }

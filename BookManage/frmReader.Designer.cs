@@ -273,6 +273,7 @@
             this.dgvReader.RowTemplate.Height = 23;
             this.dgvReader.Size = new System.Drawing.Size(559, 344);
             this.dgvReader.TabIndex = 0;
+            this.dgvReader.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReader_CellContentClick);
             // 
             // groupBox2
             // 

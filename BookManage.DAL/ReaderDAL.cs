@@ -16,7 +16,7 @@ namespace BookManage.DAL
         {
             int rows = 0;
             string sql = "insert into Reader(rdID,rdName,rdSex,rdType,rdPhone,rdEmail,rdDateReg,rdPhoto,rdStatus,rdBorrowQty,rdPwd,rdAdminRoles)"
-                             + "value (@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
+                             + " value (@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdID",reader.rdID),
                                            new SqlParameter("@rdName",reader.rdName),
@@ -45,7 +45,7 @@ namespace BookManage.DAL
         public static int Update(Reader reader)
         {
             int rows = 0;
-            string sql = "update Reader set"
+            string sql = "update Reader set "
                 + "rdID=@rdID,"
                 + "rdName=@rdName,"
                 + "rdSex=@rdSex,"
@@ -57,7 +57,7 @@ namespace BookManage.DAL
                 + "rdStatus=@rdStatus,"
                 + "rdBorrowQty=@rdBorrowQty,"
                 + "rdPwd=@rdPwd,"
-                + "rdAdminRoles=@rdAdminRoles"
+                + "rdAdminRoles=@rdAdminRoles "
                 + "where rdID=@rdID";               
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdID",reader.rdID),
