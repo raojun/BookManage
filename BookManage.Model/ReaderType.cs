@@ -35,5 +35,22 @@ namespace BookManage.Model
             this.PunishRate = rt.PunishRate;
             this.DateValid = rt.DateValid;
         }
+
+        public static string ColumnTitle(string columnName)
+        {
+            string sTitle;
+            sTitle = columnName;
+            switch (columnName)
+            {
+                case "rdType": sTitle = "读者类别"; break;
+                case "rdTypeName": sTitle = "类型名称"; break;
+                case "CanLendQty": sTitle = "可借书数量"; break;
+                case "CanLendDay": sTitle = "可借书天数"; break;
+                case "CanContinueTimes": sTitle = "可续借次数"; break;
+                case "PunishRate": sTitle = "罚款率"; break;
+                case "DateValid": sTitle = "证件有效期"; break;
+            }
+            return sTitle;
+        }
     }
 }

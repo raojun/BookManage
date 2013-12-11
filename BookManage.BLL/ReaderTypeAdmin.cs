@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BookManage.BLL
 {
-    class ReaderTypeAdmin//读者类型管理类
+    public class ReaderTypeAdmin//读者类型管理类
     {
     }
 }

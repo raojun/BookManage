@@ -25,6 +25,10 @@ namespace BookManage.BLL
             return (ReaderDAL.GetReader(rdType, rdDept, rdName));
         }
 
+        public int Insert(Reader reader)
+        {
+            return (ReaderDAL.Insert(reader));
+        }
         public int Update(Reader reader)
         {
             return (ReaderDAL.Update(reader));

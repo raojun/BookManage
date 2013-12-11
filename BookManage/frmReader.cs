@@ -14,9 +14,9 @@ namespace BookManage
 {
     internal enum opStatus//添加枚举类型，表示3种窗口操作状态
     {
-        inSelect=0,//查询操作状态
-        inNew=1,//办理新借书证状态
-        inChange=2//变更借书证状态
+        inSelect = 0,//查询操作状态
+        inNew = 1,//办理新借书证状态
+        inChange = 2//变更借书证状态
     };
     public partial class frmReader : Form
     {
@@ -31,7 +31,7 @@ namespace BookManage
             dt = readerBLL.GetAllReaderType();
             foreach (DataRow dr in dt.Rows)
             {
-                cmbTypeForQry.Items.Add(dr["rdType"].ToString()+"--"+dr["rdTypeName"].ToString());
+                cmbTypeForQry.Items.Add(dr["rdType"].ToString() + "--" + dr["rdTypeName"].ToString());
                 cmbType.Items.Add(dr["rdType"].ToString() + "--" + dr["rdTypeName"].ToString());
             }
 
@@ -54,7 +54,7 @@ namespace BookManage
             ops = opst;
             switch (ops)
             {
-                case opStatus .inSelect:
+                case opStatus.inSelect:
                     toolStrip1.Enabled = true;//查询工具栏
                     groupBox1.Enabled = true;//查询结果
                     groupBox2.Enabled = false;//读者信息
@@ -138,7 +138,7 @@ namespace BookManage
 
         private void btnNewDoc_Click(object sender, EventArgs e)
         {
-
+            SetStatus(opStatus.inNew);
         }
 
         private void btnChangeDoc_Click(object sender, EventArgs e)
@@ -156,7 +156,7 @@ namespace BookManage
 
         }
 
-        private void btnCancelDoc_Click(object sender, EventArgs e)
+        private void btnCanceldoc_Click(object sender, EventArgs e)
         {
 
         }
@@ -168,7 +168,8 @@ namespace BookManage
 
         private void btnAddReader_Click(object sender, EventArgs e)
         {
-
+            SetTextToReader();
+            readerBLL.Insert(reader);
         }
 
         private void btnUpdateReader_Click(object sender, EventArgs e)
@@ -182,9 +183,9 @@ namespace BookManage
 
         }
 
-        private void btnLoadPictureFile_Click(object sender, EventArgs e)
+        private void btnLoadPictureFile_Click_1(object sender, EventArgs e)
         {
-            OpenFileDialog ofd1=new OpenFileDialog();
+            OpenFileDialog ofd1 = new OpenFileDialog();
             ofd1.Filter = "图片文件（*.jpg;*bmp;*.png;*.gif）|*.jpg;*bmp;*.png;*.gif";
             if (ofd1.ShowDialog() == DialogResult.OK)
             {
@@ -193,7 +194,7 @@ namespace BookManage
             }
         }
 
-        private void btuQuery_Click(object sender, EventArgs e)
+        private void btuQuerry_Click_1(object sender, EventArgs e)
         {
             int rdType;
             string rdDept, rdName;
