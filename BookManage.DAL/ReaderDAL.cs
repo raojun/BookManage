@@ -126,5 +126,39 @@ namespace BookManage.DAL
             DataRow dr = GetDRByID(rdID);
             return SqlHelper.DataRowToT<Reader>(dr);
         }
+
+        public static DataTable GetReader(int rdType, string rdDept, string rdName)
+        {
+            {
+                string sql;
+                if (rdType <= 0 && rdDept == "" && rdName == "")
+                {
+                    sql = "select * from Reader where 0=1";
+                    return SqlHelper.GetDataTable(sql, null, "Reader");
+                }
+                rdDept = (rdDept == "") ? ("%") : ("%" + rdDept + "%");
+                rdName = (rdName == "") ? ("%") : ("%" + rdName + "%");
+                if (rdType <= 0)
+                {
+                    sql = "select * from Reader where rdDept like @rdDept and rdName like @rdName";
+                    SqlParameter[] parameters ={
+                                              new SqlParameter("@rdDept",rdDept),
+                                              new SqlParameter("@rdName",rdName)
+                                          };
+                    return SqlHelper.GetDataTable(sql, parameters, "Reader");
+
+                }
+                else
+                {
+                    sql = "select * from Reader where rdType=@rdType and rdDept like @rdDept and rdName like @rdName";
+                    SqlParameter[] parameters ={
+                                              new SqlParameter("@rdType",rdType),
+                                              new SqlParameter("@rdDept",rdDept),
+                                              new SqlParameter("@rdName",rdName)
+                                          };
+                    return SqlHelper.GetDataTable(sql, parameters, "Reader");
+                }
+            }
+        }
     }
 }

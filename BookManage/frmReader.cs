@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using BookManage.Model;
 using BookManage.BLL;
@@ -35,7 +36,17 @@ namespace BookManage
             }
 
             SetStatus(opStatus.inSelect);
-            
+            dt = readerBLL.GetReader(0, "", "");
+            ShowData();
+        }
+
+        private void ShowData()
+        {
+            dgvReader.DataSource = dt;
+            foreach (DataColumn dc in dt.Columns)
+            {
+                dgvReader.Columns[dc.ColumnName].HeaderText = Reader.ColumnTitle(dc.ColumnName);
+            }
         }
 
         private void SetStatus(opStatus opst)
@@ -65,6 +76,66 @@ namespace BookManage
             }
         }
 
+        //--------------------------------------------
+        //读者信息组内控件与实体类对象之间的数据互换
+        private void SetReaderToText()
+        {
+            txtID.Text = Convert.ToString(reader.rdID);
+            txtName.Text = reader.rdName;
+            txtPwd.Text = reader.rdPwd;
+            cmbSex.Text = reader.rdSex;
+            cmbType.Text = Convert.ToString(reader.rdType);
+            cmbDept.Text = reader.rdDept;
+            txtPhone.Text = reader.rdPhone;
+            txtEmail.Text = reader.rdEmail;
+            dtpDateReg.Value = reader.rdDateReg;
+            if (reader.rdPhoto == null)
+            {
+                picboxPhoto.Image = null;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream(reader.rdPhoto);
+                Image imgPhoto = Bitmap.FromStream(ms, true);
+                picboxPhoto.Image = imgPhoto;
+            }
+            txtStatus.Text = reader.rdStatus;
+            txtBorrowQty.Text = Convert.ToString(reader.rdBorrowQty);
+            txtAdminRoles.Text = Convert.ToString(reader.rdAdminRoles);
+        }
+
+        private void SetTextToReader()
+        {
+            reader.rdID = Convert.ToInt32(txtID.Text);
+            reader.rdName = txtName.Text;
+            reader.rdPwd = txtPwd.Text;
+            reader.rdSex = cmbSex.Text;
+            int i = cmbType.Text.IndexOf("--");
+            if (i > 0)
+            {
+                reader.rdType = Convert.ToInt32(cmbType.Text.Substring(0, i));
+            }
+            else
+            {
+                reader.rdType = Convert.ToInt32(cmbType.Text);
+            }
+            reader.rdDept = cmbDept.Text;
+            reader.rdPhone = txtPhone.Text;
+            reader.rdEmail = txtEmail.Text;
+            reader.rdDateReg = dtpDateReg.Value;
+            if (picboxPhoto.Image != null)
+            {
+                MemoryStream ms = new MemoryStream();
+                picboxPhoto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                reader.rdPhoto = ms.GetBuffer();
+            }
+            reader.rdStatus = txtStatus.Text;
+            reader.rdBorrowQty = Convert.ToInt32(txtBorrowQty.Text);
+            reader.rdAdminRoles = Convert.ToInt32(txtAdminRoles.Text);
+        }
+
+        //-----------------------------------------------------------------------
+
         private void btnNewDoc_Click(object sender, EventArgs e)
         {
 
@@ -72,7 +143,7 @@ namespace BookManage
 
         private void btnChangeDoc_Click(object sender, EventArgs e)
         {
-
+            SetStatus(opStatus.inChange);
         }
 
         private void btnLossDoc_Click(object sender, EventArgs e)
@@ -102,7 +173,8 @@ namespace BookManage
 
         private void btnUpdateReader_Click(object sender, EventArgs e)
         {
-
+            SetTextToReader();
+            readerBLL.Update(reader);
         }
 
         private void btnCancelChange_Click(object sender, EventArgs e)
@@ -112,7 +184,40 @@ namespace BookManage
 
         private void btnLoadPictureFile_Click(object sender, EventArgs e)
         {
+            OpenFileDialog ofd1=new OpenFileDialog();
+            ofd1.Filter = "图片文件（*.jpg;*bmp;*.png;*.gif）|*.jpg;*bmp;*.png;*.gif";
+            if (ofd1.ShowDialog() == DialogResult.OK)
+            {
+                Image imgPhoto = Image.FromFile(ofd1.FileName);
+                picboxPhoto.Image = imgPhoto;
+            }
+        }
 
+        private void btuQuery_Click(object sender, EventArgs e)
+        {
+            int rdType;
+            string rdDept, rdName;
+
+            if (cmbTypeForQry.Text.Trim() == "")
+            {
+                rdType = 0;
+            }
+            else
+            {
+                int i = cmbTypeForQry.Text.IndexOf("--");
+                if (i > 0)
+                {
+                    rdType = Convert.ToInt32(cmbTypeForQry.Text.Substring(0, i));
+                }
+                else
+                {
+                    rdType = Convert.ToInt32(cmbTypeForQry.Text);
+                }
+                rdDept = cmbDeptForQry.Text;
+                rdName = txtNameForQry.Text;
+                dt = readerBLL.GetReader(rdType, rdDept, rdName);
+                ShowData();
+            }
         }
     }
 }

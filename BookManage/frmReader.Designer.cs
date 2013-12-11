@@ -30,11 +30,11 @@
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
+            this.cmbTypeForQry = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox2 = new System.Windows.Forms.ToolStripComboBox();
+            this.cmbDeptForQry = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox3 = new System.Windows.Forms.ToolStripComboBox();
+            this.txtNameForQry = new System.Windows.Forms.ToolStripTextBox();
             this.btuQuery = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -50,18 +50,18 @@
             this.lblBorrowInfo = new System.Windows.Forms.Label();
             this.dgvReader = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpDateReg = new System.Windows.Forms.DateTimePicker();
+            this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.cmbType = new System.Windows.Forms.ComboBox();
+            this.cmbSex = new System.Windows.Forms.ComboBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtAdminRoles = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtStatus = new System.Windows.Forms.TextBox();
+            this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtBorrowQty = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -92,11 +92,11 @@
             this.toolStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,
-            this.toolStripComboBox1,
+            this.cmbTypeForQry,
             this.toolStripLabel2,
-            this.toolStripComboBox2,
+            this.cmbDeptForQry,
             this.toolStripLabel3,
-            this.toolStripComboBox3,
+            this.txtNameForQry,
             this.btuQuery,
             this.toolStripLabel4,
             this.toolStripSeparator1,
@@ -104,42 +104,42 @@
             this.toolStripLabel5});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(952, 30);
+            this.toolStrip1.Size = new System.Drawing.Size(952, 33);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(68, 27);
+            this.toolStripLabel1.Size = new System.Drawing.Size(68, 30);
             this.toolStripLabel1.Text = "读者类别：";
             // 
-            // toolStripComboBox1
+            // cmbTypeForQry
             // 
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 30);
+            this.cmbTypeForQry.Name = "cmbTypeForQry";
+            this.cmbTypeForQry.Size = new System.Drawing.Size(121, 33);
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(44, 27);
+            this.toolStripLabel2.Size = new System.Drawing.Size(44, 30);
             this.toolStripLabel2.Text = "单位：";
             // 
-            // toolStripComboBox2
+            // cmbDeptForQry
             // 
-            this.toolStripComboBox2.Name = "toolStripComboBox2";
-            this.toolStripComboBox2.Size = new System.Drawing.Size(121, 30);
+            this.cmbDeptForQry.Name = "cmbDeptForQry";
+            this.cmbDeptForQry.Size = new System.Drawing.Size(121, 33);
             // 
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(44, 27);
+            this.toolStripLabel3.Size = new System.Drawing.Size(44, 30);
             this.toolStripLabel3.Text = "姓名：";
             // 
-            // toolStripComboBox3
+            // txtNameForQry
             // 
-            this.toolStripComboBox3.Name = "toolStripComboBox3";
-            this.toolStripComboBox3.Size = new System.Drawing.Size(121, 30);
+            this.txtNameForQry.Name = "txtNameForQry";
+            this.txtNameForQry.Size = new System.Drawing.Size(100, 33);
             // 
             // btuQuery
             // 
@@ -147,19 +147,20 @@
             this.btuQuery.Image = global::BookManage.Properties.Resources.search;
             this.btuQuery.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btuQuery.Name = "btuQuery";
-            this.btuQuery.Size = new System.Drawing.Size(23, 27);
+            this.btuQuery.Size = new System.Drawing.Size(23, 30);
             this.btuQuery.Text = "toolStripButton1";
+            this.btuQuery.Click += new System.EventHandler(this.btuQuery_Click);
             // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(32, 27);
+            this.toolStripLabel4.Size = new System.Drawing.Size(32, 30);
             this.toolStripLabel4.Text = "查找";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 30);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
             // 
             // btuToExcel
             // 
@@ -167,13 +168,13 @@
             this.btuToExcel.Image = global::BookManage.Properties.Resources.Excel;
             this.btuToExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btuToExcel.Name = "btuToExcel";
-            this.btuToExcel.Size = new System.Drawing.Size(23, 27);
+            this.btuToExcel.Size = new System.Drawing.Size(23, 30);
             this.btuToExcel.Text = "toolStripButton1";
             // 
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(37, 27);
+            this.toolStripLabel5.Size = new System.Drawing.Size(37, 30);
             this.toolStripLabel5.Text = "Excel";
             // 
             // groupBox1
@@ -289,18 +290,18 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.comboBox4);
-            this.groupBox2.Controls.Add(this.comboBox3);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox7);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox6);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox5);
-            this.groupBox2.Controls.Add(this.textBox2);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.dtpDateReg);
+            this.groupBox2.Controls.Add(this.cmbDept);
+            this.groupBox2.Controls.Add(this.cmbType);
+            this.groupBox2.Controls.Add(this.cmbSex);
+            this.groupBox2.Controls.Add(this.txtEmail);
+            this.groupBox2.Controls.Add(this.txtAdminRoles);
+            this.groupBox2.Controls.Add(this.txtPhone);
+            this.groupBox2.Controls.Add(this.txtStatus);
+            this.groupBox2.Controls.Add(this.txtPwd);
+            this.groupBox2.Controls.Add(this.txtBorrowQty);
+            this.groupBox2.Controls.Add(this.txtName);
+            this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
@@ -327,93 +328,95 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "读者信息";
             // 
-            // comboBox4
+            // dtpDateReg
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(76, 356);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(219, 22);
-            this.comboBox4.TabIndex = 8;
+            this.dtpDateReg.Location = new System.Drawing.Point(76, 355);
+            this.dtpDateReg.Name = "dtpDateReg";
+            this.dtpDateReg.Size = new System.Drawing.Size(219, 23);
+            this.dtpDateReg.TabIndex = 9;
             // 
-            // comboBox3
+            // cmbDept
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(76, 264);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(219, 22);
-            this.comboBox3.TabIndex = 8;
+            this.cmbDept.FormattingEnabled = true;
+            this.cmbDept.Location = new System.Drawing.Point(76, 264);
+            this.cmbDept.Name = "cmbDept";
+            this.cmbDept.Size = new System.Drawing.Size(219, 22);
+            this.cmbDept.TabIndex = 8;
             // 
-            // comboBox2
+            // cmbType
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(76, 232);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(219, 22);
-            this.comboBox2.TabIndex = 8;
+            this.cmbType.FormattingEnabled = true;
+            this.cmbType.Location = new System.Drawing.Point(76, 232);
+            this.cmbType.Name = "cmbType";
+            this.cmbType.Size = new System.Drawing.Size(219, 22);
+            this.cmbType.TabIndex = 8;
             // 
-            // comboBox1
+            // cmbSex
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(76, 112);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 22);
-            this.comboBox1.TabIndex = 8;
+            this.cmbSex.FormattingEnabled = true;
+            this.cmbSex.Items.AddRange(new object[] {
+            "男",
+            "女"});
+            this.cmbSex.Location = new System.Drawing.Point(76, 112);
+            this.cmbSex.Name = "cmbSex";
+            this.cmbSex.Size = new System.Drawing.Size(100, 22);
+            this.cmbSex.TabIndex = 8;
             // 
-            // textBox11
+            // txtEmail
             // 
-            this.textBox11.Location = new System.Drawing.Point(76, 326);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(219, 23);
-            this.textBox11.TabIndex = 7;
+            this.txtEmail.Location = new System.Drawing.Point(76, 326);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(219, 23);
+            this.txtEmail.TabIndex = 7;
             // 
-            // textBox7
+            // txtAdminRoles
             // 
-            this.textBox7.Location = new System.Drawing.Point(76, 201);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(219, 23);
-            this.textBox7.TabIndex = 7;
+            this.txtAdminRoles.Location = new System.Drawing.Point(76, 201);
+            this.txtAdminRoles.Name = "txtAdminRoles";
+            this.txtAdminRoles.Size = new System.Drawing.Size(219, 23);
+            this.txtAdminRoles.TabIndex = 7;
             // 
-            // textBox10
+            // txtPhone
             // 
-            this.textBox10.Location = new System.Drawing.Point(76, 294);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(219, 23);
-            this.textBox10.TabIndex = 7;
+            this.txtPhone.Location = new System.Drawing.Point(76, 294);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(219, 23);
+            this.txtPhone.TabIndex = 7;
             // 
-            // textBox6
+            // txtStatus
             // 
-            this.textBox6.Location = new System.Drawing.Point(76, 171);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 23);
-            this.textBox6.TabIndex = 7;
+            this.txtStatus.Location = new System.Drawing.Point(76, 171);
+            this.txtStatus.Name = "txtStatus";
+            this.txtStatus.Size = new System.Drawing.Size(100, 23);
+            this.txtStatus.TabIndex = 7;
             // 
-            // textBox3
+            // txtPwd
             // 
-            this.textBox3.Location = new System.Drawing.Point(76, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 7;
+            this.txtPwd.Location = new System.Drawing.Point(76, 81);
+            this.txtPwd.Name = "txtPwd";
+            this.txtPwd.Size = new System.Drawing.Size(100, 23);
+            this.txtPwd.TabIndex = 7;
             // 
-            // textBox5
+            // txtBorrowQty
             // 
-            this.textBox5.Location = new System.Drawing.Point(76, 140);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 23);
-            this.textBox5.TabIndex = 7;
+            this.txtBorrowQty.Location = new System.Drawing.Point(76, 140);
+            this.txtBorrowQty.Name = "txtBorrowQty";
+            this.txtBorrowQty.Size = new System.Drawing.Size(100, 23);
+            this.txtBorrowQty.TabIndex = 7;
             // 
-            // textBox2
+            // txtName
             // 
-            this.textBox2.Location = new System.Drawing.Point(76, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 7;
+            this.txtName.Location = new System.Drawing.Point(76, 52);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 23);
+            this.txtName.TabIndex = 7;
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(76, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 7;
+            this.txtID.Location = new System.Drawing.Point(76, 24);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 23);
+            this.txtID.TabIndex = 7;
             // 
             // label12
             // 
@@ -561,7 +564,7 @@
             // 
             this.btnLoadPictureFile.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLoadPictureFile.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnLoadPictureFile.Location = new System.Drawing.Point(189, 160);
+            this.btnLoadPictureFile.Location = new System.Drawing.Point(187, 160);
             this.btnLoadPictureFile.Name = "btnLoadPictureFile";
             this.btnLoadPictureFile.Size = new System.Drawing.Size(106, 31);
             this.btnLoadPictureFile.TabIndex = 3;
@@ -631,11 +634,10 @@
 
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
+        private System.Windows.Forms.ToolStripComboBox cmbTypeForQry;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox2;
+        private System.Windows.Forms.ToolStripComboBox cmbDeptForQry;
         private System.Windows.Forms.ToolStripLabel toolStripLabel3;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox3;
         private System.Windows.Forms.ToolStripButton btuQuery;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripButton btuToExcel;
@@ -667,19 +669,20 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtAdminRoles;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtStatus;
+        private System.Windows.Forms.TextBox txtPwd;
+        private System.Windows.Forms.TextBox txtBorrowQty;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.ComboBox cmbDept;
+        private System.Windows.Forms.ComboBox cmbType;
+        private System.Windows.Forms.ComboBox cmbSex;
+        private System.Windows.Forms.ToolStripTextBox txtNameForQry;
+        private System.Windows.Forms.DateTimePicker dtpDateReg;
 
 
     }

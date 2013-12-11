@@ -19,5 +19,15 @@ namespace BookManage.BLL
         {
             return (ReaderTypeDAL.GetAll());
         }
+
+        public DataTable GetReader(int rdType, string rdDept, string rdName)
+        {
+            return (ReaderDAL.GetReader(rdType, rdDept, rdName));
+        }
+
+        public int Update(Reader reader)
+        {
+            return (ReaderDAL.Update(reader));
+        }
     }
 }
