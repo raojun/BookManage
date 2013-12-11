@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{49DB7FF8-174E-4F87-B6DF-80983478AB5C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -66,6 +66,12 @@
     <Compile Include="frmReader.Designer.cs">
       <DependentUpon>frmReader.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReaderType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReaderType.Designer.cs">
+      <DependentUpon>frmReaderType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmLogin.resx">
@@ -79,6 +85,9 @@
     <EmbeddedResource Include="frmReader.resx">
       <DependentUpon>frmReader.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReaderType.resx">
+      <DependentUpon>frmReaderType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

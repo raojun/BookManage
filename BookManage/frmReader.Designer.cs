@@ -35,10 +35,8 @@
             this.cmbDeptForQry = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.txtNameForQry = new System.Windows.Forms.ToolStripTextBox();
-            this.btuQuery = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btuToExcel = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
@@ -74,11 +72,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.picboxPhoto = new System.Windows.Forms.PictureBox();
             this.btnLoadPictureFile = new System.Windows.Forms.Button();
             this.btnCancelChange = new System.Windows.Forms.Button();
             this.btnUpdateReader = new System.Windows.Forms.Button();
             this.btnAddReader = new System.Windows.Forms.Button();
+            this.picboxPhoto = new System.Windows.Forms.PictureBox();
+            this.btuQuery = new System.Windows.Forms.ToolStripButton();
+            this.btuToExcel = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).BeginInit();
@@ -141,16 +141,6 @@
             this.txtNameForQry.Name = "txtNameForQry";
             this.txtNameForQry.Size = new System.Drawing.Size(100, 33);
             // 
-            // btuQuery
-            // 
-            this.btuQuery.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btuQuery.Image = global::BookManage.Properties.Resources.search;
-            this.btuQuery.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btuQuery.Name = "btuQuery";
-            this.btuQuery.Size = new System.Drawing.Size(23, 30);
-            this.btuQuery.Text = "toolStripButton1";
-            this.btuQuery.Click += new System.EventHandler(this.btuQuery_Click);
-            // 
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
@@ -161,15 +151,6 @@
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 33);
-            // 
-            // btuToExcel
-            // 
-            this.btuToExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.btuToExcel.Image = global::BookManage.Properties.Resources.Excel;
-            this.btuToExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btuToExcel.Name = "btuToExcel";
-            this.btuToExcel.Size = new System.Drawing.Size(23, 30);
-            this.btuToExcel.Text = "toolStripButton1";
             // 
             // toolStripLabel5
             // 
@@ -550,16 +531,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "借书证号";
             // 
-            // picboxPhoto
-            // 
-            this.picboxPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picboxPhoto.Location = new System.Drawing.Point(185, 22);
-            this.picboxPhoto.Name = "picboxPhoto";
-            this.picboxPhoto.Size = new System.Drawing.Size(110, 130);
-            this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picboxPhoto.TabIndex = 4;
-            this.picboxPhoto.TabStop = false;
-            // 
             // btnLoadPictureFile
             // 
             this.btnLoadPictureFile.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -607,6 +578,35 @@
             this.btnAddReader.Text = "确认办证";
             this.btnAddReader.UseVisualStyleBackColor = true;
             this.btnAddReader.Click += new System.EventHandler(this.btnAddReader_Click);
+            // 
+            // picboxPhoto
+            // 
+            this.picboxPhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picboxPhoto.Location = new System.Drawing.Point(185, 22);
+            this.picboxPhoto.Name = "picboxPhoto";
+            this.picboxPhoto.Size = new System.Drawing.Size(110, 130);
+            this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxPhoto.TabIndex = 4;
+            this.picboxPhoto.TabStop = false;
+            // 
+            // btuQuery
+            // 
+            this.btuQuery.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btuQuery.Image = global::BookManage.Properties.Resources.search;
+            this.btuQuery.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btuQuery.Name = "btuQuery";
+            this.btuQuery.Size = new System.Drawing.Size(23, 30);
+            this.btuQuery.Text = "toolStripButton1";
+            this.btuQuery.Click += new System.EventHandler(this.btuQuery_Click);
+            // 
+            // btuToExcel
+            // 
+            this.btuToExcel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btuToExcel.Image = global::BookManage.Properties.Resources.Excel;
+            this.btuToExcel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btuToExcel.Name = "btuToExcel";
+            this.btuToExcel.Size = new System.Drawing.Size(23, 30);
+            this.btuToExcel.Text = "toolStripButton1";
             // 
             // frmReader
             // 
