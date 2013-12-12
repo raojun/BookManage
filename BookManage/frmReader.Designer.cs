@@ -112,7 +112,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(56, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(53, 30);
             this.toolStripLabel1.Text = "读者类别";
             // 
             // cmbTypeForQry
@@ -123,7 +123,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel2.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel2.Text = "单位";
             // 
             // cmbDeptForQry
@@ -134,7 +134,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel3.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel3.Text = "姓名";
             // 
             // txtNameForQry
@@ -155,7 +155,7 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel4.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel4.Text = "查找";
             // 
             // toolStripSeparator1
@@ -175,7 +175,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(37, 30);
+            this.toolStripLabel5.Size = new System.Drawing.Size(35, 30);
             this.toolStripLabel5.Text = "Excel";
             // 
             // groupBox1
@@ -266,6 +266,7 @@
             // 
             // dgvReader
             // 
+            this.dgvReader.AllowUserToAddRows = false;
             this.dgvReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReader.Location = new System.Drawing.Point(15, 20);
             this.dgvReader.Name = "dgvReader";
@@ -273,6 +274,7 @@
             this.dgvReader.RowTemplate.Height = 23;
             this.dgvReader.Size = new System.Drawing.Size(559, 344);
             this.dgvReader.TabIndex = 0;
+            this.dgvReader.SelectionChanged += new System.EventHandler(this.dgvReader_SelectionChanged);
             this.dgvReader.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReader_CellContentClick);
             // 
             // groupBox2
@@ -327,6 +329,7 @@
             this.cmbDept.Name = "cmbDept";
             this.cmbDept.Size = new System.Drawing.Size(209, 20);
             this.cmbDept.TabIndex = 5;
+            this.cmbDept.SelectedIndexChanged += new System.EventHandler(this.cmbDept_SelectedIndexChanged);
             // 
             // cmbType
             // 
@@ -567,11 +570,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 506);
+            this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "frmReader";
-            this.Text = "frmReader";
+            this.Text = "读者信息";
+            this.Load += new System.EventHandler(this.frmReader_Load);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);

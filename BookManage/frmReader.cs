@@ -163,7 +163,9 @@ namespace BookManage
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-
+            Form form = new frmMain();
+            form.Show();
+            this.Hide();
         }
 
         private void btnAddReader_Click(object sender, EventArgs e)
@@ -180,7 +182,14 @@ namespace BookManage
 
         private void btnCancelChange_Click(object sender, EventArgs e)
         {
-
+            foreach (Control ctrl in groupBox2.Controls)//清除所有textbox的内容
+            {
+                if (ctrl is TextBox)
+                    ctrl.Text = " ";
+            }
+            cmbSex.Text = "";
+            cmbType.Text = "";
+            cmbDept.Text = "";
         }
 
         private void btnLoadPictureFile_Click_1(object sender, EventArgs e)
@@ -225,13 +234,23 @@ namespace BookManage
         {
 
         }
-        //private void dgvReader_SelectionChanged(object sender, EventArgs e)
-        //{
-        //    if (dgvReader.CurrentCell == null)
-        //        return;
-        //    reader = readerBLL.GetReader((int)dgvReader["rdID", dgvReader.CurrentCell.RowIndex].Value);
-        //    SetReaderToText();
-        //}
-        
+
+        private void cmbDept_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmReader_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvReader_SelectionChanged(object sender, EventArgs e)//选择行操作
+        {
+            if (dgvReader.CurrentCell == null)
+                return;
+            reader = ReaderAdmin.GetReader((int)dgvReader["rdID", dgvReader.CurrentCell.RowIndex].Value);
+            SetReaderToText();
+        }
     }
 }

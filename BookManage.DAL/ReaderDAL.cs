@@ -16,7 +16,7 @@ namespace BookManage.DAL
         {
             int rows = 0;
             string sql = "insert into Reader(rdID,rdName,rdSex,rdType,rdPhone,rdEmail,rdDateReg,rdPhoto,rdStatus,rdBorrowQty,rdPwd,rdAdminRoles)"
-                             + " value (@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
+                             + " values (@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdID",reader.rdID),
                                            new SqlParameter("@rdName",reader.rdName),

@@ -34,5 +34,33 @@ namespace BookManage
 
             tssUser.Text = "登录用户：" + reader.rdName + "|" + reader.rdDept;
         }
+
+        private void 读者类型管理_Click(object sender, EventArgs e)
+        {
+            Form form = new frmReaderType();
+            form.Show();
+            this.Hide();
+        }
+
+        private void 办理借书证_Click(object sender, EventArgs e)
+        {
+            Form form = new frmReader();
+            form.Show();
+            this.Hide();
+        }
+
+        private void 借书证信息变更_Click(object sender, EventArgs e)
+        {
+            Form form = new frmReader();
+            form.Show();
+            this.Hide();
+        }
+
+        private void 新书入库ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmBook();
+            form.Show();
+            this.Hide();
+        }
     }
 }

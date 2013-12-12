@@ -12,7 +12,7 @@ namespace BookManage.BLL
     {
         public static Reader GetReader(int rdID)
         {
-            return (DAL.ReaderDAL.GetObjectByID(rdID));
+            return (ReaderDAL.GetObjectByID(rdID));
         }
 
         public DataTable  GetAllReaderType()

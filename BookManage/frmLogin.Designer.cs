@@ -91,6 +91,7 @@
             this.txtUserID.Name = "txtUserID";
             this.txtUserID.Size = new System.Drawing.Size(170, 21);
             this.txtUserID.TabIndex = 5;
+            this.txtUserID.Text = "11101";
             // 
             // txtUserPwd
             // 
@@ -98,6 +99,7 @@
             this.txtUserPwd.Name = "txtUserPwd";
             this.txtUserPwd.Size = new System.Drawing.Size(170, 21);
             this.txtUserPwd.TabIndex = 6;
+            this.txtUserPwd.Text = "123";
             // 
             // frmLogin
             // 
