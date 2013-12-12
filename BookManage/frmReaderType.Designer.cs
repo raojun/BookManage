@@ -30,39 +30,39 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReaderType));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.tsbFirstRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.tsbNextRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.tsbLastRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.tsbFinalRecord = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.tsbAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.tsbUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.tsbDelate = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel7 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.tsbBack = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel8 = new System.Windows.Forms.ToolStripLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtTypeName = new System.Windows.Forms.TextBox();
+            this.txtCanContinueTimes = new System.Windows.Forms.TextBox();
+            this.txtCanLendDay = new System.Windows.Forms.TextBox();
+            this.txtPunishRate = new System.Windows.Forms.TextBox();
+            this.txtCanLendQty = new System.Windows.Forms.TextBox();
+            this.txtDateValid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,28 +75,28 @@
             // 
             this.toolStrip1.AutoSize = false;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
+            this.tsbFirstRecord,
             this.toolStripLabel1,
             this.toolStripSeparator1,
-            this.toolStripButton2,
+            this.tsbNextRecord,
             this.toolStripLabel2,
             this.toolStripSeparator2,
-            this.toolStripButton3,
+            this.tsbLastRecord,
             this.toolStripLabel3,
             this.toolStripSeparator3,
-            this.toolStripButton4,
+            this.tsbFinalRecord,
             this.toolStripLabel4,
             this.toolStripSeparator4,
-            this.toolStripButton5,
+            this.tsbAdd,
             this.toolStripLabel5,
             this.toolStripSeparator5,
-            this.toolStripButton6,
+            this.tsbUpdate,
             this.toolStripLabel6,
             this.toolStripSeparator6,
-            this.toolStripButton7,
+            this.tsbDelate,
             this.toolStripLabel7,
             this.toolStripSeparator7,
-            this.toolStripButton8,
+            this.tsbBack,
             this.toolStripLabel8});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
@@ -104,14 +104,15 @@
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // tsbFirstRecord
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.tsbFirstRecord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbFirstRecord.Image = ((System.Drawing.Image)(resources.GetObject("tsbFirstRecord.Image")));
+            this.tsbFirstRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFirstRecord.Name = "tsbFirstRecord";
+            this.tsbFirstRecord.Size = new System.Drawing.Size(23, 22);
+            this.tsbFirstRecord.Text = "toolStripButton1";
+            this.tsbFirstRecord.Click += new System.EventHandler(this.tsbFirstRecord_Click);
             // 
             // toolStripLabel1
             // 
@@ -124,14 +125,15 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton2
+            // tsbNextRecord
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.tsbNextRecord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbNextRecord.Image = ((System.Drawing.Image)(resources.GetObject("tsbNextRecord.Image")));
+            this.tsbNextRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbNextRecord.Name = "tsbNextRecord";
+            this.tsbNextRecord.Size = new System.Drawing.Size(23, 22);
+            this.tsbNextRecord.Text = "toolStripButton2";
+            this.tsbNextRecord.Click += new System.EventHandler(this.tsbNextRecord_Click);
             // 
             // toolStripLabel2
             // 
@@ -144,14 +146,15 @@
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton3
+            // tsbLastRecord
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.tsbLastRecord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbLastRecord.Image = ((System.Drawing.Image)(resources.GetObject("tsbLastRecord.Image")));
+            this.tsbLastRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbLastRecord.Name = "tsbLastRecord";
+            this.tsbLastRecord.Size = new System.Drawing.Size(23, 22);
+            this.tsbLastRecord.Text = "toolStripButton3";
+            this.tsbLastRecord.Click += new System.EventHandler(this.tsbLastRecord_Click);
             // 
             // toolStripLabel3
             // 
@@ -164,14 +167,15 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton4
+            // tsbFinalRecord
             // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.tsbFinalRecord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbFinalRecord.Image = ((System.Drawing.Image)(resources.GetObject("tsbFinalRecord.Image")));
+            this.tsbFinalRecord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbFinalRecord.Name = "tsbFinalRecord";
+            this.tsbFinalRecord.Size = new System.Drawing.Size(23, 22);
+            this.tsbFinalRecord.Text = "toolStripButton4";
+            this.tsbFinalRecord.Click += new System.EventHandler(this.tsbFinalRecord_Click);
             // 
             // toolStripLabel4
             // 
@@ -184,14 +188,15 @@
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton5
+            // tsbAdd
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.tsbAdd.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbAdd.Image = ((System.Drawing.Image)(resources.GetObject("tsbAdd.Image")));
+            this.tsbAdd.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbAdd.Name = "tsbAdd";
+            this.tsbAdd.Size = new System.Drawing.Size(23, 22);
+            this.tsbAdd.Text = "toolStripButton5";
+            this.tsbAdd.Click += new System.EventHandler(this.tsbAdd_Click);
             // 
             // toolStripLabel5
             // 
@@ -204,14 +209,15 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton6
+            // tsbUpdate
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.tsbUpdate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbUpdate.Image = ((System.Drawing.Image)(resources.GetObject("tsbUpdate.Image")));
+            this.tsbUpdate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbUpdate.Name = "tsbUpdate";
+            this.tsbUpdate.Size = new System.Drawing.Size(23, 22);
+            this.tsbUpdate.Text = "toolStripButton6";
+            this.tsbUpdate.Click += new System.EventHandler(this.tsbUpdate_Click);
             // 
             // toolStripLabel6
             // 
@@ -224,14 +230,15 @@
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton7
+            // tsbDelate
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.tsbDelate.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbDelate.Image = ((System.Drawing.Image)(resources.GetObject("tsbDelate.Image")));
+            this.tsbDelate.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbDelate.Name = "tsbDelate";
+            this.tsbDelate.Size = new System.Drawing.Size(23, 22);
+            this.tsbDelate.Text = "toolStripButton7";
+            this.tsbDelate.Click += new System.EventHandler(this.tsbDelate_Click);
             // 
             // toolStripLabel7
             // 
@@ -244,14 +251,15 @@
             this.toolStripSeparator7.Name = "toolStripSeparator7";
             this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
-            // toolStripButton8
+            // tsbBack
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton8.Text = "toolStripButton8";
+            this.tsbBack.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbBack.Image = ((System.Drawing.Image)(resources.GetObject("tsbBack.Image")));
+            this.tsbBack.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbBack.Name = "tsbBack";
+            this.tsbBack.Size = new System.Drawing.Size(23, 22);
+            this.tsbBack.Text = "toolStripButton8";
+            this.tsbBack.Click += new System.EventHandler(this.tsbBack_Click);
             // 
             // toolStripLabel8
             // 
@@ -295,47 +303,47 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "罚款率";
             // 
-            // textBox1
+            // txtTypeName
             // 
-            this.textBox1.Location = new System.Drawing.Point(102, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtTypeName.Location = new System.Drawing.Point(102, 55);
+            this.txtTypeName.Name = "txtTypeName";
+            this.txtTypeName.Size = new System.Drawing.Size(125, 21);
+            this.txtTypeName.TabIndex = 5;
             // 
-            // textBox2
+            // txtCanContinueTimes
             // 
-            this.textBox2.Location = new System.Drawing.Point(102, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 21);
-            this.textBox2.TabIndex = 6;
+            this.txtCanContinueTimes.Location = new System.Drawing.Point(102, 93);
+            this.txtCanContinueTimes.Name = "txtCanContinueTimes";
+            this.txtCanContinueTimes.Size = new System.Drawing.Size(125, 21);
+            this.txtCanContinueTimes.TabIndex = 6;
             // 
-            // textBox3
+            // txtCanLendDay
             // 
-            this.textBox3.Location = new System.Drawing.Point(320, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 21);
-            this.textBox3.TabIndex = 7;
+            this.txtCanLendDay.Location = new System.Drawing.Point(320, 56);
+            this.txtCanLendDay.Name = "txtCanLendDay";
+            this.txtCanLendDay.Size = new System.Drawing.Size(125, 21);
+            this.txtCanLendDay.TabIndex = 7;
             // 
-            // textBox4
+            // txtPunishRate
             // 
-            this.textBox4.Location = new System.Drawing.Point(320, 94);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(125, 21);
-            this.textBox4.TabIndex = 8;
+            this.txtPunishRate.Location = new System.Drawing.Point(320, 94);
+            this.txtPunishRate.Name = "txtPunishRate";
+            this.txtPunishRate.Size = new System.Drawing.Size(125, 21);
+            this.txtPunishRate.TabIndex = 8;
             // 
-            // textBox5
+            // txtCanLendQty
             // 
-            this.textBox5.Location = new System.Drawing.Point(543, 55);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(125, 21);
-            this.textBox5.TabIndex = 9;
+            this.txtCanLendQty.Location = new System.Drawing.Point(543, 55);
+            this.txtCanLendQty.Name = "txtCanLendQty";
+            this.txtCanLendQty.Size = new System.Drawing.Size(125, 21);
+            this.txtCanLendQty.TabIndex = 9;
             // 
-            // textBox6
+            // txtDateValid
             // 
-            this.textBox6.Location = new System.Drawing.Point(543, 93);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(108, 21);
-            this.textBox6.TabIndex = 10;
+            this.txtDateValid.Location = new System.Drawing.Point(543, 93);
+            this.txtDateValid.Name = "txtDateValid";
+            this.txtDateValid.Size = new System.Drawing.Size(108, 21);
+            this.txtDateValid.TabIndex = 10;
             // 
             // label5
             // 
@@ -372,6 +380,7 @@
             this.dgvReaderType.RowTemplate.Height = 23;
             this.dgvReaderType.Size = new System.Drawing.Size(671, 280);
             this.dgvReaderType.TabIndex = 14;
+            this.dgvReaderType.SelectionChanged += new System.EventHandler(this.dgvReaderType_SelectionChanged);
             // 
             // frmReaderType
             // 
@@ -382,12 +391,12 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDateValid);
+            this.Controls.Add(this.txtCanLendQty);
+            this.Controls.Add(this.txtPunishRate);
+            this.Controls.Add(this.txtCanLendDay);
+            this.Controls.Add(this.txtCanContinueTimes);
+            this.Controls.Add(this.txtTypeName);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -421,24 +430,24 @@
         private System.Windows.Forms.ToolStripLabel toolStripLabel7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripLabel toolStripLabel8;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton tsbFirstRecord;
+        private System.Windows.Forms.ToolStripButton tsbNextRecord;
+        private System.Windows.Forms.ToolStripButton tsbLastRecord;
+        private System.Windows.Forms.ToolStripButton tsbFinalRecord;
+        private System.Windows.Forms.ToolStripButton tsbAdd;
+        private System.Windows.Forms.ToolStripButton tsbUpdate;
+        private System.Windows.Forms.ToolStripButton tsbDelate;
+        private System.Windows.Forms.ToolStripButton tsbBack;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtTypeName;
+        private System.Windows.Forms.TextBox txtCanContinueTimes;
+        private System.Windows.Forms.TextBox txtCanLendDay;
+        private System.Windows.Forms.TextBox txtPunishRate;
+        private System.Windows.Forms.TextBox txtCanLendQty;
+        private System.Windows.Forms.TextBox txtDateValid;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

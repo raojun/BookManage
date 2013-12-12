@@ -117,5 +117,13 @@ namespace BookManage.DAL
             string sql = "select * from ReaderType";
             return SqlHelper.GetDataTable(sql, null, "ReaderType");
         }
+
+        public static DataTable GetReaderType()
+        {
+            string sql;
+            sql = "select * from ReaderType";
+            
+            return SqlHelper.GetDataTable(sql, null, "ReaderType");
+        }
     }
 }

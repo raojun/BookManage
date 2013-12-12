@@ -15,13 +15,14 @@ namespace BookManage.DAL
         public static int Insert(Reader reader)
         {
             int rows = 0;
-            string sql = "insert into Reader(rdID,rdName,rdSex,rdType,rdPhone,rdEmail,rdDateReg,rdPhoto,rdStatus,rdBorrowQty,rdPwd,rdAdminRoles)"
-                             + " values (@rdID,@rdName,@rdSex,@rdType,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
+            string sql ="insert into Reader(rdID,rdName,rdSex,rdType,rdDept,rdPhone,rdEmail,rdDateReg,rdPhoto,rdStatus,rdBorrowQty,rdPwd,rdAdminRoles)"
+                             +" values (@rdID,@rdName,@rdSex,@rdType,@rdDept,@rdPhone,@rdEmail,@rdDateReg,@rdPhoto,@rdStatus,@rdBorrowQty,@rdPwd,@rdAdminRoles)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdID",reader.rdID),
                                            new SqlParameter("@rdName",reader.rdName),
                                            new SqlParameter("@rdSex",reader.rdSex),
                                            new SqlParameter("@rdType",reader.rdType),
+                                           new SqlParameter("@rdDept",reader.rdDept),
                                            new SqlParameter("@rdPhone",reader.rdPhone),
                                            new SqlParameter("@rdEmail",reader.rdEmail),
                                            new SqlParameter("@rdDateReg",reader.rdDateReg),
@@ -50,6 +51,7 @@ namespace BookManage.DAL
                 + "rdName=@rdName,"
                 + "rdSex=@rdSex,"
                 + "rdType=@rdType,"
+                + "rdDept=@rdDept,"
                 + "rdPhone=@rdPhone,"
                 + "rdEmail=@rdEmail,"
                 + "rdDateReg=@rdDateReg,"
@@ -64,6 +66,7 @@ namespace BookManage.DAL
                                            new SqlParameter("@rdName",reader.rdName),
                                            new SqlParameter("@rdSex",reader.rdSex),
                                            new SqlParameter("@rdType",reader.rdType),
+                                           new SqlParameter("@rdDept",reader.rdDept),
                                            new SqlParameter("@rdPhone",reader.rdPhone),
                                            new SqlParameter("@rdEmail",reader.rdEmail),
                                            new SqlParameter("@rdDateReg",reader.rdDateReg),
@@ -129,13 +132,9 @@ namespace BookManage.DAL
 
         public static DataTable GetReader(int rdType, string rdDept, string rdName)
         {
-            {
+            
                 string sql;
-                if (rdType <= 0 && rdDept == "" && rdName == "")
-                {
-                    sql = "select * from Reader where 0=1";
-                    return SqlHelper.GetDataTable(sql, null, "Reader");
-                }
+                
                 rdDept = (rdDept == "") ? ("%") : ("%" + rdDept + "%");
                 rdName = (rdName == "") ? ("%") : ("%" + rdName + "%");
                 if (rdType <= 0)
@@ -159,6 +158,6 @@ namespace BookManage.DAL
                     return SqlHelper.GetDataTable(sql, parameters, "Reader");
                 }
             }
-        }
+        
     }
 }
