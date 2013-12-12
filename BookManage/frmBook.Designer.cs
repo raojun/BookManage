@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBook));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnUpLoadCover = new System.Windows.Forms.Button();
+            this.pictureBox = new System.Windows.Forms.PictureBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
@@ -55,11 +60,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnBookAdd = new System.Windows.Forms.Button();
             this.btnBookCancel = new System.Windows.Forms.Button();
-            this.label13 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.btnUpLoadCover = new System.Windows.Forms.Button();
+            this.labAddInformation = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -101,19 +103,58 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
+            // btnUpLoadCover
+            // 
+            this.btnUpLoadCover.Location = new System.Drawing.Point(684, 358);
+            this.btnUpLoadCover.Name = "btnUpLoadCover";
+            this.btnUpLoadCover.Size = new System.Drawing.Size(75, 23);
+            this.btnUpLoadCover.TabIndex = 7;
+            this.btnUpLoadCover.Text = "上传封面";
+            this.btnUpLoadCover.UseVisualStyleBackColor = true;
+            this.btnUpLoadCover.Click += new System.EventHandler(this.btnUpLoadCover_Click);
+            // 
+            // pictureBox
+            // 
+            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
+            this.pictureBox.Location = new System.Drawing.Point(511, 47);
+            this.pictureBox.Name = "pictureBox";
+            this.pictureBox.Size = new System.Drawing.Size(248, 302);
+            this.pictureBox.TabIndex = 6;
+            this.pictureBox.TabStop = false;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(267, 47);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(232, 302);
+            this.richTextBox1.TabIndex = 5;
+            this.richTextBox1.Text = "";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(509, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(53, 12);
+            this.label14.TabIndex = 4;
+            this.label14.Text = "图书封面";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(270, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(53, 12);
+            this.label13.TabIndex = 4;
+            this.label13.Text = "内容简介";
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(82, 320);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(163, 21);
             this.dateTimePicker2.TabIndex = 3;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(83, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(162, 21);
-            this.dateTimePicker1.TabIndex = 3;
             // 
             // comboBox2
             // 
@@ -315,65 +356,39 @@
             this.btnBookCancel.UseVisualStyleBackColor = true;
             this.btnBookCancel.Click += new System.EventHandler(this.btnBookCancel_Click);
             // 
-            // label13
+            // labAddInformation
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(270, 24);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 12);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "内容简介";
+            this.labAddInformation.AutoSize = true;
+            this.labAddInformation.Location = new System.Drawing.Point(13, 416);
+            this.labAddInformation.Name = "labAddInformation";
+            this.labAddInformation.Size = new System.Drawing.Size(65, 12);
+            this.labAddInformation.TabIndex = 2;
+            this.labAddInformation.Text = "添加状态：";
             // 
-            // richTextBox1
+            // dateTimePicker1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(267, 47);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(232, 302);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(509, 26);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 12);
-            this.label14.TabIndex = 4;
-            this.label14.Text = "图书封面";
-            // 
-            // pictureBox
-            // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(511, 47);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(248, 302);
-            this.pictureBox.TabIndex = 6;
-            this.pictureBox.TabStop = false;
-            // 
-            // btnUpLoadCover
-            // 
-            this.btnUpLoadCover.Location = new System.Drawing.Point(684, 358);
-            this.btnUpLoadCover.Name = "btnUpLoadCover";
-            this.btnUpLoadCover.Size = new System.Drawing.Size(75, 23);
-            this.btnUpLoadCover.TabIndex = 7;
-            this.btnUpLoadCover.Text = "上传封面";
-            this.btnUpLoadCover.UseVisualStyleBackColor = true;
-            this.btnUpLoadCover.Click += new System.EventHandler(this.btnUpLoadCover_Click);
+            this.dateTimePicker1.Location = new System.Drawing.Point(83, 140);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(162, 21);
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // frmBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 444);
+            this.Controls.Add(this.labAddInformation);
             this.Controls.Add(this.btnBookCancel);
             this.Controls.Add(this.btnBookAdd);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmBook";
             this.Text = "新书入库";
+            this.Load += new System.EventHandler(this.frmBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -395,7 +410,6 @@
         private System.Windows.Forms.Button btnBookAdd;
         private System.Windows.Forms.Button btnBookCancel;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox8;
@@ -411,5 +425,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnUpLoadCover;
+        private System.Windows.Forms.Label labAddInformation;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

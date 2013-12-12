@@ -14,7 +14,7 @@ namespace BookManage.DAL
         {
             int rows = 0;
             string sql = "insert into Borrow(BorrowId,rdID,bkID,IdContinueTimes,IdDateOut,IdDateRetPlan,IdDateRetAct,IdOverDay,IdOverMoney,IdPunishMoney,IsHasReturn,OperatorLend,OperatorRet)"
-                             + "value (@BorrowId,@rdID,@bkID,@IdContinueTimes,@IdDateOut,@IdDateRetPlan,@IdDateRetAct,@IdOverDay,@IdOverMoney,@IdPunishMoney,@IsHasReturn,@OperatorLend,@OperatorRet)";
+                             + "values (@BorrowId,@rdID,@bkID,@IdContinueTimes,@IdDateOut,@IdDateRetPlan,@IdDateRetAct,@IdOverDay,@IdOverMoney,@IdPunishMoney,@IsHasReturn,@OperatorLend,@OperatorRet)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@BorrowId",borrow.BorrowId),
                                            new SqlParameter("@rdID",borrow.rdID),

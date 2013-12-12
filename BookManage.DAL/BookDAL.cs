@@ -8,13 +8,13 @@ using BookManage.Model;
 
 namespace BookManage.DAL
 {
-    class BookDAL//图书数据访问类
+    public class BookDAL//图书数据访问类
     {
         public static int Insert(Book book)
         {
             int rows = 0;
             string sql = "insert into Book(bkID,bkCode,bkName,bkAuthor,bkPress,bkdatePress,bkISBN,bkCatalog,bkLanguage,bkPages,bkPages,bkPrice,bkDateIn,bkBrief,bkCover,bkStatus)"
-                             + "value (@bkID,@bkCode,@bkName,@bkAuthor,@bkPress,@bkdatePress,@bkISBN,@bkCatalog,@bkLanguage,@bkPages,@bkPages,@bkPrice,@bkDateIn,@bkBrief,@bkCover,@bkStatus)";
+                             + "values (@bkID,@bkCode,@bkName,@bkAuthor,@bkPress,@bkdatePress,@bkISBN,@bkCatalog,@bkLanguage,@bkPages,@bkPages,@bkPrice,@bkDateIn,@bkBrief,@bkCover,@bkStatus)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@bkID",book.bkID),
                                            new SqlParameter("@bkCode",book.bkCode),

@@ -172,12 +172,14 @@ namespace BookManage
         {
             SetTextToReader();
             readerBLL.Insert(reader);
+            labinformation.Text = "状态：办证成功！";
         }
 
         private void btnUpdateReader_Click(object sender, EventArgs e)
         {
             SetTextToReader();
             readerBLL.Update(reader);
+            labinformation.Text = "状态：更改成功！";
         }
 
         private void btnCancelChange_Click(object sender, EventArgs e)
@@ -187,6 +189,7 @@ namespace BookManage
                 if (ctrl is TextBox)
                     ctrl.Text = " ";
             }
+            //清楚combobox的内容
             cmbSex.Text = "";
             cmbType.Text = "";
             cmbDept.Text = "";
@@ -251,6 +254,11 @@ namespace BookManage
                 return;
             reader = ReaderAdmin.GetReader((int)dgvReader["rdID", dgvReader.CurrentCell.RowIndex].Value);
             SetReaderToText();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            SetStatus(opStatus.inSelect);
         }
     }
 }

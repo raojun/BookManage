@@ -17,7 +17,7 @@ namespace BookManage.DAL
         {
             int rows = 0;
             string sql = "insert into ReadType(rdType,rdTypeName,CanLendQty,CanLendDay,CanContinueTimes,PunishRate,DateValid)"
-                             + "value (@rdType,@rdTypeName,@CanLendQty,@CanLendDay,@CanContinueTimes,@PunishRate,@DateValid)";
+                             + "values (@rdType,@rdTypeName,@CanLendQty,@CanLendDay,@CanContinueTimes,@PunishRate,@DateValid)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdType",readertype.rdType),
                                            new SqlParameter("@rdTypeName",readertype.rdTypeName),

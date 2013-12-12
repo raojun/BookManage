@@ -80,6 +80,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picboxPhoto = new System.Windows.Forms.PictureBox();
+            this.labinformation = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).BeginInit();
@@ -112,7 +114,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(53, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(56, 30);
             this.toolStripLabel1.Text = "读者类别";
             // 
             // cmbTypeForQry
@@ -123,7 +125,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(29, 30);
+            this.toolStripLabel2.Size = new System.Drawing.Size(32, 30);
             this.toolStripLabel2.Text = "单位";
             // 
             // cmbDeptForQry
@@ -134,7 +136,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(29, 30);
+            this.toolStripLabel3.Size = new System.Drawing.Size(32, 30);
             this.toolStripLabel3.Text = "姓名";
             // 
             // txtNameForQry
@@ -155,7 +157,7 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(29, 30);
+            this.toolStripLabel4.Size = new System.Drawing.Size(32, 30);
             this.toolStripLabel4.Text = "查找";
             // 
             // toolStripSeparator1
@@ -175,7 +177,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(35, 30);
+            this.toolStripLabel5.Size = new System.Drawing.Size(37, 30);
             this.toolStripLabel5.Text = "Excel";
             // 
             // groupBox1
@@ -190,14 +192,14 @@
             this.groupBox1.Controls.Add(this.dgvReader);
             this.groupBox1.Location = new System.Drawing.Point(13, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(589, 457);
+            this.groupBox1.Size = new System.Drawing.Size(589, 475);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询结果";
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(484, 409);
+            this.btnClose.Location = new System.Drawing.Point(486, 431);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 2;
@@ -207,7 +209,7 @@
             // 
             // btnCanceldoc
             // 
-            this.btnCanceldoc.Location = new System.Drawing.Point(349, 409);
+            this.btnCanceldoc.Location = new System.Drawing.Point(351, 431);
             this.btnCanceldoc.Name = "btnCanceldoc";
             this.btnCanceldoc.Size = new System.Drawing.Size(75, 23);
             this.btnCanceldoc.TabIndex = 2;
@@ -217,7 +219,7 @@
             // 
             // btnUnlossDoc
             // 
-            this.btnUnlossDoc.Location = new System.Drawing.Point(268, 409);
+            this.btnUnlossDoc.Location = new System.Drawing.Point(270, 431);
             this.btnUnlossDoc.Name = "btnUnlossDoc";
             this.btnUnlossDoc.Size = new System.Drawing.Size(75, 23);
             this.btnUnlossDoc.TabIndex = 2;
@@ -227,7 +229,7 @@
             // 
             // btnLossDoc
             // 
-            this.btnLossDoc.Location = new System.Drawing.Point(187, 409);
+            this.btnLossDoc.Location = new System.Drawing.Point(189, 431);
             this.btnLossDoc.Name = "btnLossDoc";
             this.btnLossDoc.Size = new System.Drawing.Size(75, 23);
             this.btnLossDoc.TabIndex = 2;
@@ -237,7 +239,7 @@
             // 
             // btnChangeDoc
             // 
-            this.btnChangeDoc.Location = new System.Drawing.Point(106, 409);
+            this.btnChangeDoc.Location = new System.Drawing.Point(108, 431);
             this.btnChangeDoc.Name = "btnChangeDoc";
             this.btnChangeDoc.Size = new System.Drawing.Size(75, 23);
             this.btnChangeDoc.TabIndex = 2;
@@ -247,7 +249,7 @@
             // 
             // btnNewDoc
             // 
-            this.btnNewDoc.Location = new System.Drawing.Point(25, 409);
+            this.btnNewDoc.Location = new System.Drawing.Point(27, 431);
             this.btnNewDoc.Name = "btnNewDoc";
             this.btnNewDoc.Size = new System.Drawing.Size(75, 23);
             this.btnNewDoc.TabIndex = 2;
@@ -258,7 +260,7 @@
             // lblBorrowInfo
             // 
             this.lblBorrowInfo.AutoSize = true;
-            this.lblBorrowInfo.Location = new System.Drawing.Point(6, 380);
+            this.lblBorrowInfo.Location = new System.Drawing.Point(6, 405);
             this.lblBorrowInfo.Name = "lblBorrowInfo";
             this.lblBorrowInfo.Size = new System.Drawing.Size(65, 12);
             this.lblBorrowInfo.TabIndex = 1;
@@ -272,13 +274,15 @@
             this.dgvReader.Name = "dgvReader";
             this.dgvReader.ReadOnly = true;
             this.dgvReader.RowTemplate.Height = 23;
-            this.dgvReader.Size = new System.Drawing.Size(559, 344);
+            this.dgvReader.Size = new System.Drawing.Size(559, 370);
             this.dgvReader.TabIndex = 0;
             this.dgvReader.SelectionChanged += new System.EventHandler(this.dgvReader_SelectionChanged);
             this.dgvReader.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReader_CellContentClick);
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnBack);
+            this.groupBox2.Controls.Add(this.labinformation);
             this.groupBox2.Controls.Add(this.dtpDateReg);
             this.groupBox2.Controls.Add(this.cmbDept);
             this.groupBox2.Controls.Add(this.cmbType);
@@ -310,7 +314,7 @@
             this.groupBox2.Controls.Add(this.picboxPhoto);
             this.groupBox2.Location = new System.Drawing.Point(621, 37);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(308, 457);
+            this.groupBox2.Size = new System.Drawing.Size(308, 475);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "读者信息";
@@ -438,7 +442,7 @@
             // 
             // btnAddReader
             // 
-            this.btnAddReader.Location = new System.Drawing.Point(15, 409);
+            this.btnAddReader.Location = new System.Drawing.Point(24, 409);
             this.btnAddReader.Name = "btnAddReader";
             this.btnAddReader.Size = new System.Drawing.Size(75, 23);
             this.btnAddReader.TabIndex = 2;
@@ -565,11 +569,31 @@
             this.picboxPhoto.TabIndex = 0;
             this.picboxPhoto.TabStop = false;
             // 
+            // labinformation
+            // 
+            this.labinformation.AutoSize = true;
+            this.labinformation.ForeColor = System.Drawing.Color.Red;
+            this.labinformation.Location = new System.Drawing.Point(22, 445);
+            this.labinformation.Name = "labinformation";
+            this.labinformation.Size = new System.Drawing.Size(41, 12);
+            this.labinformation.TabIndex = 7;
+            this.labinformation.Text = "状态：";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(216, 445);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "返回";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frmReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 506);
+            this.ClientSize = new System.Drawing.Size(943, 524);
             this.ControlBox = false;
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -642,5 +666,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ToolStripButton btuQuerry;
         private System.Windows.Forms.PictureBox picboxPhoto;
+        private System.Windows.Forms.Label labinformation;
+        private System.Windows.Forms.Button btnBack;
     }
 }
