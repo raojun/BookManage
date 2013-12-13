@@ -47,7 +47,7 @@ namespace BookManage.DAL
         public static int Update(Book book)
         {
             int rows = 0;
-            string sql = "update Book set"
+            string sql = "update Book set "
                 + "bkID=@bkID,"
                 + "bkCode=@bkCode,"
                 + "bkName=@bkName,"
@@ -63,7 +63,7 @@ namespace BookManage.DAL
                 + "bkNum=@bkNum,"
                 + "bkBrief=@bkBrief,"
                 + "bkCover=@bkCover,"
-                + "bkStatus=@bkStatus"
+                + "bkStatus=@bkStatus "
                 + "where bkID=@bkID";
             SqlParameter[] parameters ={
                                            new SqlParameter("@bkID",book.bkID),
@@ -97,7 +97,7 @@ namespace BookManage.DAL
         public static int Delete(Book book)
         {
             int rows = 0;
-            string sql = "deaete from Book where bkID=@bkID";
+            string sql = "delete from Book where bkID=@bkID";
             SqlParameter[] parameters = { new SqlParameter("@bkID", book.bkID) };
             try
             {

@@ -155,6 +155,12 @@ namespace BookManage
             }
         }
 
-      
+        private void dgvBook_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvBook.CurrentCell == null)
+                return;
+            book = BookAdmin.GetBook((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
+            SetBookToText();
+        }
     }
 }

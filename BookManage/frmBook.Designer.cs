@@ -371,6 +371,7 @@
             this.dgvBook.RowTemplate.Height = 23;
             this.dgvBook.Size = new System.Drawing.Size(480, 444);
             this.dgvBook.TabIndex = 0;
+            this.dgvBook.SelectionChanged += new System.EventHandler(this.dgvBook_SelectionChanged);
             // 
             // groupBox2
             // 

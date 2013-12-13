@@ -10,6 +10,11 @@ namespace BookManage.BLL
 {
     public class BookAdmin//图书管理类
     {
+        public static Book GetBook(int bkID)
+        {
+            return (BookDAL.GetObjectByID(bkID));
+        }
+
         public int Insert(Book book)
         {
             return (BookDAL.Insert(book));

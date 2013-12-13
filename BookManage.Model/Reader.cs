@@ -42,6 +42,7 @@ namespace BookManage.Model
             this.rdAdminRoles = rt.rdAdminRoles;
         }
 
+        #region 权限设置
         public bool IsLoginAdmin()
         {
             return (rdStatus!="挂失");
@@ -66,7 +67,9 @@ namespace BookManage.Model
         {
             return ((rdAdminRoles & 8) > 0);
         }
+        #endregion
 
+        #region 设置DataGridView 标题
         public static string ColumnTitle(string columnName)
         {
             string sTitle;
@@ -89,5 +92,6 @@ namespace BookManage.Model
             }
             return sTitle;
         }
+        #endregion
     }
 }

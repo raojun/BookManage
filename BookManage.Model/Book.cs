@@ -48,27 +48,33 @@ namespace BookManage.Model
             this.bkCover = rt.bkCover;
             this.bkStatus = rt.bkStatus;
         }
+
+        #region 设置DataGridView 标题
         public static string ColumnTitle(string columnName)
         {
             string sTitle;
             sTitle = columnName;
             switch (columnName)
             {
-                case "rdID": sTitle = "借书证号"; break;
-                case "rdName": sTitle = "姓    名"; break;
-                case "rdSex": sTitle = "性    别"; break;
-                case "rdType": sTitle = "读者类别"; break;
-                case "rdDept": sTitle = "单    位"; break;
-                case "rdPhone": sTitle = "电    话"; break;
-                case "rdEmail": sTitle = "邮    箱"; break;
-                case "rdDateReg": sTitle = "办证日期"; break;
-                case "rdPhoto": sTitle = "照    片"; break;
-                case "rdStatus": sTitle = "证件状态"; break;
-                case "rdBorrowQty": sTitle = "已 借 书"; break;
-                case "rdPwd": sTitle = "密    码"; break;
-                case "rdAdminRoles": sTitle = "管理员角色"; break;
+                case "bkID": sTitle = "图书序号"; break;
+                case "bkCode": sTitle = "图书编号"; break;
+                case "bkName": sTitle = "图书名称"; break;
+                case "bkAuthor": sTitle = "图书作者"; break;
+                case "bkPress": sTitle = "出版社名"; break;
+                case "bkdatePress": sTitle = "出版日期"; break;
+                case "bkISBN": sTitle = "标准ISBN"; break;
+                case "bkCatalog": sTitle = "名称分类"; break;
+                case "bkLanguage": sTitle = "所属语种"; break;
+                case "bkPages": sTitle = "图书页数"; break;
+                case "bkPrice": sTitle = "图书价格"; break;
+                case "bkDateIn": sTitle = "入馆日期"; break;
+                case "bkNum": sTitle = "图书本数"; break;
+                case "bkBrief": sTitle = "图书状态"; break;
+                case "bkCover": sTitle = "图书简介"; break;
+                case "bkStatus": sTitle = "图书封面"; break;
             }
             return sTitle;
         }
+        #endregion
     }
 }
