@@ -148,17 +148,23 @@ namespace BookManage
 
         private void btnLossDoc_Click(object sender, EventArgs e)
         {
-
+            SetTextToReader();
+            readerBLL.Loss(reader);
+            labinformation.Text = "状态：已挂失！";
         }
 
         private void btnUnlossDoc_Click(object sender, EventArgs e)
         {
-
+            SetTextToReader();
+            readerBLL.UnLoss(reader);
+            labinformation.Text = "状态：已解除挂失！";
         }
 
         private void btnCanceldoc_Click(object sender, EventArgs e)
         {
-
+            SetTextToReader();
+            readerBLL.Delete(reader);
+            labinformation.Text = "状态：已注销！";
         }
 
         private void btnClose_Click(object sender, EventArgs e)

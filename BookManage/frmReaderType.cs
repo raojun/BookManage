@@ -15,7 +15,7 @@ namespace BookManage
     public partial class frmReaderType : Form
     {
         private DataTable dt = null;//存放查询结果，并给DataGridView drvReader提供数据
-        private ReaderType readerType = new ReaderType();//存放读者信息，与读者信息控件组内的各控件进行数据交换，并与BLL、Model层进行数据交换
+        private ReaderType readertype = new ReaderType();//存放读者信息，与读者信息控件组内的各控件进行数据交换，并与BLL、Model层进行数据交换
         private ReaderTypeAdmin readerTypeBLL = new ReaderTypeAdmin();
 
         public frmReaderType()
@@ -34,25 +34,25 @@ namespace BookManage
             }
         }
         //读者信息组内控件与实体类对象之间的数据互换
-        private void SetReaderToText()
+        private void SetReaderTypeToText()
         {
-            
-            txtTypeName.Text = readerType.rdTypeName;
-            txtCanLendQty.Text = Convert.ToString(readerType.CanLendQty);
-            txtCanLendDay.Text = Convert.ToString(readerType.CanLendDay);
-            txtCanContinueTimes.Text = Convert.ToString(readerType.CanContinueTimes);
-            txtPunishRate.Text = Convert.ToString(readerType.PunishRate);
-            txtDateValid.Text = Convert.ToString(readerType.DateValid);
+            txtTypeName.Text = readertype.rdTypeName;
+            txtCanLendQty.Text = Convert.ToString(readertype.CanLendQty);
+            txtCanLendDay.Text = Convert.ToString(readertype.CanLendDay);
+            txtCanContinueTimes.Text = Convert.ToString(readertype.CanContinueTimes);
+            txtPunishRate.Text = Convert.ToString(readertype.PunishRate);
+            txtDateValid.Text = Convert.ToString(readertype.DateValid);
         }
 
-        private void SetTextToReader()
+        private void SetTextToReaderType()
         {
-            readerType.rdTypeName = txtTypeName.Text;
-            readerType.CanLendQty = Convert.ToInt32(txtCanLendQty);
-            readerType.CanLendDay = Convert.ToInt32(txtCanLendDay);
-            readerType.CanContinueTimes = Convert.ToInt32(txtCanContinueTimes);
-            readerType.PunishRate = Convert.ToInt32(txtPunishRate);
-            readerType.DateValid = Convert.ToInt32(txtDateValid);
+            readertype.rdType = Convert.ToInt32(txtType.Text);
+            readertype.rdTypeName = txtTypeName.Text;
+            readertype.CanLendQty = Convert.ToInt32(txtCanLendQty.Text);
+            readertype.CanLendDay = Convert.ToInt32(txtCanLendDay.Text);
+            readertype.CanContinueTimes = Convert.ToInt32(txtCanContinueTimes.Text);
+            readertype.PunishRate = Convert.ToSingle(txtPunishRate.Text);
+            readertype.DateValid = Convert.ToInt32(txtDateValid.Text);
         }
 
         private void tsbFirstRecord_Click(object sender, EventArgs e)
@@ -77,12 +77,15 @@ namespace BookManage
 
         private void tsbAdd_Click(object sender, EventArgs e)
         {
-
+            SetTextToReaderType();
+            readerTypeBLL.Insert(readertype);
+            ShowData();
         }
 
         private void tsbUpdate_Click(object sender, EventArgs e)
         {
-
+            SetTextToReaderType();
+            readerTypeBLL.Update(readertype);
         }
 
         private void tsbDelate_Click(object sender, EventArgs e)
@@ -92,15 +95,17 @@ namespace BookManage
 
         private void tsbBack_Click(object sender, EventArgs e)
         {
-
+            Form form = new frmMain();
+            form.Show();
+            this.Hide();
         }
 
         private void dgvReaderType_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvReaderType.CurrentCell == null)
                 return;
-            readerType= ReaderTypeAdmin.GetReaderType((int)dgvReaderType["rdType", dgvReaderType.CurrentCell.RowIndex].Value);
-            SetReaderToText();
+            readertype= ReaderTypeAdmin.GetReaderType((int)dgvReaderType["rdType", dgvReaderType.CurrentCell.RowIndex].Value);
+            SetReaderTypeToText();
         }
 
         //-----------------------------------------------------------------------

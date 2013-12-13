@@ -19,5 +19,15 @@ namespace BookManage.BLL
         {
             return (ReaderTypeDAL.GetReaderType());
         }
+
+        public int Insert(ReaderType readertype)
+        {
+            return (ReaderTypeDAL.Insert(readertype));
+        }
+
+        public int Update(ReaderType readertype)
+        {
+            return (ReaderTypeDAL.Update(readertype));
+        }
     }
 }

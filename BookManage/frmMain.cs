@@ -27,10 +27,14 @@ namespace BookManage
 
             //图书管理ToolStripMenuItem.Visible = true;//是否可见
             //图书管理ToolStripMenuItem.Avaiable =false;//是否活动
-            图书管理ToolStripMenuItem.Enabled = reader.IsBookAdmin();//是否能用
-            读者管理ToolStripMenuItem.Enabled = (reader.IsReaderAdmin() | reader.IsSystemAdmin());
-            借阅管理ToolStripMenuItem.Enabled = reader.IsBorrowAdmin();
-            权限管理ToolStripMenuItem.Enabled = reader.IsSystemAdmin();
+            
+           
+            图书管理ToolStripMenuItem.Enabled = (reader.IsBookAdmin()&&reader.IsLoginAdmin());//是否能用
+            读者管理ToolStripMenuItem.Enabled = ((reader.IsReaderAdmin() | reader.IsSystemAdmin())&&reader.IsLoginAdmin());
+            借阅管理ToolStripMenuItem.Enabled = (reader.IsBorrowAdmin()&&reader.IsLoginAdmin());
+            用户管理ToolStripMenuItem.Enabled = (reader.IsLoginAdmin());
+            //授权管理ToolStripMenuItem.Enabled = (reader.IsLoginAdmin());
+            授权管理ToolStripMenuItem.Enabled = (reader.IsSystemAdmin() && reader.IsLoginAdmin());
 
             tssUser.Text = "登录用户：" + reader.rdName + "|" + reader.rdDept;
         }

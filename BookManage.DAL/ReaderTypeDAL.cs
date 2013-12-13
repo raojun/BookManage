@@ -16,7 +16,7 @@ namespace BookManage.DAL
         public static int Insert(ReaderType readertype)
         {
             int rows = 0;
-            string sql = "insert into ReadType(rdType,rdTypeName,CanLendQty,CanLendDay,CanContinueTimes,PunishRate,DateValid)"
+            string sql = "insert into ReaderType(rdType,rdTypeName,CanLendQty,CanLendDay,CanContinueTimes,PunishRate,DateValid)"
                              + "values (@rdType,@rdTypeName,@CanLendQty,@CanLendDay,@CanContinueTimes,@PunishRate,@DateValid)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdType",readertype.rdType),
@@ -58,6 +58,7 @@ namespace BookManage.DAL
         {
             int rows = 0;
             string sql = "update ReaderType set"
+                + "rdType=@rdType,"
                 + "rdTypeName=@rdTypeName,"
                 + "CanLendQty=@CanLendQty,"
                 + "CanLendDay=@CanLendDay,"
@@ -66,13 +67,13 @@ namespace BookManage.DAL
                 + "DateValid=@DateValid"
                 + "where rdType=@rdType";
             SqlParameter[] parameters ={
+                                           new SqlParameter("@rdType",readertype.rdType),
                                            new SqlParameter("@rdTypeName",readertype.rdTypeName),
                                            new SqlParameter("@CanLendQty",readertype.CanLendQty),
                                            new SqlParameter("@CanLendDay",readertype.CanLendDay),
                                            new SqlParameter("@CancontinueTimes",readertype.CanContinueTimes),
                                            new SqlParameter("@PunishRate",readertype.PunishRate),
-                                           new SqlParameter("@DateValid",readertype.DateValid),
-                                           new SqlParameter("@rdType",readertype.rdType)
+                                           new SqlParameter("@DateValid",readertype.DateValid)             
                                       };
             try
             {

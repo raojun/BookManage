@@ -67,6 +67,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvReaderType = new System.Windows.Forms.DataGridView();
+            this.txtType = new System.Windows.Forms.TextBox();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReaderType)).BeginInit();
             this.SuspendLayout();
@@ -382,11 +383,19 @@
             this.dgvReaderType.TabIndex = 14;
             this.dgvReaderType.SelectionChanged += new System.EventHandler(this.dgvReaderType_SelectionChanged);
             // 
+            // txtType
+            // 
+            this.txtType.Location = new System.Drawing.Point(102, 29);
+            this.txtType.Name = "txtType";
+            this.txtType.Size = new System.Drawing.Size(100, 21);
+            this.txtType.TabIndex = 15;
+            // 
             // frmReaderType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(697, 414);
+            this.Controls.Add(this.txtType);
             this.Controls.Add(this.dgvReaderType);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -452,5 +461,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dgvReaderType;
+        private System.Windows.Forms.TextBox txtType;
     }
 }

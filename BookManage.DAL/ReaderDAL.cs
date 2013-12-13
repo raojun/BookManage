@@ -87,10 +87,10 @@ namespace BookManage.DAL
             return rows;
         }
 
-        public static int Delete(Reader reader)
+        public static int Delete(Reader reader)//删除操作
         {
             int rows = 0;
-            string sql = "deaete from Reader where rdID=@rdID";
+            string sql = "delete from Reader where rdID=@rdID";
             SqlParameter[] parameters = { new SqlParameter("@rdID", reader.rdID) };
             try
             {
@@ -103,6 +103,37 @@ namespace BookManage.DAL
             return rows;
         }
 
+        public static int Loss(Reader reader)//挂失操作
+        {
+            int rows = 0;
+            string sql = "update Reader set rdStatus='挂失' where rdID=@rdID";
+            SqlParameter[] parameters = { new SqlParameter("@rdID", reader.rdID) };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
+
+        public static int UnLoss(Reader reader)//解除
+        {
+            int rows = 0;
+            string sql = "update Reader set rdStatus='有效' where rdID=@rdID";
+            SqlParameter[] parameters = { new SqlParameter("@rdID", reader.rdID) };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
         ///
         /// 由读者类型ID(rdType)得到该读者类型信息，返回DataRow
         ///

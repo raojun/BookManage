@@ -33,5 +33,17 @@ namespace BookManage.BLL
         {
             return (ReaderDAL.Update(reader));
         }
+        public int Delete(Reader reader)
+        {
+            return (ReaderDAL.Delete(reader));
+        }
+        public int Loss(Reader reader)
+        {
+            return (ReaderDAL.Loss(reader));
+        }
+        public int UnLoss(Reader reader)
+        {
+            return (ReaderDAL.UnLoss(reader));
+        }
     }
 }

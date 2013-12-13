@@ -42,6 +42,14 @@ namespace BookManage.Model
             this.rdAdminRoles = rt.rdAdminRoles;
         }
 
+        public bool IsLoginAdmin()
+        {
+            return (rdStatus!="挂失");
+        }
+        public bool IsUserAdmin()
+        {
+            return (rdAdminRoles != 0);
+        }
         public bool IsReaderAdmin()
         {
             return ((rdAdminRoles & 1) > 0);
