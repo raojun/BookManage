@@ -15,11 +15,23 @@ namespace BookManage
 {
     public partial class frmBook : Form
     {
+        private DataTable dt = null;//存放查询结果，并给DataGridView drvReader提供数据
         private Book book = new Book();
         private BookAdmin bookBLL = new BookAdmin();
         public frmBook()
         {
             InitializeComponent();
+            dt = bookBLL.GetBook();
+            ShowData();
+        }
+
+        private void ShowData()
+        {
+            dgvBook.DataSource = dt;
+            foreach (DataColumn dc in dt.Columns)
+            {
+                dgvBook.Columns[dc.ColumnName].HeaderText = Book.ColumnTitle(dc.ColumnName);
+            }
         }
 
         #region 类型转换
@@ -46,6 +58,35 @@ namespace BookManage
                 book.bkCover = ms.GetBuffer();
             }
             book.bkStatus = cmbbkStatus.Text;
+        }
+
+        private void SetBookToText()
+        {
+            txtbkID.Text = Convert.ToString(book.bkID);
+            txtbkCode.Text = book.bkCode;
+            txtbkName.Text = book.bkName;
+            txtbkAuthor.Text = book.bkAuthor;
+            txtbkPress.Text=book.bkPress;;
+            dtpbkdatePress.Text = Convert.ToString(book.bkdatePress);
+            txtbkISBN.Text = book.bkISBN;
+            cmbbkCatalog.Text=book.bkCatalog;
+            cmbbkLanguage.Text = book.bkLanguage;
+            txtbkPages.Text= Convert.ToString(book.bkPages);
+            txtbkPrice.Text= Convert.ToString(book.bkPrice);
+            dtpbkDateIn.Text = Convert.ToString(book.bkDateIn);
+            txtbkNum.Text = Convert.ToString(book.bkNum);
+            rtbbkBrief.Text =book.bkBrief ;
+            if (book.bkCover == null)
+            {
+                ptbkCover.Image = null;
+            }
+            else
+            {
+                MemoryStream ms = new MemoryStream(book.bkCover);
+                Image imgPhoto = Bitmap.FromStream(ms, true);
+                ptbkCover.Image = imgPhoto;
+            }
+            cmbbkStatus.Text = book.bkStatus;
         }
 
         #endregion
@@ -114,5 +155,6 @@ namespace BookManage
             }
         }
 
+      
     }
 }

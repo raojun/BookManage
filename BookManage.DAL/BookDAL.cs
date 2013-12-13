@@ -136,5 +136,12 @@ namespace BookManage.DAL
             DataRow dr = GetDRByID(bkID);
             return SqlHelper.DataRowToT<Book>(dr);
         }
+
+        public static DataTable GetBook()
+        {
+            string sql;
+            sql = "select * from Book";
+            return SqlHelper.GetDataTable(sql, null, "Book");
+        }
     }
 }

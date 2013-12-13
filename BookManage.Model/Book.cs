@@ -48,5 +48,27 @@ namespace BookManage.Model
             this.bkCover = rt.bkCover;
             this.bkStatus = rt.bkStatus;
         }
+        public static string ColumnTitle(string columnName)
+        {
+            string sTitle;
+            sTitle = columnName;
+            switch (columnName)
+            {
+                case "rdID": sTitle = "借书证号"; break;
+                case "rdName": sTitle = "姓    名"; break;
+                case "rdSex": sTitle = "性    别"; break;
+                case "rdType": sTitle = "读者类别"; break;
+                case "rdDept": sTitle = "单    位"; break;
+                case "rdPhone": sTitle = "电    话"; break;
+                case "rdEmail": sTitle = "邮    箱"; break;
+                case "rdDateReg": sTitle = "办证日期"; break;
+                case "rdPhoto": sTitle = "照    片"; break;
+                case "rdStatus": sTitle = "证件状态"; break;
+                case "rdBorrowQty": sTitle = "已 借 书"; break;
+                case "rdPwd": sTitle = "密    码"; break;
+                case "rdAdminRoles": sTitle = "管理员角色"; break;
+            }
+            return sTitle;
+        }
     }
 }

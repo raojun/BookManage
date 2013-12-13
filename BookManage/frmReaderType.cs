@@ -41,8 +41,8 @@ namespace BookManage
         {
             txtrdType.Text = Convert.ToString(readertype.rdType);
             txtTypeName.Text = readertype.rdTypeName;
-            txtCanLendQty.Text = Convert.ToString(readertype.CanLendQty);
-            txtCanLendDay.Text = Convert.ToString(readertype.CanLendDay);
+            txtCanLendDay.Text = Convert.ToString(readertype.CanLendQty);
+            txtCanLendQty.Text = Convert.ToString(readertype.CanLendDay);
             txtCanContinueTimes.Text = Convert.ToString(readertype.CanContinueTimes);
             txtPunishRate.Text = Convert.ToString(readertype.PunishRate);
             txtDateValid.Text = Convert.ToString(readertype.DateValid);
@@ -52,8 +52,8 @@ namespace BookManage
         {
             readertype.rdType = Convert.ToInt32(txtrdType.Text);
             readertype.rdTypeName = txtTypeName.Text;
-            readertype.CanLendQty = Convert.ToInt32(txtCanLendQty.Text);
-            readertype.CanLendDay = Convert.ToInt32(txtCanLendDay.Text);
+            readertype.CanLendQty = Convert.ToInt32(txtCanLendDay.Text);
+            readertype.CanLendDay = Convert.ToInt32(txtCanLendQty.Text);
             readertype.CanContinueTimes = Convert.ToInt32(txtCanContinueTimes.Text);
             readertype.PunishRate = Convert.ToSingle(txtPunishRate.Text);
             readertype.DateValid = Convert.ToInt32(txtDateValid.Text);
@@ -84,6 +84,8 @@ namespace BookManage
         {
             SetTextToReaderType();
             readerTypeBLL.Insert(readertype);
+            dt = readerTypeBLL.GetReaderType();
+            ShowData();
             labImformation.Text=("状态：添加成功！");
         }
 
@@ -91,6 +93,8 @@ namespace BookManage
         {
             SetTextToReaderType();
             readerTypeBLL.Update(readertype);
+            dt = readerTypeBLL.GetReaderType();
+            ShowData();
             labImformation.Text = ("状态：修改成功！");
         }
 

@@ -59,9 +59,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtTypeName = new System.Windows.Forms.TextBox();
             this.txtCanContinueTimes = new System.Windows.Forms.TextBox();
-            this.txtCanLendDay = new System.Windows.Forms.TextBox();
-            this.txtPunishRate = new System.Windows.Forms.TextBox();
             this.txtCanLendQty = new System.Windows.Forms.TextBox();
+            this.txtPunishRate = new System.Windows.Forms.TextBox();
+            this.txtCanLendDay = new System.Windows.Forms.TextBox();
             this.txtDateValid = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -320,12 +320,12 @@
             this.txtCanContinueTimes.Size = new System.Drawing.Size(125, 21);
             this.txtCanContinueTimes.TabIndex = 6;
             // 
-            // txtCanLendDay
+            // txtCanLendQty
             // 
-            this.txtCanLendDay.Location = new System.Drawing.Point(320, 47);
-            this.txtCanLendDay.Name = "txtCanLendDay";
-            this.txtCanLendDay.Size = new System.Drawing.Size(125, 21);
-            this.txtCanLendDay.TabIndex = 7;
+            this.txtCanLendQty.Location = new System.Drawing.Point(320, 47);
+            this.txtCanLendQty.Name = "txtCanLendQty";
+            this.txtCanLendQty.Size = new System.Drawing.Size(125, 21);
+            this.txtCanLendQty.TabIndex = 7;
             // 
             // txtPunishRate
             // 
@@ -334,12 +334,12 @@
             this.txtPunishRate.Size = new System.Drawing.Size(125, 21);
             this.txtPunishRate.TabIndex = 8;
             // 
-            // txtCanLendQty
+            // txtCanLendDay
             // 
-            this.txtCanLendQty.Location = new System.Drawing.Point(543, 46);
-            this.txtCanLendQty.Name = "txtCanLendQty";
-            this.txtCanLendQty.Size = new System.Drawing.Size(125, 21);
-            this.txtCanLendQty.TabIndex = 9;
+            this.txtCanLendDay.Location = new System.Drawing.Point(543, 46);
+            this.txtCanLendDay.Name = "txtCanLendDay";
+            this.txtCanLendDay.Size = new System.Drawing.Size(125, 21);
+            this.txtCanLendDay.TabIndex = 9;
             // 
             // txtDateValid
             // 
@@ -424,9 +424,9 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtDateValid);
-            this.Controls.Add(this.txtCanLendQty);
-            this.Controls.Add(this.txtPunishRate);
             this.Controls.Add(this.txtCanLendDay);
+            this.Controls.Add(this.txtPunishRate);
+            this.Controls.Add(this.txtCanLendQty);
             this.Controls.Add(this.txtCanContinueTimes);
             this.Controls.Add(this.txtTypeName);
             this.Controls.Add(this.label4);
@@ -476,9 +476,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTypeName;
         private System.Windows.Forms.TextBox txtCanContinueTimes;
-        private System.Windows.Forms.TextBox txtCanLendDay;
-        private System.Windows.Forms.TextBox txtPunishRate;
         private System.Windows.Forms.TextBox txtCanLendQty;
+        private System.Windows.Forms.TextBox txtPunishRate;
+        private System.Windows.Forms.TextBox txtCanLendDay;
         private System.Windows.Forms.TextBox txtDateValid;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

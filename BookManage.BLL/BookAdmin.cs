@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BookManage.DAL;
+using System.Data;
 using BookManage.Model;
+using BookManage.DAL;
 
 namespace BookManage.BLL
 {
@@ -12,6 +13,10 @@ namespace BookManage.BLL
         public int Insert(Book book)
         {
             return (BookDAL.Insert(book));
+        }
+        public DataTable GetBook()
+        {
+            return (BookDAL.GetBook());
         }
     }
 }
