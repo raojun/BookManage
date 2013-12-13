@@ -22,6 +22,7 @@ namespace BookManage.Model
         public int bkPages { get; set; }
         public float bkPrice { get; set; }
         public DateTime bkDateIn { get; set; }
+        public int bkNum { get; set; }
         public string bkBrief { get; set; }
         public Byte[] bkCover { get; set; }
         public string bkStatus { get; set; }
@@ -42,6 +43,7 @@ namespace BookManage.Model
             this.bkPages = rt.bkPages;
             this.bkPrice = rt.bkPrice;
             this.bkDateIn = rt.bkDateIn;
+            this.bkNum = rt.bkNum;
             this.bkBrief = rt.bkBrief;
             this.bkCover = rt.bkCover;
             this.bkStatus = rt.bkStatus;

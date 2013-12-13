@@ -13,8 +13,8 @@ namespace BookManage.DAL
         public static int Insert(Book book)
         {
             int rows = 0;
-            string sql = "insert into Book(bkID,bkCode,bkName,bkAuthor,bkPress,bkdatePress,bkISBN,bkCatalog,bkLanguage,bkPages,bkPages,bkPrice,bkDateIn,bkBrief,bkCover,bkStatus)"
-                             + "values (@bkID,@bkCode,@bkName,@bkAuthor,@bkPress,@bkdatePress,@bkISBN,@bkCatalog,@bkLanguage,@bkPages,@bkPages,@bkPrice,@bkDateIn,@bkBrief,@bkCover,@bkStatus)";
+            string sql = "insert into Book(bkID,bkCode,bkName,bkAuthor,bkPress,bkdatePress,bkISBN,bkCatalog,bkLanguage,bkPages,bkPrice,bkDateIn,bkNum,bkBrief,bkCover,bkStatus)"
+                             + "values (@bkID,@bkCode,@bkName,@bkAuthor,@bkPress,@bkdatePress,@bkISBN,@bkCatalog,@bkLanguage,@bkPages,@bkPrice,@bkDateIn,@bkNum,@bkBrief,@bkCover,@bkStatus)";
             SqlParameter[] parameters ={
                                            new SqlParameter("@bkID",book.bkID),
                                            new SqlParameter("@bkCode",book.bkCode),
@@ -28,6 +28,7 @@ namespace BookManage.DAL
                                            new SqlParameter("@bkPages",book.bkPages),
                                            new SqlParameter("@bkPrice",book.bkPrice),
                                            new SqlParameter("@bkDateIn",book.bkDateIn),
+                                           new SqlParameter("@bkNum",book.bkNum),
                                            new SqlParameter("@bkBrief",book.bkBrief),
                                            new SqlParameter("@bkCover",book.bkCover),
                                            new SqlParameter("@bkStatus",book.bkStatus)
@@ -59,6 +60,7 @@ namespace BookManage.DAL
                 + "bkPages=@bkPages,"
                 + "bkPrice=@bkPrice,"
                 + "bkDateIn=@bkDateIn,"
+                + "bkNum=@bkNum,"
                 + "bkBrief=@bkBrief,"
                 + "bkCover=@bkCover,"
                 + "bkStatus=@bkStatus"
@@ -76,6 +78,7 @@ namespace BookManage.DAL
                                            new SqlParameter("@bkPages",book.bkPages),
                                            new SqlParameter("@bkPrice",book.bkPrice),
                                            new SqlParameter("@bkDateIn",book.bkDateIn),
+                                           new SqlParameter("@bkNum",book.bkNum),
                                            new SqlParameter("@bkBrief",book.bkBrief),
                                            new SqlParameter("@bkCover",book.bkCover),
                                            new SqlParameter("@bkStatus",book.bkStatus)

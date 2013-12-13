@@ -51,6 +51,8 @@
             this.lblBorrowInfo = new System.Windows.Forms.Label();
             this.dgvReader = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.labinformation = new System.Windows.Forms.Label();
             this.dtpDateReg = new System.Windows.Forms.DateTimePicker();
             this.cmbDept = new System.Windows.Forms.ComboBox();
             this.cmbType = new System.Windows.Forms.ComboBox();
@@ -80,8 +82,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picboxPhoto = new System.Windows.Forms.PictureBox();
-            this.labinformation = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).BeginInit();
@@ -318,6 +318,26 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "读者信息";
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(216, 445);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 8;
+            this.btnBack.Text = "返回";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // labinformation
+            // 
+            this.labinformation.AutoSize = true;
+            this.labinformation.ForeColor = System.Drawing.Color.Red;
+            this.labinformation.Location = new System.Drawing.Point(22, 445);
+            this.labinformation.Name = "labinformation";
+            this.labinformation.Size = new System.Drawing.Size(41, 12);
+            this.labinformation.TabIndex = 7;
+            this.labinformation.Text = "状态：";
             // 
             // dtpDateReg
             // 
@@ -568,26 +588,6 @@
             this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxPhoto.TabIndex = 0;
             this.picboxPhoto.TabStop = false;
-            // 
-            // labinformation
-            // 
-            this.labinformation.AutoSize = true;
-            this.labinformation.ForeColor = System.Drawing.Color.Red;
-            this.labinformation.Location = new System.Drawing.Point(22, 445);
-            this.labinformation.Name = "labinformation";
-            this.labinformation.Size = new System.Drawing.Size(41, 12);
-            this.labinformation.TabIndex = 7;
-            this.labinformation.Text = "状态：";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(216, 445);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
-            this.btnBack.TabIndex = 8;
-            this.btnBack.Text = "返回";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmReader
             // 

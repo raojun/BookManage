@@ -31,21 +31,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBook));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnUpLoadCover = new System.Windows.Forms.Button();
-            this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.ptbkCover = new System.Windows.Forms.PictureBox();
+            this.rtbbkBrief = new System.Windows.Forms.RichTextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpbkDateIn = new System.Windows.Forms.DateTimePicker();
+            this.dtpbkdatePress = new System.Windows.Forms.DateTimePicker();
+            this.cmbbkLanguage = new System.Windows.Forms.ComboBox();
+            this.cmbbkCatalog = new System.Windows.Forms.ComboBox();
+            this.txtbkNum = new System.Windows.Forms.TextBox();
+            this.txtbkPrice = new System.Windows.Forms.TextBox();
+            this.txtbkPages = new System.Windows.Forms.TextBox();
+            this.txtbkISBN = new System.Windows.Forms.TextBox();
+            this.txtbkPress = new System.Windows.Forms.TextBox();
+            this.txtbkAuthor = new System.Windows.Forms.TextBox();
+            this.txtbkName = new System.Windows.Forms.TextBox();
+            this.txtbkCode = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,30 +62,38 @@
             this.btnBookAdd = new System.Windows.Forms.Button();
             this.btnBookCancel = new System.Windows.Forms.Button();
             this.labAddInformation = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtbkID = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.cmbbkStatus = new System.Windows.Forms.ComboBox();
+            this.btnBack = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbkCover)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cmbbkStatus);
+            this.groupBox1.Controls.Add(this.label16);
+            this.groupBox1.Controls.Add(this.txtbkID);
+            this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.btnUpLoadCover);
-            this.groupBox1.Controls.Add(this.pictureBox);
-            this.groupBox1.Controls.Add(this.richTextBox1);
+            this.groupBox1.Controls.Add(this.ptbkCover);
+            this.groupBox1.Controls.Add(this.rtbbkBrief);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.textBox8);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.dtpbkDateIn);
+            this.groupBox1.Controls.Add(this.dtpbkdatePress);
+            this.groupBox1.Controls.Add(this.cmbbkLanguage);
+            this.groupBox1.Controls.Add(this.cmbbkCatalog);
+            this.groupBox1.Controls.Add(this.txtbkNum);
+            this.groupBox1.Controls.Add(this.txtbkPrice);
+            this.groupBox1.Controls.Add(this.txtbkPages);
+            this.groupBox1.Controls.Add(this.txtbkISBN);
+            this.groupBox1.Controls.Add(this.txtbkPress);
+            this.groupBox1.Controls.Add(this.txtbkAuthor);
+            this.groupBox1.Controls.Add(this.txtbkName);
+            this.groupBox1.Controls.Add(this.txtbkCode);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
@@ -99,13 +108,13 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(776, 387);
+            this.groupBox1.Size = new System.Drawing.Size(776, 420);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnUpLoadCover
             // 
-            this.btnUpLoadCover.Location = new System.Drawing.Point(684, 358);
+            this.btnUpLoadCover.Location = new System.Drawing.Point(684, 387);
             this.btnUpLoadCover.Name = "btnUpLoadCover";
             this.btnUpLoadCover.Size = new System.Drawing.Size(75, 23);
             this.btnUpLoadCover.TabIndex = 7;
@@ -113,23 +122,23 @@
             this.btnUpLoadCover.UseVisualStyleBackColor = true;
             this.btnUpLoadCover.Click += new System.EventHandler(this.btnUpLoadCover_Click);
             // 
-            // pictureBox
+            // ptbkCover
             // 
-            this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox.Image")));
-            this.pictureBox.Location = new System.Drawing.Point(511, 47);
-            this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(248, 302);
-            this.pictureBox.TabIndex = 6;
-            this.pictureBox.TabStop = false;
+            this.ptbkCover.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ptbkCover.Image = ((System.Drawing.Image)(resources.GetObject("ptbkCover.Image")));
+            this.ptbkCover.Location = new System.Drawing.Point(511, 47);
+            this.ptbkCover.Name = "ptbkCover";
+            this.ptbkCover.Size = new System.Drawing.Size(248, 325);
+            this.ptbkCover.TabIndex = 6;
+            this.ptbkCover.TabStop = false;
             // 
-            // richTextBox1
+            // rtbbkBrief
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(267, 47);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(232, 302);
-            this.richTextBox1.TabIndex = 5;
-            this.richTextBox1.Text = "";
+            this.rtbbkBrief.Location = new System.Drawing.Point(267, 47);
+            this.rtbbkBrief.Name = "rtbbkBrief";
+            this.rtbbkBrief.Size = new System.Drawing.Size(232, 325);
+            this.rtbbkBrief.TabIndex = 5;
+            this.rtbbkBrief.Text = "";
             // 
             // label14
             // 
@@ -149,84 +158,91 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "内容简介";
             // 
-            // dateTimePicker2
+            // dtpbkDateIn
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(82, 320);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(163, 21);
-            this.dateTimePicker2.TabIndex = 3;
+            this.dtpbkDateIn.Location = new System.Drawing.Point(82, 320);
+            this.dtpbkDateIn.Name = "dtpbkDateIn";
+            this.dtpbkDateIn.Size = new System.Drawing.Size(163, 21);
+            this.dtpbkDateIn.TabIndex = 3;
             // 
-            // comboBox2
+            // dtpbkdatePress
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(83, 230);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(162, 20);
-            this.comboBox2.TabIndex = 2;
+            this.dtpbkdatePress.Location = new System.Drawing.Point(83, 140);
+            this.dtpbkdatePress.Name = "dtpbkdatePress";
+            this.dtpbkdatePress.Size = new System.Drawing.Size(162, 21);
+            this.dtpbkdatePress.TabIndex = 3;
             // 
-            // comboBox1
+            // cmbbkLanguage
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(83, 201);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(162, 20);
-            this.comboBox1.TabIndex = 2;
+            this.cmbbkLanguage.FormattingEnabled = true;
+            this.cmbbkLanguage.Location = new System.Drawing.Point(83, 230);
+            this.cmbbkLanguage.Name = "cmbbkLanguage";
+            this.cmbbkLanguage.Size = new System.Drawing.Size(162, 20);
+            this.cmbbkLanguage.TabIndex = 2;
             // 
-            // textBox8
+            // cmbbkCatalog
             // 
-            this.textBox8.Location = new System.Drawing.Point(82, 351);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(163, 21);
-            this.textBox8.TabIndex = 1;
+            this.cmbbkCatalog.FormattingEnabled = true;
+            this.cmbbkCatalog.Location = new System.Drawing.Point(83, 201);
+            this.cmbbkCatalog.Name = "cmbbkCatalog";
+            this.cmbbkCatalog.Size = new System.Drawing.Size(162, 20);
+            this.cmbbkCatalog.TabIndex = 2;
             // 
-            // textBox7
+            // txtbkNum
             // 
-            this.textBox7.Location = new System.Drawing.Point(82, 290);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(163, 21);
-            this.textBox7.TabIndex = 1;
+            this.txtbkNum.Location = new System.Drawing.Point(82, 351);
+            this.txtbkNum.Name = "txtbkNum";
+            this.txtbkNum.Size = new System.Drawing.Size(163, 21);
+            this.txtbkNum.TabIndex = 1;
             // 
-            // textBox6
+            // txtbkPrice
             // 
-            this.textBox6.Location = new System.Drawing.Point(82, 260);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(163, 21);
-            this.textBox6.TabIndex = 1;
+            this.txtbkPrice.Location = new System.Drawing.Point(82, 290);
+            this.txtbkPrice.Name = "txtbkPrice";
+            this.txtbkPrice.Size = new System.Drawing.Size(163, 21);
+            this.txtbkPrice.TabIndex = 1;
             // 
-            // textBox5
+            // txtbkPages
             // 
-            this.textBox5.Location = new System.Drawing.Point(82, 170);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(163, 21);
-            this.textBox5.TabIndex = 1;
+            this.txtbkPages.Location = new System.Drawing.Point(82, 260);
+            this.txtbkPages.Name = "txtbkPages";
+            this.txtbkPages.Size = new System.Drawing.Size(163, 21);
+            this.txtbkPages.TabIndex = 1;
             // 
-            // textBox4
+            // txtbkISBN
             // 
-            this.textBox4.Location = new System.Drawing.Point(82, 109);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(163, 21);
-            this.textBox4.TabIndex = 1;
+            this.txtbkISBN.Location = new System.Drawing.Point(82, 170);
+            this.txtbkISBN.Name = "txtbkISBN";
+            this.txtbkISBN.Size = new System.Drawing.Size(163, 21);
+            this.txtbkISBN.TabIndex = 1;
             // 
-            // textBox3
+            // txtbkPress
             // 
-            this.textBox3.Location = new System.Drawing.Point(82, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(163, 21);
-            this.textBox3.TabIndex = 1;
+            this.txtbkPress.Location = new System.Drawing.Point(82, 109);
+            this.txtbkPress.Name = "txtbkPress";
+            this.txtbkPress.Size = new System.Drawing.Size(163, 21);
+            this.txtbkPress.TabIndex = 1;
             // 
-            // textBox2
+            // txtbkAuthor
             // 
-            this.textBox2.Location = new System.Drawing.Point(82, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(163, 21);
-            this.textBox2.TabIndex = 1;
+            this.txtbkAuthor.Location = new System.Drawing.Point(82, 79);
+            this.txtbkAuthor.Name = "txtbkAuthor";
+            this.txtbkAuthor.Size = new System.Drawing.Size(163, 21);
+            this.txtbkAuthor.TabIndex = 1;
             // 
-            // textBox1
+            // txtbkName
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 21);
-            this.textBox1.TabIndex = 1;
+            this.txtbkName.Location = new System.Drawing.Point(82, 50);
+            this.txtbkName.Name = "txtbkName";
+            this.txtbkName.Size = new System.Drawing.Size(163, 21);
+            this.txtbkName.TabIndex = 1;
+            // 
+            // txtbkCode
+            // 
+            this.txtbkCode.Location = new System.Drawing.Point(83, 22);
+            this.txtbkCode.Name = "txtbkCode";
+            this.txtbkCode.Size = new System.Drawing.Size(162, 21);
+            this.txtbkCode.TabIndex = 1;
             // 
             // label12
             // 
@@ -338,7 +354,7 @@
             // 
             // btnBookAdd
             // 
-            this.btnBookAdd.Location = new System.Drawing.Point(612, 409);
+            this.btnBookAdd.Location = new System.Drawing.Point(518, 441);
             this.btnBookAdd.Name = "btnBookAdd";
             this.btnBookAdd.Size = new System.Drawing.Size(75, 23);
             this.btnBookAdd.TabIndex = 1;
@@ -348,7 +364,7 @@
             // 
             // btnBookCancel
             // 
-            this.btnBookCancel.Location = new System.Drawing.Point(713, 409);
+            this.btnBookCancel.Location = new System.Drawing.Point(616, 441);
             this.btnBookCancel.Name = "btnBookCancel";
             this.btnBookCancel.Size = new System.Drawing.Size(75, 23);
             this.btnBookCancel.TabIndex = 1;
@@ -359,24 +375,68 @@
             // labAddInformation
             // 
             this.labAddInformation.AutoSize = true;
-            this.labAddInformation.Location = new System.Drawing.Point(13, 416);
+            this.labAddInformation.ForeColor = System.Drawing.Color.Red;
+            this.labAddInformation.Location = new System.Drawing.Point(13, 448);
             this.labAddInformation.Name = "labAddInformation";
             this.labAddInformation.Size = new System.Drawing.Size(65, 12);
             this.labAddInformation.TabIndex = 2;
             this.labAddInformation.Text = "添加状态：";
             // 
-            // dateTimePicker1
+            // label15
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(83, 140);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(162, 21);
-            this.dateTimePicker1.TabIndex = 3;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(267, 388);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(77, 12);
+            this.label15.TabIndex = 8;
+            this.label15.Text = "图书起始序号";
+            // 
+            // txtbkID
+            // 
+            this.txtbkID.Location = new System.Drawing.Point(347, 384);
+            this.txtbkID.Name = "txtbkID";
+            this.txtbkID.Size = new System.Drawing.Size(152, 21);
+            this.txtbkID.TabIndex = 9;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(23, 381);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(53, 12);
+            this.label16.TabIndex = 10;
+            this.label16.Text = "图书状态";
+            // 
+            // cmbbkStatus
+            // 
+            this.cmbbkStatus.FormattingEnabled = true;
+            this.cmbbkStatus.Items.AddRange(new object[] {
+            "在馆",
+            "借出",
+            "遗失",
+            "变卖",
+            "销毁"});
+            this.cmbbkStatus.Location = new System.Drawing.Point(83, 383);
+            this.cmbbkStatus.Name = "cmbbkStatus";
+            this.cmbbkStatus.Size = new System.Drawing.Size(162, 20);
+            this.cmbbkStatus.TabIndex = 11;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(713, 441);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = " 退出";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // frmBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(802, 444);
+            this.ClientSize = new System.Drawing.Size(802, 473);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.labAddInformation);
             this.Controls.Add(this.btnBookCancel);
             this.Controls.Add(this.btnBookAdd);
@@ -386,7 +446,7 @@
             this.Load += new System.EventHandler(this.frmBook_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ptbkCover)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,23 +469,28 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBookAdd;
         private System.Windows.Forms.Button btnBookCancel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.DateTimePicker dtpbkDateIn;
+        private System.Windows.Forms.ComboBox cmbbkLanguage;
+        private System.Windows.Forms.ComboBox cmbbkCatalog;
+        private System.Windows.Forms.TextBox txtbkNum;
+        private System.Windows.Forms.TextBox txtbkPrice;
+        private System.Windows.Forms.TextBox txtbkPages;
+        private System.Windows.Forms.TextBox txtbkISBN;
+        private System.Windows.Forms.TextBox txtbkPress;
+        private System.Windows.Forms.TextBox txtbkAuthor;
+        private System.Windows.Forms.TextBox txtbkName;
+        private System.Windows.Forms.TextBox txtbkCode;
+        private System.Windows.Forms.PictureBox ptbkCover;
+        private System.Windows.Forms.RichTextBox rtbbkBrief;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnUpLoadCover;
         private System.Windows.Forms.Label labAddInformation;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpbkdatePress;
+        private System.Windows.Forms.TextBox txtbkID;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmbbkStatus;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button btnBack;
     }
 }

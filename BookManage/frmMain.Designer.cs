@@ -44,16 +44,17 @@
             this.还书ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.密码修改ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tssUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.授权管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.权限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tssUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.图书管理ToolStripMenuItem,
             this.读者管理ToolStripMenuItem,
@@ -62,7 +63,7 @@
             this.授权管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(579, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(497, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -78,14 +79,14 @@
             // 新书入库ToolStripMenuItem
             // 
             this.新书入库ToolStripMenuItem.Name = "新书入库ToolStripMenuItem";
-            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.新书入库ToolStripMenuItem.Text = "新书入库";
             this.新书入库ToolStripMenuItem.Click += new System.EventHandler(this.新书入库ToolStripMenuItem_Click);
             // 
             // 图书信息维护ToolStripMenuItem
             // 
             this.图书信息维护ToolStripMenuItem.Name = "图书信息维护ToolStripMenuItem";
-            this.图书信息维护ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.图书信息维护ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.图书信息维护ToolStripMenuItem.Text = "图书信息维护";
             // 
             // 读者管理ToolStripMenuItem
@@ -146,19 +147,19 @@
             // 借书ToolStripMenuItem
             // 
             this.借书ToolStripMenuItem.Name = "借书ToolStripMenuItem";
-            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.借书ToolStripMenuItem.Text = "借书";
             // 
             // 续借ToolStripMenuItem
             // 
             this.续借ToolStripMenuItem.Name = "续借ToolStripMenuItem";
-            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.续借ToolStripMenuItem.Text = "续借";
             // 
             // 还书ToolStripMenuItem
             // 
             this.还书ToolStripMenuItem.Name = "还书ToolStripMenuItem";
-            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.还书ToolStripMenuItem.Text = "还书";
             // 
             // 用户管理ToolStripMenuItem
@@ -172,24 +173,8 @@
             // 密码修改ToolStripMenuItem
             // 
             this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
-            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.密码修改ToolStripMenuItem.Text = "密码修改";
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tssUser});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 372);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(579, 22);
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tssUser
-            // 
-            this.tssUser.Name = "tssUser";
-            this.tssUser.Size = new System.Drawing.Size(131, 17);
-            this.tssUser.Text = "toolStripStatusLabel1";
             // 
             // 授权管理ToolStripMenuItem
             // 
@@ -202,16 +187,33 @@
             // 权限管理ToolStripMenuItem
             // 
             this.权限管理ToolStripMenuItem.Name = "权限管理ToolStripMenuItem";
-            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.权限管理ToolStripMenuItem.Text = "权限管理";
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tssUser});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 262);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(497, 22);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tssUser
+            // 
+            this.tssUser.Name = "tssUser";
+            this.tssUser.Size = new System.Drawing.Size(131, 17);
+            this.tssUser.Text = "toolStripStatusLabel1";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 394);
+            this.ClientSize = new System.Drawing.Size(497, 284);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
             this.Text = "frmMain";

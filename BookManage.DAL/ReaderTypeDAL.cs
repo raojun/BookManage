@@ -23,7 +23,7 @@ namespace BookManage.DAL
                                            new SqlParameter("@rdTypeName",readertype.rdTypeName),
                                            new SqlParameter("@CanLendQty",readertype.CanLendQty),
                                            new SqlParameter("@CanLendDay",readertype.CanLendDay),
-                                           new SqlParameter("@CancontinueTimes",readertype.CanContinueTimes),
+                                           new SqlParameter("@CanContinueTimes",readertype.CanContinueTimes),
                                            new SqlParameter("@PunishRate",readertype.PunishRate),
                                            new SqlParameter("@DateValid",readertype.DateValid)
                                       };
@@ -37,11 +37,12 @@ namespace BookManage.DAL
             }
             return rows;
         }
+
         //删除
         public static int Delete(ReaderType readertype)
         {
             int rows = 0;
-            string sql = "deaete from ReaderType where rdType=@rdType";
+            string sql = "delete from ReaderType where rdType=@rdType";
             SqlParameter[] parameters = { new SqlParameter("@rdType", readertype.rdType) };
             try
             {
@@ -53,25 +54,26 @@ namespace BookManage.DAL
             }
             return rows;
         }
+
         //更新
         public static int Update(ReaderType readertype)
         {
             int rows = 0;
-            string sql = "update ReaderType set"
+            string sql = "update ReaderType set "
                 + "rdType=@rdType,"
                 + "rdTypeName=@rdTypeName,"
                 + "CanLendQty=@CanLendQty,"
                 + "CanLendDay=@CanLendDay,"
-                + "ContinueTimes=@ContinueTimes,"
+                + "CanContinueTimes=@CanContinueTimes,"
                 + "PunishRate=@PunishRate,"
-                + "DateValid=@DateValid"
+                + "DateValid=@DateValid "
                 + "where rdType=@rdType";
             SqlParameter[] parameters ={
                                            new SqlParameter("@rdType",readertype.rdType),
                                            new SqlParameter("@rdTypeName",readertype.rdTypeName),
                                            new SqlParameter("@CanLendQty",readertype.CanLendQty),
                                            new SqlParameter("@CanLendDay",readertype.CanLendDay),
-                                           new SqlParameter("@CancontinueTimes",readertype.CanContinueTimes),
+                                           new SqlParameter("@CanContinueTimes",readertype.CanContinueTimes),
                                            new SqlParameter("@PunishRate",readertype.PunishRate),
                                            new SqlParameter("@DateValid",readertype.DateValid)             
                                       };
@@ -88,10 +90,12 @@ namespace BookManage.DAL
         ///
         /// 由读者类型ID(rdType)得到该读者类型信息，返回DataRow
         ///
-        public static DataRow GetDRByID(int rdType)
+        public static DataRow GetDRByID(string rdType)
         {
             string sql = "select * from ReaderType where rdType=@rdType";
-            SqlParameter[] parameters = { new SqlParameter("@rdType)", rdType) };
+            SqlParameter[] parameters = { 
+                                            new SqlParameter("@rdType", rdType) 
+                                        };
             DataTable dt = null;
             dt = SqlHelper.GetDataTable(sql, parameters, "ReaderType");
             DataRow dr = null;
@@ -106,7 +110,7 @@ namespace BookManage.DAL
             }
         }
 
-        public static ReaderType GetObjectByID(int rdType)
+        public static ReaderType GetObjectByID(string rdType)
         {
             DataRow dr = GetDRByID(rdType);
             return SqlHelper.DataRowToT<ReaderType>(dr);

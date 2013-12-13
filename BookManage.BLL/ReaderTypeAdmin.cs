@@ -10,7 +10,7 @@ namespace BookManage.BLL
 {
     public class ReaderTypeAdmin//读者类型管理类
     {
-        public static ReaderType GetReaderType(int rdType)
+        public static ReaderType GetReaderType(string rdType)
         {
             return (ReaderTypeDAL.GetObjectByID(rdType));
         }
@@ -28,6 +28,10 @@ namespace BookManage.BLL
         public int Update(ReaderType readertype)
         {
             return (ReaderTypeDAL.Update(readertype));
+        }
+        public int Delete(ReaderType readertype)
+        {
+            return (ReaderTypeDAL.Delete(readertype));
         }
     }
 }

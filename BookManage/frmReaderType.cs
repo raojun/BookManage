@@ -36,6 +36,7 @@ namespace BookManage
         //读者信息组内控件与实体类对象之间的数据互换
         private void SetReaderTypeToText()
         {
+            txtrdType.Text = Convert.ToString(readertype.rdType);
             txtTypeName.Text = readertype.rdTypeName;
             txtCanLendQty.Text = Convert.ToString(readertype.CanLendQty);
             txtCanLendDay.Text = Convert.ToString(readertype.CanLendDay);
@@ -46,7 +47,7 @@ namespace BookManage
 
         private void SetTextToReaderType()
         {
-            readertype.rdType = Convert.ToInt32(txtType.Text);
+            readertype.rdType = Convert.ToInt32(txtrdType.Text);
             readertype.rdTypeName = txtTypeName.Text;
             readertype.CanLendQty = Convert.ToInt32(txtCanLendQty.Text);
             readertype.CanLendDay = Convert.ToInt32(txtCanLendDay.Text);
@@ -57,7 +58,7 @@ namespace BookManage
 
         private void tsbFirstRecord_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void tsbNextRecord_Click(object sender, EventArgs e)
@@ -79,18 +80,21 @@ namespace BookManage
         {
             SetTextToReaderType();
             readerTypeBLL.Insert(readertype);
-            ShowData();
+            labImformation.Text=("状态：添加成功！");
         }
 
         private void tsbUpdate_Click(object sender, EventArgs e)
         {
             SetTextToReaderType();
             readerTypeBLL.Update(readertype);
+            labImformation.Text = ("状态：修改成功！");
         }
 
         private void tsbDelate_Click(object sender, EventArgs e)
         {
-
+            SetTextToReaderType();
+            readerTypeBLL.Delete(readertype);
+            labImformation.Text = ("状态：已删除！");
         }
 
         private void tsbBack_Click(object sender, EventArgs e)
@@ -104,7 +108,7 @@ namespace BookManage
         {
             if (dgvReaderType.CurrentCell == null)
                 return;
-            readertype= ReaderTypeAdmin.GetReaderType((int)dgvReaderType["rdType", dgvReaderType.CurrentCell.RowIndex].Value);
+            readertype= ReaderTypeAdmin.GetReaderType(Convert.ToString( dgvReaderType["rdType", dgvReaderType.CurrentCell.RowIndex].Value));
             SetReaderTypeToText();
         }
 
