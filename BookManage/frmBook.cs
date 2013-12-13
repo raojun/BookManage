@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BookManage.Model;
 using BookManage.BLL;
 
+
 namespace BookManage
 {
     public partial class frmBook : Form
@@ -21,8 +22,7 @@ namespace BookManage
             InitializeComponent();
         }
 
-        //-----------------------------------
-        //类型转换
+        #region 类型转换
         private void SetTextToBook()
         {
             book.bkID = Convert.ToInt32(txtbkID.Text);
@@ -33,19 +33,31 @@ namespace BookManage
             book.bkdatePress = Convert.ToDateTime(dtpbkdatePress.Text);
             book.bkISBN = txtbkISBN.Text;
             book.bkCatalog = cmbbkCatalog.Text;
-            book.bkLanguage = Convert.ToInt32(cmbbkLanguage.Text);
+            book.bkLanguage = cmbbkLanguage.Text;
             book.bkPages = Convert.ToInt32(txtbkPages.Text);
             book.bkPrice = Convert.ToSingle(txtbkPrice.Text);
             book.bkDateIn = Convert.ToDateTime(dtpbkDateIn.Text);
-            book.bkNum =Convert.ToInt32(txtbkNum.Text);
+            book.bkNum = Convert.ToInt32(txtbkNum.Text);
             book.bkBrief = rtbbkBrief.Text;
             if (ptbkCover.Image != null)
             {
                 MemoryStream ms = new MemoryStream();
                 ptbkCover.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
-                book.bkCover= ms.GetBuffer();
+                book.bkCover = ms.GetBuffer();
             }
             book.bkStatus = cmbbkStatus.Text;
+        }
+
+        #endregion
+
+        private void btnBookScan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBookSelect_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnBookAdd_Click(object sender, EventArgs e)
@@ -55,9 +67,31 @@ namespace BookManage
             labAddInformation.Text = "添加状态：添加成功！";
         }
 
+        private void btnBookUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBookDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOutExcel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Form form = new frmMain();
+            form.Show();
+            this.Hide();
+        }
+
         private void btnBookCancel_Click(object sender, EventArgs e)
         {
-            foreach (Control ctrl in groupBox1.Controls)//清除所有textbox的内容
+            foreach (Control ctrl in groupBox2.Controls)//清除所有textbox的内容
             {
                 if (ctrl is TextBox)
                     ctrl.Text = " ";
@@ -80,16 +114,5 @@ namespace BookManage
             }
         }
 
-        private void frmBook_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            Form form = new frmMain();
-            form.Show();
-            this.Hide();
-        }
     }
 }

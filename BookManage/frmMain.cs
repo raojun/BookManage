@@ -66,5 +66,26 @@ namespace BookManage
             form.Show();
             this.Hide();
         }
+
+        private void 借书证挂失与解除ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmReader();
+            form.Show();
+            this.Hide();
+        }
+
+        private void 注销借书证ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmReader();
+            form.Show();
+            this.Hide();
+        }
+
+        private void 图书管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmBook();
+            form.Show();
+            this.Hide();
+        }
     }
 }

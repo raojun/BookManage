@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.图书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新书入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.图书信息维护ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.读者管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.办理借书证 = new System.Windows.Forms.ToolStripMenuItem();
             this.借书证信息变更 = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,6 +45,7 @@
             this.权限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssUser = new System.Windows.Forms.ToolStripStatusLabel();
+            this.图书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,28 +64,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(497, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 图书管理ToolStripMenuItem
-            // 
-            this.图书管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新书入库ToolStripMenuItem,
-            this.图书信息维护ToolStripMenuItem});
-            this.图书管理ToolStripMenuItem.Name = "图书管理ToolStripMenuItem";
-            this.图书管理ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
-            this.图书管理ToolStripMenuItem.Text = " 图书管理";
-            // 
-            // 新书入库ToolStripMenuItem
-            // 
-            this.新书入库ToolStripMenuItem.Name = "新书入库ToolStripMenuItem";
-            this.新书入库ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.新书入库ToolStripMenuItem.Text = "新书入库";
-            this.新书入库ToolStripMenuItem.Click += new System.EventHandler(this.新书入库ToolStripMenuItem_Click);
-            // 
-            // 图书信息维护ToolStripMenuItem
-            // 
-            this.图书信息维护ToolStripMenuItem.Name = "图书信息维护ToolStripMenuItem";
-            this.图书信息维护ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.图书信息维护ToolStripMenuItem.Text = "图书信息维护";
             // 
             // 读者管理ToolStripMenuItem
             // 
@@ -120,12 +96,14 @@
             this.借书证挂失与解除ToolStripMenuItem.Name = "借书证挂失与解除ToolStripMenuItem";
             this.借书证挂失与解除ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.借书证挂失与解除ToolStripMenuItem.Text = "借书证挂失与解除";
+            this.借书证挂失与解除ToolStripMenuItem.Click += new System.EventHandler(this.借书证挂失与解除ToolStripMenuItem_Click);
             // 
             // 注销借书证ToolStripMenuItem
             // 
             this.注销借书证ToolStripMenuItem.Name = "注销借书证ToolStripMenuItem";
             this.注销借书证ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.注销借书证ToolStripMenuItem.Text = "注销借书证";
+            this.注销借书证ToolStripMenuItem.Click += new System.EventHandler(this.注销借书证ToolStripMenuItem_Click);
             // 
             // 读者类型管理
             // 
@@ -206,6 +184,13 @@
             this.tssUser.Size = new System.Drawing.Size(131, 17);
             this.tssUser.Text = "toolStripStatusLabel1";
             // 
+            // 图书管理ToolStripMenuItem
+            // 
+            this.图书管理ToolStripMenuItem.Name = "图书管理ToolStripMenuItem";
+            this.图书管理ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
+            this.图书管理ToolStripMenuItem.Text = " 图书管理";
+            this.图书管理ToolStripMenuItem.Click += new System.EventHandler(this.图书管理ToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -230,9 +215,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 图书管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 新书入库ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 图书信息维护ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 读者管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 办理借书证;
         private System.Windows.Forms.ToolStripMenuItem 借书证信息变更;
@@ -248,5 +230,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tssUser;
         private System.Windows.Forms.ToolStripMenuItem 授权管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 权限管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 图书管理ToolStripMenuItem;
     }
 }

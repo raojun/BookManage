@@ -18,7 +18,7 @@ namespace BookManage.Model
         public DateTime bkdatePress { get; set; }
         public string bkISBN { get; set; }
         public string bkCatalog { get; set; }
-        public int bkLanguage { get; set; }
+        public string bkLanguage { get; set; }
         public int bkPages { get; set; }
         public float bkPrice { get; set; }
         public DateTime bkDateIn { get; set; }

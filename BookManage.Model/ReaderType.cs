@@ -36,6 +36,7 @@ namespace BookManage.Model
             this.DateValid = rt.DateValid;
         }
 
+        #region 设置DataGridView 标题
         public static string ColumnTitle(string columnName)
         {
             string sTitle;
@@ -52,5 +53,6 @@ namespace BookManage.Model
             }
             return sTitle;
         }
+        #endregion
     }
 }

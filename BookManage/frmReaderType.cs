@@ -25,6 +25,7 @@ namespace BookManage
             ShowData();
         }
 
+        #region 显示数据ShowData()
         private void ShowData()
         {
             dgvReaderType.DataSource = dt;
@@ -33,7 +34,9 @@ namespace BookManage
                 dgvReaderType.Columns[dc.ColumnName].HeaderText = ReaderType.ColumnTitle(dc.ColumnName);
             }
         }
-        //读者信息组内控件与实体类对象之间的数据互换
+        #endregion
+
+        #region 读者信息组内控件与实体类对象之间的数据互换
         private void SetReaderTypeToText()
         {
             txtrdType.Text = Convert.ToString(readertype.rdType);
@@ -55,6 +58,7 @@ namespace BookManage
             readertype.PunishRate = Convert.ToSingle(txtPunishRate.Text);
             readertype.DateValid = Convert.ToInt32(txtDateValid.Text);
         }
+        #endregion
 
         private void tsbFirstRecord_Click(object sender, EventArgs e)
         {
@@ -104,6 +108,7 @@ namespace BookManage
             this.Hide();
         }
 
+        #region 将DataGridView的数据显示到textbox中
         private void dgvReaderType_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvReaderType.CurrentCell == null)
@@ -111,7 +116,7 @@ namespace BookManage
             readertype= ReaderTypeAdmin.GetReaderType(Convert.ToString( dgvReaderType["rdType", dgvReaderType.CurrentCell.RowIndex].Value));
             SetReaderTypeToText();
         }
-
-        //-----------------------------------------------------------------------
+        #endregion
+        
     }
 }
