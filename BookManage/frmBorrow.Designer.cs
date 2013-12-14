@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBorrow));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvReader = new System.Windows.Forms.DataGridView();
@@ -123,6 +124,8 @@
             // 
             // btnSelectbkID
             // 
+            this.btnSelectbkID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelectbkID.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectbkID.Image")));
             this.btnSelectbkID.Location = new System.Drawing.Point(175, 19);
             this.btnSelectbkID.Name = "btnSelectbkID";
             this.btnSelectbkID.Size = new System.Drawing.Size(26, 23);
@@ -195,6 +198,8 @@
             // 
             // btnSelectID
             // 
+            this.btnSelectID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSelectID.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectID.Image")));
             this.btnSelectID.Location = new System.Drawing.Point(175, 17);
             this.btnSelectID.Name = "btnSelectID";
             this.btnSelectID.Size = new System.Drawing.Size(26, 23);
