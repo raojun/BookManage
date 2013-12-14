@@ -8,7 +8,7 @@ using BookManage.Model;
 
 namespace BookManage.DAL
 {
-    class BorrowDAL//借阅数据表访问类
+    public class BorrowDAL//借阅数据表访问类
     {
         public static int Insert(Borrow borrow)
         {
@@ -44,7 +44,7 @@ namespace BookManage.DAL
         public static int Update(Borrow borrow)
         {
             int rows = 0;
-            string sql = "update Borrow set"
+            string sql = "update Borrow set "
                 + "BorrowId=@rdID,"
                 + "rdID=@rdID,"
                 + "bkID=@bkID,"
@@ -57,7 +57,7 @@ namespace BookManage.DAL
                 + "IdPunishMoney=@IdPunishMoney,"
                 + "IsHasReturn=@IsHasReturn,"
                 + "OperatorLend=@OperatorLend,"
-                + "OperatorRet=@OperatorRet"
+                + "OperatorRet=@OperatorRet "
                 + "where BorrowID=@BorrowID";
             SqlParameter[] parameters ={
                                            new SqlParameter("@BorrowId",borrow.BorrowId),
@@ -99,6 +99,24 @@ namespace BookManage.DAL
                 throw new Exception(ex.Message);
             }
             return rows;
+        }
+
+        public static DataTable GetBookID(int bkID)
+        {
+            string sql = "select * from Book where bkID=@bkID";
+            SqlParameter[] parameters ={
+                                           new SqlParameter("@bkID",bkID)
+                                      };
+            return SqlHelper.GetDataTable(sql, parameters, "Book");
+        }
+
+        public static DataTable GetBookName(string bkName)
+        {
+            string sql = "select * from Book where bkName=@bkName";
+            SqlParameter[] parameters ={
+                                           new SqlParameter("@bkName",bkName)
+                                      };
+            return SqlHelper.GetDataTable(sql, parameters, "Book");
         }
 
         ///

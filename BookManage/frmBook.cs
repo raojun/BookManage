@@ -21,8 +21,7 @@ namespace BookManage
         public frmBook()
         {
             InitializeComponent();
-            dt = bookBLL.GetBook();
-            ShowData();
+            
         }
 
         private void ShowData()
@@ -93,29 +92,59 @@ namespace BookManage
 
         private void btnBookScan_Click(object sender, EventArgs e)
         {
-
+            dt = bookBLL.GetBook();
+            ShowData();
         }
 
         private void btnBookSelect_Click(object sender, EventArgs e)
         {
+            int bkID,bkNum;
+            string bkCode,bkName,bkAuthor,bkPress;
 
+            if (textID.Text.Trim() == "")
+            {
+                bkID = 0;
+            }
+            else
+            {
+                int i = textID.Text.IndexOf("--");
+                if (i > 0)
+                {
+                    bkID = Convert.ToInt32(textID.Text.Substring(0, i));
+                }
+                else
+                {
+                    bkID = Convert.ToInt32(textID.Text);
+                }
+            }
+            bkCode = textCode.Text;
+            bkName = Convert.ToString(textName.Text);
+            bkAuthor = Convert.ToString(textAuthor.Text);
+            bkPress = Convert.ToString(textPress.Text);
+            bkNum = Convert.ToInt32(textID.Text);
+            //dt = bookBLL.GetBook(bkID, bkCode, bkName, bkAuthor, bkPress, bkNum);
+            ShowData();
         }
 
         private void btnBookAdd_Click(object sender, EventArgs e)
         {
             SetTextToBook();
             bookBLL.Insert(book);
-            labAddInformation.Text = "添加状态：添加成功！";
+            labAddInformation.Text = "添加状态：已添加！";
         }
 
         private void btnBookUpdate_Click(object sender, EventArgs e)
         {
-
+            SetTextToBook();
+            bookBLL.Update(book);
+            labAddInformation.Text = "添加状态：已修改！";
         }
 
         private void btnBookDelete_Click(object sender, EventArgs e)
         {
-
+            SetTextToBook();
+            bookBLL.Delete(book);
+            labAddInformation.Text = "添加状态：已删除！";
         }
 
         private void btnOutExcel_Click(object sender, EventArgs e)

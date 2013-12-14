@@ -19,9 +19,25 @@ namespace BookManage.BLL
         {
             return (BookDAL.Insert(book));
         }
+
+        public int Delete(Book book)
+        {
+            return (BookDAL.Delete(book));
+        }
+
+        public int Update(Book book)
+        {
+            return (BookDAL.Update(book));
+        }
+
         public DataTable GetBook()
         {
             return (BookDAL.GetBook());
+        }
+
+        public static DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress, int bkNum)
+        {
+            return (BookDAL.GetBook(bkID, bkCode, bkName,bkAuthor,bkPress,bkNum));
         }
     }
 }

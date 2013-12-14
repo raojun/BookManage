@@ -46,18 +46,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textID = new System.Windows.Forms.TextBox();
+            this.textCode = new System.Windows.Forms.TextBox();
+            this.textName = new System.Windows.Forms.TextBox();
+            this.textAuthor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textPress = new System.Windows.Forms.TextBox();
+            this.textdatePress = new System.Windows.Forms.TextBox();
+            this.textDateIn = new System.Windows.Forms.TextBox();
+            this.textNum = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvBook = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -260,33 +260,33 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "图书作者";
             // 
-            // textBox1
+            // textID
             // 
-            this.textBox1.Location = new System.Drawing.Point(72, 45);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 21);
-            this.textBox1.TabIndex = 2;
+            this.textID.Location = new System.Drawing.Point(72, 45);
+            this.textID.Name = "textID";
+            this.textID.Size = new System.Drawing.Size(136, 21);
+            this.textID.TabIndex = 2;
             // 
-            // textBox2
+            // textCode
             // 
-            this.textBox2.Location = new System.Drawing.Point(273, 45);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 21);
-            this.textBox2.TabIndex = 2;
+            this.textCode.Location = new System.Drawing.Point(273, 45);
+            this.textCode.Name = "textCode";
+            this.textCode.Size = new System.Drawing.Size(136, 21);
+            this.textCode.TabIndex = 2;
             // 
-            // textBox3
+            // textName
             // 
-            this.textBox3.Location = new System.Drawing.Point(474, 45);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(136, 21);
-            this.textBox3.TabIndex = 2;
+            this.textName.Location = new System.Drawing.Point(474, 45);
+            this.textName.Name = "textName";
+            this.textName.Size = new System.Drawing.Size(136, 21);
+            this.textName.TabIndex = 2;
             // 
-            // textBox4
+            // textAuthor
             // 
-            this.textBox4.Location = new System.Drawing.Point(675, 45);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 21);
-            this.textBox4.TabIndex = 2;
+            this.textAuthor.Location = new System.Drawing.Point(675, 45);
+            this.textAuthor.Name = "textAuthor";
+            this.textAuthor.Size = new System.Drawing.Size(136, 21);
+            this.textAuthor.TabIndex = 2;
             // 
             // label5
             // 
@@ -325,33 +325,33 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "图书数量";
             // 
-            // textBox5
+            // textPress
             // 
-            this.textBox5.Location = new System.Drawing.Point(72, 81);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(136, 21);
-            this.textBox5.TabIndex = 2;
+            this.textPress.Location = new System.Drawing.Point(72, 81);
+            this.textPress.Name = "textPress";
+            this.textPress.Size = new System.Drawing.Size(136, 21);
+            this.textPress.TabIndex = 2;
             // 
-            // textBox6
+            // textdatePress
             // 
-            this.textBox6.Location = new System.Drawing.Point(273, 81);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(136, 21);
-            this.textBox6.TabIndex = 2;
+            this.textdatePress.Location = new System.Drawing.Point(273, 81);
+            this.textdatePress.Name = "textdatePress";
+            this.textdatePress.Size = new System.Drawing.Size(136, 21);
+            this.textdatePress.TabIndex = 2;
             // 
-            // textBox7
+            // textDateIn
             // 
-            this.textBox7.Location = new System.Drawing.Point(474, 81);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(136, 21);
-            this.textBox7.TabIndex = 2;
+            this.textDateIn.Location = new System.Drawing.Point(474, 81);
+            this.textDateIn.Name = "textDateIn";
+            this.textDateIn.Size = new System.Drawing.Size(136, 21);
+            this.textDateIn.TabIndex = 2;
             // 
-            // textBox8
+            // textNum
             // 
-            this.textBox8.Location = new System.Drawing.Point(675, 81);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(136, 21);
-            this.textBox8.TabIndex = 2;
+            this.textNum.Location = new System.Drawing.Point(675, 81);
+            this.textNum.Name = "textNum";
+            this.textNum.Size = new System.Drawing.Size(136, 21);
+            this.textNum.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -728,15 +728,15 @@
             this.ClientSize = new System.Drawing.Size(991, 619);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textNum);
+            this.Controls.Add(this.textAuthor);
+            this.Controls.Add(this.textDateIn);
+            this.Controls.Add(this.textName);
+            this.Controls.Add(this.textdatePress);
+            this.Controls.Add(this.textCode);
+            this.Controls.Add(this.textPress);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textID);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label6);
@@ -776,18 +776,18 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.TextBox textCode;
+        private System.Windows.Forms.TextBox textName;
+        private System.Windows.Forms.TextBox textAuthor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textPress;
+        private System.Windows.Forms.TextBox textdatePress;
+        private System.Windows.Forms.TextBox textDateIn;
+        private System.Windows.Forms.TextBox textNum;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvBook;
         private System.Windows.Forms.GroupBox groupBox2;

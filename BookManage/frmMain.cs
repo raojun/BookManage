@@ -87,5 +87,12 @@ namespace BookManage
             form.Show();
             this.Hide();
         }
+
+        private void 借书ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmBorrow();
+            form.Show();
+            this.Hide();
+        }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.图书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.读者管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.办理借书证 = new System.Windows.Forms.ToolStripMenuItem();
             this.借书证信息变更 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,7 +46,6 @@
             this.权限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tssUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.图书管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +64,13 @@
             this.menuStrip1.Size = new System.Drawing.Size(497, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 图书管理ToolStripMenuItem
+            // 
+            this.图书管理ToolStripMenuItem.Name = "图书管理ToolStripMenuItem";
+            this.图书管理ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
+            this.图书管理ToolStripMenuItem.Text = " 图书管理";
+            this.图书管理ToolStripMenuItem.Click += new System.EventHandler(this.图书管理ToolStripMenuItem_Click);
             // 
             // 读者管理ToolStripMenuItem
             // 
@@ -125,19 +132,20 @@
             // 借书ToolStripMenuItem
             // 
             this.借书ToolStripMenuItem.Name = "借书ToolStripMenuItem";
-            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.借书ToolStripMenuItem.Text = "借书";
+            this.借书ToolStripMenuItem.Click += new System.EventHandler(this.借书ToolStripMenuItem_Click);
             // 
             // 续借ToolStripMenuItem
             // 
             this.续借ToolStripMenuItem.Name = "续借ToolStripMenuItem";
-            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.续借ToolStripMenuItem.Text = "续借";
             // 
             // 还书ToolStripMenuItem
             // 
             this.还书ToolStripMenuItem.Name = "还书ToolStripMenuItem";
-            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.还书ToolStripMenuItem.Text = "还书";
             // 
             // 用户管理ToolStripMenuItem
@@ -151,7 +159,7 @@
             // 密码修改ToolStripMenuItem
             // 
             this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
-            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.密码修改ToolStripMenuItem.Text = "密码修改";
             // 
             // 授权管理ToolStripMenuItem
@@ -183,13 +191,6 @@
             this.tssUser.Name = "tssUser";
             this.tssUser.Size = new System.Drawing.Size(131, 17);
             this.tssUser.Text = "toolStripStatusLabel1";
-            // 
-            // 图书管理ToolStripMenuItem
-            // 
-            this.图书管理ToolStripMenuItem.Name = "图书管理ToolStripMenuItem";
-            this.图书管理ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
-            this.图书管理ToolStripMenuItem.Text = " 图书管理";
-            this.图书管理ToolStripMenuItem.Click += new System.EventHandler(this.图书管理ToolStripMenuItem_Click);
             // 
             // frmMain
             // 

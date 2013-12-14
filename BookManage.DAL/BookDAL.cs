@@ -10,6 +10,7 @@ namespace BookManage.DAL
 {
     public class BookDAL//图书数据访问类
     {
+        #region 添加
         public static int Insert(Book book)
         {
             int rows = 0;
@@ -43,7 +44,9 @@ namespace BookManage.DAL
             }
             return rows;
         }
+        #endregion
 
+        #region 修改
         public static int Update(Book book)
         {
             int rows = 0;
@@ -53,7 +56,7 @@ namespace BookManage.DAL
                 + "bkName=@bkName,"
                 + "bkAuthor=@bkAuthor,"
                 + "bkPress=@bkPress,"
-                + "bkdatePress@bkdatePress,"
+                + "bkdatePress=@bkdatePress,"
                 + "bkISBN=@bkISBN,"
                 + "bkCatalog=@bkCatalog,"
                 + "bkLanguage=@bkLanguage,"
@@ -93,7 +96,9 @@ namespace BookManage.DAL
             }
             return rows;
         }
+        #endregion
 
+        #region 删除
         public static int Delete(Book book)
         {
             int rows = 0;
@@ -109,10 +114,50 @@ namespace BookManage.DAL
             }
             return rows;
         }
+        #endregion
 
-        ///
-        /// 由读者类型ID(rdType)得到该读者类型信息，返回DataRow
-        ///
+        #region 查询
+        public static DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress,int bkNum)
+        {
+            string sql;
+            bkCode = (bkCode == "") ? ("%") : ("%" + bkCode + "%");
+            bkName = (bkName == "") ? ("%") : ("%" + bkName + "%");
+            bkAuthor = (bkAuthor == "") ? ("%") : ("%" + bkAuthor + "%");
+            bkPress = (bkPress == "") ? ("%") : ("%" + bkPress + "%");
+            if (bkID <= 0)
+            {
+                sql = "select * from Book where bkCode like @bkCode and bkName like @bkName and bkAuthor like @bkAuthor and bkPress like @bkPress "
+                    +"and bkNum=@bkNum";
+                SqlParameter[] parameters ={
+                                              new SqlParameter("@bkCode",bkCode),
+                                              new SqlParameter("@bkName",bkName),
+                                              new SqlParameter("@bkAuthor",bkAuthor),
+                                              new SqlParameter("@bkPress",bkPress),
+                                              new SqlParameter("@bkNum",bkNum)
+                                          };
+                return SqlHelper.GetDataTable(sql, parameters, "Book");
+
+            }
+            else
+            {
+                sql = "select * from Book where bkID=@bkID and bkCode like @bkCode and bkName like @bkName and bkAuthor like @bkAuthor "
+                        + "and bkPress like @bkPress and bkNum=@bkNum";
+                SqlParameter[] parameters ={
+                                              new SqlParameter("@bkID",bkID),
+                                              new SqlParameter("@bkCode",bkCode),
+                                              new SqlParameter("@bkName",bkName),
+                                              new SqlParameter("@bkAuthor",bkAuthor),
+                                              new SqlParameter("@bkPress",bkPress),
+                                              new SqlParameter("@bkNum",bkNum)
+                                          };
+                return SqlHelper.GetDataTable(sql, parameters, "Book");
+            }
+        }
+        #endregion
+
+
+
+        #region 由读者类型ID(rdType)得到该读者类型信息，返回DataRow
         public static DataRow GetDRByID(int bkID)
         {
             string sql = "select * from Book where bkID=@bkID";
@@ -130,6 +175,7 @@ namespace BookManage.DAL
                 return dr;
             }
         }
+        #endregion
 
         public static Book GetObjectByID(int bkID)
         {

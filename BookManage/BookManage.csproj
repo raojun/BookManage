@@ -35,6 +35,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -53,6 +54,12 @@
     </Compile>
     <Compile Include="frmBook.Designer.cs">
       <DependentUpon>frmBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBorrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBorrow.Designer.cs">
+      <DependentUpon>frmBorrow.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -82,6 +89,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBook.resx">
       <DependentUpon>frmBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBorrow.resx">
+      <DependentUpon>frmBorrow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
