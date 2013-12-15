@@ -122,7 +122,7 @@ namespace BookManage
             bkAuthor = Convert.ToString(textAuthor.Text);
             bkPress = Convert.ToString(textPress.Text);
             bkNum = Convert.ToInt32(textID.Text);
-            //dt = bookBLL.GetBook(bkID, bkCode, bkName, bkAuthor, bkPress, bkNum);
+            dt = bookBLL.GetBook(bkID, bkCode, bkName, bkAuthor, bkPress, bkNum);
             ShowData();
         }
 

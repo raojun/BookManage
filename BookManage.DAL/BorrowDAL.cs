@@ -145,5 +145,58 @@ namespace BookManage.DAL
             DataRow dr = GetDRByID(BorrowID);
             return SqlHelper.DataRowToT<Borrow>(dr);
         }
+
+        public static DataTable GetBorrow(int rdID)
+        {
+
+            string sql;
+            if (rdID == 0)
+            {
+                return null;
+            }
+            else
+            {
+                sql = "select Reader.rdType,Reader.rdName,Reader.rdDept,Reader.rdBorrowQty, ReaderType.CanLendQty,ReaderType.CanLendDay "
+                        +"from Reader left join ReaderType on Reader.rdType=ReaderType.rdType;";
+                return SqlHelper.GetDataTable(sql, null , "Reader");
+            }
+        }
+
+        /// <summary>
+        /// 获取读者信息
+        /// </summary>
+        /// <param name="rdID"></param>
+        /// <returns></returns>
+       public static DataTable GetReader(int rdID)
+       {
+           string sql;
+
+           if (rdID == 0)
+           {
+               return null;
+           }
+           else
+           {
+               sql = "select * from Reader where rdID=@rdID";
+               SqlParameter[] parameters ={
+                                             new  SqlParameter ("@rdID",rdID)
+                                          };
+               return SqlHelper.GetDataTable(sql, parameters, "Reader");
+           }
+       }
+
+        /// <summary>
+        /// 查询所借书信息
+        /// </summary>
+        /// <param name="rdID"></param>
+        /// <returns></returns>
+       public static DataTable GetBorrowBook(int rdID)
+       {
+           string sql = "select * from Borrow where rdID=@rdID";
+           SqlParameter[] parameters ={
+                                             new  SqlParameter ("@rdID",rdID)
+                                          };
+           return SqlHelper.GetDataTable(sql, parameters, "Borrow");
+       }
     }
 }

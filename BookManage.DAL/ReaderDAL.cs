@@ -188,7 +188,6 @@ namespace BookManage.DAL
                                           };
                     return SqlHelper.GetDataTable(sql, parameters, "Reader");
                 }
-            }
-        
+        }
     }
 }

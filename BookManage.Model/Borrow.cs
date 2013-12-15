@@ -42,5 +42,30 @@ namespace BookManage.Model
             this.OperatorLend = rt.OperatorLend;
             this.OperatorRet = rt.OperatorRet;
         }
+
+        #region 设置DataGridView 标题
+        public static string ColumnTitle(string columnName)
+        {
+            string sTitle;
+            sTitle = columnName;
+            switch (columnName)
+            {
+                case "BorrowId": sTitle = "借书顺序号"; break;
+                case "rdID": sTitle = "证件号码"; break;
+                case "bkID": sTitle = "图书序号"; break;
+                case "IdContinueTimes": sTitle = "续借次数"; break;
+                case "IdDateOut": sTitle = "借书日期"; break;
+                case "IdDateRetPlan": sTitle = "应还日期"; break;
+                case "IdDateRetAct": sTitle = "实际还书日期"; break;
+                case "IdOverDay": sTitle = "超期天数"; break;
+                case "IdOverMoney": sTitle = "超期金额"; break;
+                case "IdPunishMoney": sTitle = "罚款金额"; break;
+                case "IsHasReturn": sTitle = "是否已经还书"; break;
+                case "OperatorLend": sTitle = "借书操作员"; break;
+                case "OperatorRet": sTitle = "还书操作员"; break;
+            }
+            return sTitle;
+        }
+        #endregion
     }
 }

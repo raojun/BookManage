@@ -16,11 +16,13 @@ namespace BookManage
     {
         private DataTable dt = null;//存放查询结果，并给DataGridView drvReader提供数据
         private BorrowAdmin borrowBLL = new BorrowAdmin();
+        private Borrow borrow = new Borrow();
         public frmBorrow()
         {
             InitializeComponent();
         }
 
+        //显示dgvBook数据
         private void ShowData()
         {
             dgvBook.DataSource = dt;
@@ -30,6 +32,31 @@ namespace BookManage
             }
         }
 
+        //显示dgvReader数据
+        private void ShowReaderData()
+        {
+            dgvReader.DataSource = dt;
+            foreach (DataColumn dc in dt.Columns)
+            {
+                dgvReader.Columns[dc.ColumnName].HeaderText = Reader.ColumnTitle(dc.ColumnName);
+            }
+        }
+
+        //显示dgvBorrow数据
+        private void ShowBorrowData()
+        {
+            dgvBorrow.DataSource = dt;
+            foreach (DataColumn dc in dt.Columns)
+            {
+                dgvBorrow.Columns[dc.ColumnName].HeaderText =Borrow.ColumnTitle(dc.ColumnName);
+            }
+        }
+
+        /// <summary>
+        /// 按图书序号查找
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSelectID_Click(object sender, EventArgs e)
         {
             int bkID;
@@ -53,6 +80,11 @@ namespace BookManage
             ShowData();
         }
 
+        /// <summary>
+        /// 按书名查找
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnSelectName_Click(object sender, EventArgs e)
         {
             string bkName;
@@ -66,6 +98,61 @@ namespace BookManage
             }
             dt = borrowBLL.GetBookName(bkName);
             ShowData();
+        }
+
+        private void dgvBook_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvBook.CurrentCell == null)
+                return;
+           borrow = BorrowAdmin.GetBook((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
+        }
+
+        //借书
+        private void btnBorrowBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /// <summary>
+        /// 根据借书证号查询读者信息和所借书
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnSelectbkID_Click(object sender, EventArgs e)
+        {
+            int rdID;
+            if (txtrdID.Text.Trim() == "")
+            {
+                rdID = 0;
+            }
+            else
+            {
+                int i = txtrdID.Text.IndexOf("--");
+                if (i > 0)
+                {
+                    rdID = Convert.ToInt32(txtrdID.Text.Substring(0, i));
+                }
+                else
+                {
+                    rdID = Convert.ToInt32(txtrdID.Text);
+                }
+            }
+            dt = borrowBLL.GetReader(rdID);
+            ShowReaderData();
+            dt = borrowBLL.GetBorrowBook(rdID);
+            ShowBorrowData();
+        }
+
+        //还书
+        private void btnRetBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //续借
+        private void btnConBorrow_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
