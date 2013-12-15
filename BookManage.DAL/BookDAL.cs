@@ -117,7 +117,7 @@ namespace BookManage.DAL
         #endregion
 
         #region 查询
-        public static DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress,int bkNum)
+        public static DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress,string bkNum)
         {
             string sql;
             bkCode = (bkCode == "") ? ("%") : ("%" + bkCode + "%");

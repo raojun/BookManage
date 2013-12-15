@@ -35,7 +35,7 @@ namespace BookManage.BLL
             return (BookDAL.GetBook());
         }
 
-        public DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress, int bkNum)
+        public DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress, string bkNum)
         {
             return (BookDAL.GetBook(bkID, bkCode, bkName,bkAuthor,bkPress,bkNum));
         }
