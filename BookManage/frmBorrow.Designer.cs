@@ -189,6 +189,7 @@
             // 
             // btnSelectName
             // 
+            this.btnSelectName.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectName.Image")));
             this.btnSelectName.Location = new System.Drawing.Point(372, 17);
             this.btnSelectName.Name = "btnSelectName";
             this.btnSelectName.Size = new System.Drawing.Size(26, 23);
