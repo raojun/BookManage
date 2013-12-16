@@ -10,13 +10,14 @@ namespace BookManage.DAL
 {
     public class BorrowDAL//借阅数据表访问类
     {
+        //借书时在Borrow表内插入一条记录
         public static int Insert(Borrow borrow)
         {
+
             int rows = 0;
-            string sql = "insert into Borrow(BorrowId,rdID,bkID,IdContinueTimes,IdDateOut,IdDateRetPlan,IdDateRetAct,IdOverDay,IdOverMoney,IdPunishMoney,IsHasReturn,OperatorLend,OperatorRet)"
-                             + "values (@BorrowId,@rdID,@bkID,@IdContinueTimes,@IdDateOut,@IdDateRetPlan,@IdDateRetAct,@IdOverDay,@IdOverMoney,@IdPunishMoney,@IsHasReturn,@OperatorLend,@OperatorRet)";
+            string sql = "insert into Borrow(rdID,bkID,IdContinueTimes,IdDateOut,IdDateRetPlan,IdDateRetAct,IdOverDay,IdOverMoney,IdPunishMoney,IsHasReturn,OperatorLend,OperatorRet)"
+                             + " values (@rdID,@bkID,@IdContinueTimes,@IdDateOut,@IdDateRetPlan,@IdDateRetAct,@IdOverDay,@IdOverMoney,@IdPunishMoney,@IsHasReturn,@OperatorLend,@OperatorRet)";
             SqlParameter[] parameters ={
-                                           new SqlParameter("@BorrowId",borrow.BorrowId),
                                            new SqlParameter("@rdID",borrow.rdID),
                                            new SqlParameter("@bkID",borrow.bkID),
                                            new SqlParameter("@IdContinueTimes",borrow.IdContinueTimes),
@@ -41,6 +42,7 @@ namespace BookManage.DAL
             return rows;
         }
 
+        //续借时更新借书信息
         public static int Update(Borrow borrow)
         {
             int rows = 0;
@@ -101,6 +103,7 @@ namespace BookManage.DAL
             return rows;
         }
 
+        //dgvBook内按bkID查找图书
         public static DataTable GetBookID(int bkID)
         {
             string sql = "select * from Book where bkID=@bkID";
@@ -110,9 +113,11 @@ namespace BookManage.DAL
             return SqlHelper.GetDataTable(sql, parameters, "Book");
         }
 
+        //dgvBook内按bkName查找图书
         public static DataTable GetBookName(string bkName)
         {
-            string sql = "select * from Book where bkName=@bkName";
+            bkName = (bkName == "") ? ("%") : ("%" + bkName + "%");
+            string sql = "select * from Book where bkName like @bkName";
             SqlParameter[] parameters ={
                                            new SqlParameter("@bkName",bkName)
                                       };
@@ -146,6 +151,7 @@ namespace BookManage.DAL
             return SqlHelper.DataRowToT<Borrow>(dr);
         }
 
+        //dgvBorrow内显示所借书信息
         public static DataTable GetBorrow(int rdID)
         {
 
@@ -156,9 +162,9 @@ namespace BookManage.DAL
             }
             else
             {
-                sql = "select Reader.rdType,Reader.rdName,Reader.rdDept,Reader.rdBorrowQty, ReaderType.CanLendQty,ReaderType.CanLendDay "
-                        +"from Reader left join ReaderType on Reader.rdType=ReaderType.rdType;";
-                return SqlHelper.GetDataTable(sql, null , "Reader");
+                sql = "select Book.bkID,Book.bkName,Book.bkAuthor,Borrow.IdContinueTimes,Borrow.IdDateOut,Borrow.IdDateRetPlan,Borrow.IdOverDay,Borrow.IdOverMoney "
+	                    +"from Book left join Borrow on Book.bkID=Borrow.bkID where Book.bkID=Borrow.bkID";
+                return SqlHelper.GetDataTable(sql, null , "Borrow");
             }
         }
 

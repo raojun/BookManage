@@ -88,6 +88,7 @@
             this.dgvReader.RowTemplate.Height = 23;
             this.dgvReader.Size = new System.Drawing.Size(845, 79);
             this.dgvReader.TabIndex = 5;
+            this.dgvReader.SelectionChanged += new System.EventHandler(this.dgvReader_SelectionChanged);
             // 
             // label3
             // 
@@ -180,7 +181,7 @@
             // 
             // btnSelectName
             // 
-            this.btnSelectName.Location = new System.Drawing.Point(377, 18);
+            this.btnSelectName.Location = new System.Drawing.Point(377, 12);
             this.btnSelectName.Name = "btnSelectName";
             this.btnSelectName.Size = new System.Drawing.Size(26, 23);
             this.btnSelectName.TabIndex = 2;
@@ -207,7 +208,7 @@
             // 
             // txtbkName
             // 
-            this.txtbkName.Location = new System.Drawing.Point(279, 19);
+            this.txtbkName.Location = new System.Drawing.Point(283, 13);
             this.txtbkName.Name = "txtbkName";
             this.txtbkName.Size = new System.Drawing.Size(100, 21);
             this.txtbkName.TabIndex = 1;

@@ -99,7 +99,7 @@ namespace BookManage
         private void btnBookSelect_Click(object sender, EventArgs e)
         {
             int bkID;
-            string bkCode, bkName, bkAuthor, bkPress, bkNum;
+            string bkCode, bkName, bkAuthor, bkPress;
 
             if (textID.Text.Trim() == "")
             {
@@ -121,8 +121,7 @@ namespace BookManage
             bkName = Convert.ToString(textName.Text);
             bkAuthor = Convert.ToString(textAuthor.Text);
             bkPress = Convert.ToString(textPress.Text);
-            bkNum = Convert.ToString(textID.Text);
-            dt = bookBLL.GetBook(bkID, bkCode, bkName, bkAuthor, bkPress, bkNum);
+            dt = bookBLL.GetBook(bkID, bkCode, bkName, bkAuthor, bkPress);
             ShowData();
         }
 

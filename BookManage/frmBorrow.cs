@@ -100,19 +100,6 @@ namespace BookManage
             ShowData();
         }
 
-        private void dgvBook_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvBook.CurrentCell == null)
-                return;
-           borrow = BorrowAdmin.GetBook((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
-        }
-
-        //借书
-        private void btnBorrowBook_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /// <summary>
         /// 根据借书证号查询读者信息和所借书
         /// </summary>
@@ -139,8 +126,27 @@ namespace BookManage
             }
             dt = borrowBLL.GetReader(rdID);
             ShowReaderData();
-            dt = borrowBLL.GetBorrowBook(rdID);
+            dt = borrowBLL.GetBorrow(rdID);
             ShowBorrowData();
+        }
+
+        //借书
+        private void btnBorrowBook_Click(object sender, EventArgs e)
+        {
+            borrow.rdID = Convert.ToInt32(txtrdID.Text);
+            borrow.bkID = Convert.ToInt32(dgvBook.SelectedRows[0].Cells[0]);
+            borrow.IdContinueTimes = 0;
+            borrow.IdDateOut = DateTime.Now;
+            borrow.IdDateRetPlan = DateTime.Now.AddDays(60);
+            borrow.IdDateRetAct = Convert.ToDateTime("NULL");
+            borrow.IdOverDay = 0;
+            borrow.IdOverMoney = 0;
+            borrow.IdPunishMoney = 0;
+            borrow.IsHasReturn = false;
+            borrow.OperatorLend = Convert.ToString(dgvReader.SelectedRows[0].Cells[1]);
+            borrow.OperatorRet = Convert.ToString(dgvReader.SelectedRows[0].Cells[1]);
+            borrowBLL.Insert(borrow);
+            MessageBox.Show("借书成功！！！");
         }
 
         //还书
@@ -153,6 +159,19 @@ namespace BookManage
         private void btnConBorrow_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvReader_SelectionChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        //指定行操作
+        private void dgvBook_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvBook.CurrentCell == null)
+                return;
+            borrow = BorrowAdmin.GetBookInformation((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
         }
     }
 }

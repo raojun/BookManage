@@ -117,23 +117,26 @@ namespace BookManage.DAL
         #endregion
 
         #region 查询
-        public static DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress,string bkNum)
+        public static DataTable GetBook(int bkID, string bkCode, string bkName, string bkAuthor, string bkPress)
         {
             string sql;
+            if (bkID <= 0 && bkCode == " " && bkName == " " && bkAuthor == "" && bkPress == "")
+            {
+                sql = "select * from Book where 0=1";
+                return SqlHelper.GetDataTable(sql, null, "Book");
+            }
             bkCode = (bkCode == "") ? ("%") : ("%" + bkCode + "%");
             bkName = (bkName == "") ? ("%") : ("%" + bkName + "%");
             bkAuthor = (bkAuthor == "") ? ("%") : ("%" + bkAuthor + "%");
             bkPress = (bkPress == "") ? ("%") : ("%" + bkPress + "%");
             if (bkID <= 0)
             {
-                sql = "select * from Book where bkCode like @bkCode and bkName like @bkName and bkAuthor like @bkAuthor and bkPress like @bkPress "
-                    +"and bkNum=@bkNum";
+                sql = "select * from Book where bkCode like @bkCode and bkName like @bkName and bkAuthor like @bkAuthor and bkPress like @bkPress";
                 SqlParameter[] parameters ={
                                               new SqlParameter("@bkCode",bkCode),
                                               new SqlParameter("@bkName",bkName),
                                               new SqlParameter("@bkAuthor",bkAuthor),
-                                              new SqlParameter("@bkPress",bkPress),
-                                              new SqlParameter("@bkNum",bkNum)
+                                              new SqlParameter("@bkPress",bkPress)
                                           };
                 return SqlHelper.GetDataTable(sql, parameters, "Book");
 
@@ -141,14 +144,13 @@ namespace BookManage.DAL
             else
             {
                 sql = "select * from Book where bkID=@bkID and bkCode like @bkCode and bkName like @bkName and bkAuthor like @bkAuthor "
-                        + "and bkPress like @bkPress and bkNum=@bkNum";
+                        + "and bkPress like @bkPress";
                 SqlParameter[] parameters ={
                                               new SqlParameter("@bkID",bkID),
                                               new SqlParameter("@bkCode",bkCode),
                                               new SqlParameter("@bkName",bkName),
                                               new SqlParameter("@bkAuthor",bkAuthor),
-                                              new SqlParameter("@bkPress",bkPress),
-                                              new SqlParameter("@bkNum",bkNum)
+                                              new SqlParameter("@bkPress",bkPress)
                                           };
                 return SqlHelper.GetDataTable(sql, parameters, "Book");
             }

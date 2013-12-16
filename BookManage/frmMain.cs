@@ -94,5 +94,10 @@ namespace BookManage
             form.Show();
             this.Hide();
         }
+
+        private void 密码修改ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

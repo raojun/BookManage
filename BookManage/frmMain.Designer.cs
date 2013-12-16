@@ -132,20 +132,20 @@
             // 借书ToolStripMenuItem
             // 
             this.借书ToolStripMenuItem.Name = "借书ToolStripMenuItem";
-            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.借书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.借书ToolStripMenuItem.Text = "借书";
             this.借书ToolStripMenuItem.Click += new System.EventHandler(this.借书ToolStripMenuItem_Click);
             // 
             // 续借ToolStripMenuItem
             // 
             this.续借ToolStripMenuItem.Name = "续借ToolStripMenuItem";
-            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.续借ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.续借ToolStripMenuItem.Text = "续借";
             // 
             // 还书ToolStripMenuItem
             // 
             this.还书ToolStripMenuItem.Name = "还书ToolStripMenuItem";
-            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.还书ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.还书ToolStripMenuItem.Text = "还书";
             // 
             // 用户管理ToolStripMenuItem
@@ -161,6 +161,7 @@
             this.密码修改ToolStripMenuItem.Name = "密码修改ToolStripMenuItem";
             this.密码修改ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.密码修改ToolStripMenuItem.Text = "密码修改";
+            this.密码修改ToolStripMenuItem.Click += new System.EventHandler(this.密码修改ToolStripMenuItem_Click);
             // 
             // 授权管理ToolStripMenuItem
             // 
