@@ -585,7 +585,7 @@
             this.picboxPhoto.Location = new System.Drawing.Point(194, 54);
             this.picboxPhoto.Name = "picboxPhoto";
             this.picboxPhoto.Size = new System.Drawing.Size(100, 117);
-            this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picboxPhoto.TabIndex = 0;
             this.picboxPhoto.TabStop = false;
             // 

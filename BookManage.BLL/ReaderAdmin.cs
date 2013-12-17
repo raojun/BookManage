@@ -45,5 +45,11 @@ namespace BookManage.BLL
         {
             return (ReaderDAL.UnLoss(reader));
         }
+
+        //修改密码
+        public int UpdatePwd(Reader readerPwd)
+        {
+            return (ReaderDAL.UpdatePwd(readerPwd));
+        }
     }
 }

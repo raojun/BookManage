@@ -467,6 +467,7 @@
             this.ptbkCover.Location = new System.Drawing.Point(263, 255);
             this.ptbkCover.Name = "ptbkCover";
             this.ptbkCover.Size = new System.Drawing.Size(142, 181);
+            this.ptbkCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbkCover.TabIndex = 5;
             this.ptbkCover.TabStop = false;
             // 
@@ -481,6 +482,12 @@
             // cmbbkStatus
             // 
             this.cmbbkStatus.FormattingEnabled = true;
+            this.cmbbkStatus.Items.AddRange(new object[] {
+            "在馆",
+            "借出",
+            "遗失",
+            "变卖",
+            "销毁"});
             this.cmbbkStatus.Location = new System.Drawing.Point(76, 380);
             this.cmbbkStatus.Name = "cmbbkStatus";
             this.cmbbkStatus.Size = new System.Drawing.Size(160, 20);
@@ -489,6 +496,14 @@
             // cmbbkLanguage
             // 
             this.cmbbkLanguage.FormattingEnabled = true;
+            this.cmbbkLanguage.Items.AddRange(new object[] {
+            "中文",
+            "英文",
+            "日文",
+            "俄文",
+            "德文",
+            "法文",
+            "火星文"});
             this.cmbbkLanguage.Location = new System.Drawing.Point(77, 241);
             this.cmbbkLanguage.Name = "cmbbkLanguage";
             this.cmbbkLanguage.Size = new System.Drawing.Size(160, 20);

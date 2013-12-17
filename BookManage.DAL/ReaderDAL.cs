@@ -134,6 +134,26 @@ namespace BookManage.DAL
             }
             return rows;
         }
+
+        //修改密码
+        public static int UpdatePwd(Reader readerPwd)
+        {
+            int rows = 0;
+            string sql = "update Reader set rdPwd=@rdPwd where rdID=@rdID";
+            SqlParameter[] parameters ={
+                                           new SqlParameter("@rdID",readerPwd.rdID),
+                                           new SqlParameter("@rdPwd",readerPwd.rdPwd)
+                                      };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
         ///
         /// 由读者类型ID(rdType)得到该读者类型信息，返回DataRow
         ///
