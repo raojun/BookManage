@@ -365,6 +365,7 @@
             // 
             // dgvBook
             // 
+            this.dgvBook.AllowUserToAddRows = false;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBook.Location = new System.Drawing.Point(13, 20);
             this.dgvBook.Name = "dgvBook";
@@ -426,6 +427,7 @@
             this.btnBookAdd.TabIndex = 9;
             this.btnBookAdd.Text = "添加图书";
             this.btnBookAdd.UseVisualStyleBackColor = true;
+            this.btnBookAdd.Click += new System.EventHandler(this.btnBookAdd_Click);
             // 
             // labAddInformation
             // 

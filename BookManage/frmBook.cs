@@ -190,5 +190,6 @@ namespace BookManage
             book = BookAdmin.GetBook((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
             SetBookToText();
         }
+
     }
 }

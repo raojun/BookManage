@@ -60,24 +60,34 @@ namespace BookManage
         }
         #endregion
 
+        //首记录
         private void tsbFirstRecord_Click(object sender, EventArgs e)
         {
-            
+            dgvReaderType.CurrentCell = dgvReaderType[dgvReaderType.CurrentCell.ColumnIndex, 0];
         }
 
+        //下记录
         private void tsbNextRecord_Click(object sender, EventArgs e)
         {
-
+            if (dgvReaderType.CurrentCell.RowIndex < dgvReaderType.RowCount - 1)
+            {
+                dgvReaderType.CurrentCell = dgvReaderType[dgvReaderType.CurrentCell.ColumnIndex, dgvReaderType.CurrentCell.RowIndex + 1];
+            }
         }
 
+        //上记录
         private void tsbLastRecord_Click(object sender, EventArgs e)
         {
-
+            if (dgvReaderType.CurrentCell.RowIndex > 0)
+            {
+                dgvReaderType.CurrentCell = dgvReaderType[dgvReaderType.CurrentCell.ColumnIndex, dgvReaderType.CurrentCell.RowIndex - 1];
+            }
         }
 
+        //尾记录
         private void tsbFinalRecord_Click(object sender, EventArgs e)
         {
-
+            dgvReaderType.CurrentCell = dgvReaderType[dgvReaderType.CurrentCell.ColumnIndex, dgvReaderType.RowCount - 1];
         }
 
         private void tsbAdd_Click(object sender, EventArgs e)

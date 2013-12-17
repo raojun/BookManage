@@ -95,6 +95,20 @@ namespace BookManage
             this.Hide();
         }
 
+        private void 续借ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmBorrow();
+            form.Show();
+            this.Hide();
+        }
+
+        private void 还书ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form form = new frmBorrow();
+            form.Show();
+            this.Hide();
+        }
+
         private void 密码修改ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 

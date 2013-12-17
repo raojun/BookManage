@@ -42,40 +42,81 @@ namespace BookManage.DAL
             return rows;
         }
 
+        //借书后更新图书馆书籍数量和状态
+        public static  int UpdateBook(Borrow borrow)
+        {
+            int rows = 0;
+            string sql="update Book set bkNum=bkNum-1,bkStatus='借出' where bkID=@bkID";
+            SqlParameter [] parameters={
+                                           new SqlParameter("@bkID",borrow.bkID)
+                                       };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
+
         //续借时更新借书信息
-        public static int Update(Borrow borrow)
+        public static int UpdateContinue(Borrow borrow)
         {
             int rows = 0;
             string sql = "update Borrow set "
-                + "BorrowId=@rdID,"
-                + "rdID=@rdID,"
-                + "bkID=@bkID,"
-                + "IdcontinueTimes=@IdContinueTimes,"
-                + "IdDateOut=@IdDateOut,"
-                + "IdDateRetPlan=@IdDateRetPlan,"
-                + "IdDateRetAct=@IdDateRetAct,"
-                + "IdOverDay=@IdOverDay,"
-                + "IdOverMoney=@IdOverMoney,"
-                + "IdPunishMoney=@IdPunishMoney,"
-                + "IsHasReturn=@IsHasReturn,"
-                + "OperatorLend=@OperatorLend,"
-                + "OperatorRet=@OperatorRet "
-                + "where BorrowID=@BorrowID";
+                + "IdContinueTimes=@IdContinueTimes+1,"
+                + "IdDateOut=@IdDateOut "
+                + "where bkID=@bkID";
             SqlParameter[] parameters ={
-                                           new SqlParameter("@BorrowId",borrow.BorrowId),
-                                           new SqlParameter("@rdID",borrow.rdID),
                                            new SqlParameter("@bkID",borrow.bkID),
                                            new SqlParameter("@IdContinueTimes",borrow.IdContinueTimes),
-                                           new SqlParameter("@IdDateOut",borrow.IdDateOut),
-                                           new SqlParameter("@IdDateRetPlan",borrow.IdDateRetPlan),
-                                           new SqlParameter("@IdDateRetAct",borrow.IdDateRetAct),
-                                           new SqlParameter("@IdOverDay",borrow.IdOverDay),
-                                           new SqlParameter("@IdOverMoney",borrow.IdOverMoney),
-                                           new SqlParameter("@IdPunishMoney",borrow.IdPunishMoney),
-                                           new SqlParameter("@IsHasReturn",borrow.IsHasReturn),
-                                           new SqlParameter("@OperatorLend",borrow.OperatorLend),
-                                           new SqlParameter("@OperatorRet",borrow.OperatorRet)
+                                           new SqlParameter("@IdDateOut",borrow.IdDateOut)
                                       };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
+
+        //还书时更新借书信息
+        public static int UpdateBack(Borrow borrow)
+        {
+            int rows = 0;
+            string sql = "update Borrow set "
+                + "IdContinueTimes=0,"
+                + "IdDateRetAct=@IdDateRetAct, "
+                + "IsHasReturn=1 "
+                + " where bkID=@bkID";
+            SqlParameter[] parameters ={
+                                           new SqlParameter("@bkID",borrow.bkID),
+                                           new SqlParameter("@IdDateRetAct",borrow.IdDateRetAct)
+                                      };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
+
+        //还书时更新图书信息
+        public static int UpdateBk(Borrow borrow)
+        {
+            int rows = 0;
+            string sql = "update Book set bkNum=bkNum+1,bkStatus='在馆' where bkID=@bkID";
+            SqlParameter[] parameters ={
+                                           new SqlParameter("@bkID",borrow.bkID)
+                                       };
             try
             {
                 rows = SqlHelper.ExecuteNonQuery(sql, parameters);
@@ -154,7 +195,6 @@ namespace BookManage.DAL
         //dgvBorrow内显示所借书信息
         public static DataTable GetBorrow(int rdID)
         {
-
             string sql;
             if (rdID == 0)
             {
@@ -163,8 +203,11 @@ namespace BookManage.DAL
             else
             {
                 sql = "select Book.bkID,Book.bkName,Book.bkAuthor,Borrow.IdContinueTimes,Borrow.IdDateOut,Borrow.IdDateRetPlan,Borrow.IdOverDay,Borrow.IdOverMoney "
-	                    +"from Book left join Borrow on Book.bkID=Borrow.bkID where Book.bkID=Borrow.bkID";
-                return SqlHelper.GetDataTable(sql, null , "Borrow");
+                        + "from Book, Borrow  where Book.bkID=Borrow.bkID and Borrow.rdID=@rdID and Borrow.IsHasReturn=0";
+                SqlParameter[] parameters ={
+                                              new SqlParameter ("@rdID",rdID)
+                                          };
+                return SqlHelper.GetDataTable(sql,parameters , "Book");
             }
         }
 

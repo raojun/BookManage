@@ -27,19 +27,14 @@ namespace BookManage.BLL
             return (BorrowDAL.GetBookName(bkName));
         }
 
-        public static int Update(Borrow borrow)
-        {
-            return (BorrowDAL.Update(borrow));
-        }
-
         //借书
-        public  int Insert(Borrow borrow)
+        public int Insert(Borrow borrow)
         {
             return (BorrowDAL.Insert(borrow));
         }
 
         //显示所借书信息
-        public  DataTable GetBorrow(int rdID)
+        public DataTable GetBorrow(int rdID)
         {
             return (BorrowDAL.GetBorrow(rdID));
         }
@@ -48,6 +43,29 @@ namespace BookManage.BLL
         public DataTable GetReader(int rdID)
         {
             return (BorrowDAL.GetReader(rdID));
+        }
+
+        //借书时更新图书信息
+        public  int UpdateBook(Borrow borrow)
+        {
+            return (BorrowDAL.UpdateBook(borrow));
+        }
+
+        //续借时更新borrow表记录
+        public int UpdateContinue(Borrow borrow)
+        {
+            return (BorrowDAL.UpdateContinue(borrow));
+        }
+
+        //还书时更新borrow表记录
+        public int UpdateBack(Borrow borrow)
+        {
+            return (BorrowDAL.UpdateBack(borrow));
+        }
+        //还书时更新所借图书信息
+        public int UpdateBk(Borrow borrow)
+        {
+            return (BorrowDAL.UpdateBk(borrow));
         }
     }
 }

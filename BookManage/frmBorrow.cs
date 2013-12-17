@@ -16,7 +16,7 @@ namespace BookManage
     {
         private DataTable dt = null;//存放查询结果，并给DataGridView drvReader提供数据
         private BorrowAdmin borrowBLL = new BorrowAdmin();
-        private Borrow borrow = new Borrow();
+        //private Borrow borrow = new Borrow();
         public frmBorrow()
         {
             InitializeComponent();
@@ -126,39 +126,81 @@ namespace BookManage
             }
             dt = borrowBLL.GetReader(rdID);
             ShowReaderData();
-            dt = borrowBLL.GetBorrow(rdID);
+            dt= borrowBLL.GetBorrow(rdID);
             ShowBorrowData();
         }
 
         //借书
         private void btnBorrowBook_Click(object sender, EventArgs e)
-        {
+        {   
+            Borrow borrow = new Borrow();
+            DataRow dr=null;
+            DataRow ds = null;
             borrow.rdID = Convert.ToInt32(txtrdID.Text);
-            borrow.bkID = Convert.ToInt32(dgvBook.SelectedRows[0].Cells[0]);
+            for(int i=0;i<dgvBook.SelectedRows.Count;i++)
+            {
+                dr = (dgvBook.SelectedRows[i].DataBoundItem as DataRowView).Row;
+            }
+            borrow.bkID = Convert.ToInt32(dr.ItemArray[0]);
             borrow.IdContinueTimes = 0;
             borrow.IdDateOut = DateTime.Now;
             borrow.IdDateRetPlan = DateTime.Now.AddDays(60);
-            borrow.IdDateRetAct = Convert.ToDateTime("NULL");
+            borrow.IdDateRetAct = DateTime.Now;
             borrow.IdOverDay = 0;
             borrow.IdOverMoney = 0;
             borrow.IdPunishMoney = 0;
             borrow.IsHasReturn = false;
-            borrow.OperatorLend = Convert.ToString(dgvReader.SelectedRows[0].Cells[1]);
-            borrow.OperatorRet = Convert.ToString(dgvReader.SelectedRows[0].Cells[1]);
+            for (int j = 0; j < dgvReader.SelectedRows.Count; j++)
+            {
+                ds = (dgvReader.SelectedRows[j].DataBoundItem as DataRowView).Row;
+            }
+            borrow.OperatorLend = Convert.ToString(ds.ItemArray[1]);
+            borrow.OperatorRet = Convert.ToString(ds.ItemArray[1]);
             borrowBLL.Insert(borrow);
+            txtbkName.Text = Convert.ToString(borrow.rdID);
+            borrowBLL.UpdateBook(borrow);
             MessageBox.Show("借书成功！！！");
-        }
-
-        //还书
-        private void btnRetBook_Click(object sender, EventArgs e)
-        {
-
         }
 
         //续借
         private void btnConBorrow_Click(object sender, EventArgs e)
         {
+            Borrow borrow = new Borrow();
+            ReaderType readerType=new ReaderType();
+            DataRow dr = null;
+            for (int i = 0; i < dgvBorrow.SelectedRows.Count; i++)// 指定行操作
+            {
+                dr = (dgvBorrow.SelectedRows[i].DataBoundItem as DataRowView).Row;
+            }
+            //根据续借次数判断是否可续借
+            if (Convert.ToInt32(dr.ItemArray[3]) > readerType.CanContinueTimes)
+            {
+                MessageBox.Show("对不起，您的续借次数已超出最大可续借次数！");
+            }
+            else
+            {
+                borrow.bkID = Convert.ToInt32(dr.ItemArray[0]);
+                borrow.IdContinueTimes = Convert.ToInt32(dr.ItemArray[3]);
+                borrow.IdDateOut = DateTime.Now;
+                borrowBLL.UpdateContinue(borrow);
+                MessageBox.Show("续借成功！");
+            }
+        }
 
+        //还书
+        private void btnRetBook_Click(object sender, EventArgs e)
+        {
+            Borrow borrow = new Borrow();
+            DataRow dr = null;
+            for (int i = 0; i < dgvBorrow.SelectedRows.Count; i++)// 指定行操作
+            {
+                dr = (dgvBorrow.SelectedRows[i].DataBoundItem as DataRowView).Row;
+            }
+            borrow.bkID = Convert.ToInt32(dr.ItemArray[0]);
+            borrow.IdDateRetAct = DateTime.Now;
+            borrowBLL.UpdateBack(borrow);
+            borrowBLL.UpdateBk(borrow);
+            MessageBox.Show("还书成功！");
         }
 
         private void dgvReader_SelectionChanged(object sender, EventArgs e)
@@ -169,9 +211,14 @@ namespace BookManage
         //指定行操作
         private void dgvBook_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgvBook.CurrentCell == null)
-                return;
-            borrow = BorrowAdmin.GetBookInformation((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
+            //if (dgvBook.CurrentCell == null)
+            //    return;
+            //borrow = BorrowAdmin.GetBookInformation((int)dgvBook["bkID", dgvBook.CurrentCell.RowIndex].Value);
+        }
+
+        private void dgvBorrow_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

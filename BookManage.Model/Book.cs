@@ -69,9 +69,9 @@ namespace BookManage.Model
                 case "bkPrice": sTitle = "图书价格"; break;
                 case "bkDateIn": sTitle = "入馆日期"; break;
                 case "bkNum": sTitle = "图书本数"; break;
-                case "bkBrief": sTitle = "图书状态"; break;
+                case "bkBrief": sTitle = "图书封面"; break;
                 case "bkCover": sTitle = "图书简介"; break;
-                case "bkStatus": sTitle = "图书封面"; break;
+                case "bkStatus": sTitle = "图书状态"; break;
             }
             return sTitle;
         }

@@ -377,6 +377,7 @@
             // 
             // dgvReaderType
             // 
+            this.dgvReaderType.AllowUserToAddRows = false;
             this.dgvReaderType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReaderType.Location = new System.Drawing.Point(13, 134);
             this.dgvReaderType.Name = "dgvReaderType";
