@@ -49,7 +49,6 @@ namespace BookManage
             }
         }
 
-        //操作状态
         private void SetStatus(opStatus opst)
         {
             ops = opst;
@@ -137,19 +136,16 @@ namespace BookManage
 
         //-----------------------------------------------------------------------
 
-        //办理
         private void btnNewDoc_Click(object sender, EventArgs e)
         {
             SetStatus(opStatus.inNew);
         }
 
-        //变更
         private void btnChangeDoc_Click(object sender, EventArgs e)
         {
             SetStatus(opStatus.inChange);
         }
 
-        //挂失
         private void btnLossDoc_Click(object sender, EventArgs e)
         {
             SetTextToReader();
@@ -157,7 +153,6 @@ namespace BookManage
             labinformation.Text = "状态：已挂失！";
         }
 
-        //解除挂失
         private void btnUnlossDoc_Click(object sender, EventArgs e)
         {
             SetTextToReader();
@@ -165,7 +160,6 @@ namespace BookManage
             labinformation.Text = "状态：已解除挂失！";
         }
 
-        //注销
         private void btnCanceldoc_Click(object sender, EventArgs e)
         {
             SetTextToReader();
@@ -173,7 +167,6 @@ namespace BookManage
             labinformation.Text = "状态：已注销！";
         }
 
-        //关闭
         private void btnClose_Click(object sender, EventArgs e)
         {
             Form form = new frmMain();
@@ -181,7 +174,6 @@ namespace BookManage
             this.Hide();
         }
 
-        //确认办证
         private void btnAddReader_Click(object sender, EventArgs e)
         {
             SetTextToReader();
@@ -189,7 +181,6 @@ namespace BookManage
             labinformation.Text = "状态：办证成功！";
         }
 
-        //确认变更
         private void btnUpdateReader_Click(object sender, EventArgs e)
         {
             SetTextToReader();
@@ -197,7 +188,6 @@ namespace BookManage
             labinformation.Text = "状态：更改成功！";
         }
 
-        //撤销
         private void btnCancelChange_Click(object sender, EventArgs e)
         {
             foreach (Control ctrl in groupBox2.Controls)//清除所有textbox的内容
@@ -211,7 +201,6 @@ namespace BookManage
             cmbDept.Text = "";
         }
 
-        //加载图片
         private void btnLoadPictureFile_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog ofd1 = new OpenFileDialog();
@@ -223,7 +212,6 @@ namespace BookManage
             }
         }
        
-        //查询
         private void btuQuerry_Click_1(object sender, EventArgs e)
         {
             int rdType;
@@ -274,65 +262,9 @@ namespace BookManage
             SetReaderToText();
         }
 
-        //返回
         private void btnBack_Click(object sender, EventArgs e)
         {
             SetStatus(opStatus.inSelect);
-        }
-
-        //导出excel
-        private void btnToExcel_Click(object sender, EventArgs e)
-        {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Execl files (*.xls)|*.xls";
-            saveFileDialog.FilterIndex = 0;
-            saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.CreatePrompt = true;
-            saveFileDialog.Title = "Export Excel File To";
-            saveFileDialog.ShowDialog();
-            Stream myStream;
-            myStream = saveFileDialog.OpenFile();
-            //StreamWriter sw = new StreamWriter(myStream, System.Text.Encoding.GetEncoding("gb2312"));
-            StreamWriter sw = new StreamWriter(myStream, System.Text.Encoding.GetEncoding(-0));
-            string str = "";
-            try
-            {
-                //写标题
-                for (int i = 0; i < dgvReader.ColumnCount; i++)
-                {
-                    if (i > 0)
-                    {
-                        str += "\t";
-                    }
-                    str += dgvReader.Columns[i].HeaderText;
-                }
-                sw.WriteLine(str);
-                //写内容
-                for (int j = 0; j < dgvReader.Rows.Count; j++)
-                {
-                    string tempStr = "";
-                    for (int k = 0; k < dgvReader.Columns.Count; k++)
-                    {
-                        if (k > 0)
-                        {
-                            tempStr += "\t";
-                        }
-                        tempStr += dgvReader.Rows[j].Cells[k].Value.ToString();
-                    }
-                    sw.WriteLine(tempStr);
-                }
-                sw.Close();
-                myStream.Close();
-            }
-            catch (Exception a)
-            {
-                MessageBox.Show(a.ToString());
-            }
-            finally
-            {
-                sw.Close();
-                myStream.Close();
-            }          
         }
     }
 }

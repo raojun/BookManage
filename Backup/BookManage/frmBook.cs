@@ -142,70 +142,13 @@ namespace BookManage
         private void btnBookDelete_Click(object sender, EventArgs e)
         {
             SetTextToBook();
-            if (book.bkStatus == "借出")
-            {
-                labAddInformation.Text = "添加状态：该书以借出，暂时无法删除！";
-            }
-            else
-            {
-                bookBLL.Delete(book);
-                labAddInformation.Text = "添加状态：已删除！";
-            }
+            bookBLL.Delete(book);
+            labAddInformation.Text = "添加状态：已删除！";
         }
 
-        //导出excel
         private void btnOutExcel_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Execl files (*.xls)|*.xls";
-            saveFileDialog.FilterIndex = 0;
-            saveFileDialog.RestoreDirectory = true;
-            saveFileDialog.CreatePrompt = true;
-            saveFileDialog.Title = "Export Excel File To";
-            saveFileDialog.ShowDialog();
-            Stream myStream;
-            myStream = saveFileDialog.OpenFile();
-            //StreamWriter sw = new StreamWriter(myStream, System.Text.Encoding.GetEncoding("gb2312"));
-            StreamWriter sw = new StreamWriter(myStream, System.Text.Encoding.GetEncoding(-0));
-            string str = "";
-            try
-            {
-                //写标题
-                for (int i = 0; i < dgvBook.ColumnCount; i++)
-                {
-                    if (i > 0)
-                    {
-                        str += "\t";
-                    }
-                    str += dgvBook.Columns[i].HeaderText;
-                }
-                sw.WriteLine(str);
-                //写内容
-                for (int j = 0; j < dgvBook.Rows.Count; j++)
-                {
-                    string tempStr = "";
-                    for (int k = 0; k < dgvBook.Columns.Count; k++)
-                    {
-                        if (k > 0)
-                        {
-                            tempStr += "\t";
-                        }
-                        tempStr += dgvBook.Rows[j].Cells[k].Value.ToString();
-                    }
-                    sw.WriteLine(tempStr);
-                }
-                sw.Close();
-                myStream.Close();
-            }
-            catch (Exception a)
-            {
-                MessageBox.Show(a.ToString());
-            }
-            finally
-            {
-                sw.Close();
-                myStream.Close();
-            }  
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)

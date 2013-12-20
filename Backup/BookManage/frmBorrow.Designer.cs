@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBorrow));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvReader = new System.Windows.Forms.DataGridView();
@@ -83,13 +82,10 @@
             // 
             // dgvReader
             // 
-            this.dgvReader.AllowUserToAddRows = false;
             this.dgvReader.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReader.Location = new System.Drawing.Point(14, 84);
             this.dgvReader.Name = "dgvReader";
-            this.dgvReader.ReadOnly = true;
             this.dgvReader.RowTemplate.Height = 23;
-            this.dgvReader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReader.Size = new System.Drawing.Size(845, 79);
             this.dgvReader.TabIndex = 5;
             this.dgvReader.SelectionChanged += new System.EventHandler(this.dgvReader_SelectionChanged);
@@ -125,8 +121,6 @@
             // 
             // btnSelectbkID
             // 
-            this.btnSelectbkID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSelectbkID.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectbkID.Image")));
             this.btnSelectbkID.Location = new System.Drawing.Point(175, 19);
             this.btnSelectbkID.Name = "btnSelectbkID";
             this.btnSelectbkID.Size = new System.Drawing.Size(26, 23);
@@ -136,16 +130,12 @@
             // 
             // dgvBorrow
             // 
-            this.dgvBorrow.AllowUserToAddRows = false;
             this.dgvBorrow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBorrow.Location = new System.Drawing.Point(14, 197);
             this.dgvBorrow.Name = "dgvBorrow";
-            this.dgvBorrow.ReadOnly = true;
             this.dgvBorrow.RowTemplate.Height = 23;
-            this.dgvBorrow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBorrow.Size = new System.Drawing.Size(845, 108);
             this.dgvBorrow.TabIndex = 1;
-            this.dgvBorrow.SelectionChanged += new System.EventHandler(this.dgvBorrow_SelectionChanged);
             // 
             // txtrdID
             // 
@@ -191,8 +181,7 @@
             // 
             // btnSelectName
             // 
-            this.btnSelectName.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectName.Image")));
-            this.btnSelectName.Location = new System.Drawing.Point(372, 17);
+            this.btnSelectName.Location = new System.Drawing.Point(377, 12);
             this.btnSelectName.Name = "btnSelectName";
             this.btnSelectName.Size = new System.Drawing.Size(26, 23);
             this.btnSelectName.TabIndex = 2;
@@ -201,8 +190,6 @@
             // 
             // btnSelectID
             // 
-            this.btnSelectID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSelectID.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectID.Image")));
             this.btnSelectID.Location = new System.Drawing.Point(175, 17);
             this.btnSelectID.Name = "btnSelectID";
             this.btnSelectID.Size = new System.Drawing.Size(26, 23);
@@ -221,7 +208,7 @@
             // 
             // txtbkName
             // 
-            this.txtbkName.Location = new System.Drawing.Point(278, 18);
+            this.txtbkName.Location = new System.Drawing.Point(283, 13);
             this.txtbkName.Name = "txtbkName";
             this.txtbkName.Size = new System.Drawing.Size(100, 21);
             this.txtbkName.TabIndex = 1;
@@ -244,11 +231,9 @@
             // 
             // dgvBook
             // 
-            this.dgvBook.AllowUserToAddRows = false;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBook.Location = new System.Drawing.Point(13, 392);
             this.dgvBook.Name = "dgvBook";
-            this.dgvBook.ReadOnly = true;
             this.dgvBook.RowTemplate.Height = 23;
             this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBook.Size = new System.Drawing.Size(872, 134);

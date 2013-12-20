@@ -291,7 +291,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(472, 50);
+            this.label3.Location = new System.Drawing.Point(249, 51);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 3;
@@ -351,7 +351,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(250, 51);
+            this.label5.Location = new System.Drawing.Point(472, 49);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 11;
@@ -377,12 +377,10 @@
             // 
             // dgvReaderType
             // 
-            this.dgvReaderType.AllowUserToAddRows = false;
             this.dgvReaderType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReaderType.Location = new System.Drawing.Point(13, 134);
             this.dgvReaderType.Name = "dgvReaderType";
             this.dgvReaderType.RowTemplate.Height = 23;
-            this.dgvReaderType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReaderType.Size = new System.Drawing.Size(671, 280);
             this.dgvReaderType.TabIndex = 14;
             this.dgvReaderType.SelectionChanged += new System.EventHandler(this.dgvReaderType_SelectionChanged);

@@ -173,7 +173,6 @@
             this.btnToExcel.Name = "btnToExcel";
             this.btnToExcel.Size = new System.Drawing.Size(23, 30);
             this.btnToExcel.Text = "toolStripButton2";
-            this.btnToExcel.Click += new System.EventHandler(this.btnToExcel_Click);
             // 
             // toolStripLabel5
             // 
@@ -275,7 +274,6 @@
             this.dgvReader.Name = "dgvReader";
             this.dgvReader.ReadOnly = true;
             this.dgvReader.RowTemplate.Height = 23;
-            this.dgvReader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReader.Size = new System.Drawing.Size(559, 370);
             this.dgvReader.TabIndex = 0;
             this.dgvReader.SelectionChanged += new System.EventHandler(this.dgvReader_SelectionChanged);
@@ -587,7 +585,7 @@
             this.picboxPhoto.Location = new System.Drawing.Point(194, 54);
             this.picboxPhoto.Name = "picboxPhoto";
             this.picboxPhoto.Size = new System.Drawing.Size(100, 117);
-            this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picboxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picboxPhoto.TabIndex = 0;
             this.picboxPhoto.TabStop = false;
             // 

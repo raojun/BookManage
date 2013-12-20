@@ -51,7 +51,13 @@
             this.textName = new System.Windows.Forms.TextBox();
             this.textAuthor = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.textPress = new System.Windows.Forms.TextBox();
+            this.textdatePress = new System.Windows.Forms.TextBox();
+            this.textDateIn = new System.Windows.Forms.TextBox();
+            this.textNum = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvBook = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -134,7 +140,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(36, 30);
+            this.toolStripLabel1.Size = new System.Drawing.Size(35, 30);
             this.toolStripLabel1.Text = " 游览";
             // 
             // btnBookSelect
@@ -150,7 +156,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel3.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel3.Text = "查询";
             // 
             // btnBookUpdate
@@ -166,7 +172,7 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel4.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel4.Text = "修改";
             // 
             // btnBookDelete
@@ -182,7 +188,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel5.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel5.Text = "删除";
             // 
             // btnOutExcel
@@ -198,7 +204,7 @@
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(61, 30);
+            this.toolStripLabel6.Size = new System.Drawing.Size(59, 30);
             this.toolStripLabel6.Text = "导出Excel";
             // 
             // btnBack
@@ -214,7 +220,7 @@
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel7.Size = new System.Drawing.Size(29, 30);
             this.toolStripLabel7.Text = "返回";
             // 
             // label1
@@ -248,7 +254,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 89);
+            this.label4.Location = new System.Drawing.Point(624, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 1;
@@ -277,7 +283,7 @@
             // 
             // textAuthor
             // 
-            this.textAuthor.Location = new System.Drawing.Point(72, 85);
+            this.textAuthor.Location = new System.Drawing.Point(675, 45);
             this.textAuthor.Name = "textAuthor";
             this.textAuthor.Size = new System.Drawing.Size(136, 21);
             this.textAuthor.TabIndex = 2;
@@ -285,18 +291,67 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(219, 89);
+            this.label5.Location = new System.Drawing.Point(18, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 1;
             this.label5.Text = "出版社名";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(220, 85);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "出版日期";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(422, 85);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "入馆日期";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(624, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(53, 12);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "图书数量";
+            // 
             // textPress
             // 
-            this.textPress.Location = new System.Drawing.Point(273, 85);
+            this.textPress.Location = new System.Drawing.Point(72, 81);
             this.textPress.Name = "textPress";
             this.textPress.Size = new System.Drawing.Size(136, 21);
             this.textPress.TabIndex = 2;
+            // 
+            // textdatePress
+            // 
+            this.textdatePress.Location = new System.Drawing.Point(273, 81);
+            this.textdatePress.Name = "textdatePress";
+            this.textdatePress.Size = new System.Drawing.Size(136, 21);
+            this.textdatePress.TabIndex = 2;
+            // 
+            // textDateIn
+            // 
+            this.textDateIn.Location = new System.Drawing.Point(474, 81);
+            this.textDateIn.Name = "textDateIn";
+            this.textDateIn.Size = new System.Drawing.Size(136, 21);
+            this.textDateIn.TabIndex = 2;
+            // 
+            // textNum
+            // 
+            this.textNum.Location = new System.Drawing.Point(675, 81);
+            this.textNum.Name = "textNum";
+            this.textNum.Size = new System.Drawing.Size(136, 21);
+            this.textNum.TabIndex = 2;
             // 
             // groupBox1
             // 
@@ -310,12 +365,10 @@
             // 
             // dgvBook
             // 
-            this.dgvBook.AllowUserToAddRows = false;
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBook.Location = new System.Drawing.Point(13, 20);
             this.dgvBook.Name = "dgvBook";
             this.dgvBook.RowTemplate.Height = 23;
-            this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBook.Size = new System.Drawing.Size(480, 444);
             this.dgvBook.TabIndex = 0;
             this.dgvBook.SelectionChanged += new System.EventHandler(this.dgvBook_SelectionChanged);
@@ -413,7 +466,6 @@
             this.ptbkCover.Location = new System.Drawing.Point(263, 255);
             this.ptbkCover.Name = "ptbkCover";
             this.ptbkCover.Size = new System.Drawing.Size(142, 181);
-            this.ptbkCover.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ptbkCover.TabIndex = 5;
             this.ptbkCover.TabStop = false;
             // 
@@ -428,12 +480,6 @@
             // cmbbkStatus
             // 
             this.cmbbkStatus.FormattingEnabled = true;
-            this.cmbbkStatus.Items.AddRange(new object[] {
-            "在馆",
-            "借出",
-            "遗失",
-            "变卖",
-            "销毁"});
             this.cmbbkStatus.Location = new System.Drawing.Point(76, 380);
             this.cmbbkStatus.Name = "cmbbkStatus";
             this.cmbbkStatus.Size = new System.Drawing.Size(160, 20);
@@ -442,14 +488,6 @@
             // cmbbkLanguage
             // 
             this.cmbbkLanguage.FormattingEnabled = true;
-            this.cmbbkLanguage.Items.AddRange(new object[] {
-            "中文",
-            "英文",
-            "日文",
-            "俄文",
-            "德文",
-            "法文",
-            "火星文"});
             this.cmbbkLanguage.Location = new System.Drawing.Point(77, 241);
             this.cmbbkLanguage.Name = "cmbbkLanguage";
             this.cmbbkLanguage.Size = new System.Drawing.Size(160, 20);
@@ -691,12 +729,18 @@
             this.ClientSize = new System.Drawing.Size(991, 619);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.textNum);
             this.Controls.Add(this.textAuthor);
+            this.Controls.Add(this.textDateIn);
             this.Controls.Add(this.textName);
+            this.Controls.Add(this.textdatePress);
             this.Controls.Add(this.textCode);
             this.Controls.Add(this.textPress);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.textID);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -738,7 +782,13 @@
         private System.Windows.Forms.TextBox textName;
         private System.Windows.Forms.TextBox textAuthor;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textPress;
+        private System.Windows.Forms.TextBox textdatePress;
+        private System.Windows.Forms.TextBox textDateIn;
+        private System.Windows.Forms.TextBox textNum;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvBook;
         private System.Windows.Forms.GroupBox groupBox2;

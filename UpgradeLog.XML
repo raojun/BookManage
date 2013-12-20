@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="BookManage">
+</Property><Property Name="解决方案文件" Value="I:\Sql Server 课设\BookManage\BookManage.sln">
+</Property><Property Name="用户选项文件" Value="I:\Sql Server 课设\BookManage\BookManage.suo">
+</Property><Property Name="Date" Value="2013年12月18日">
+</Property><Property Name="Time" Value="10:38">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="BookManage.sln" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.sln">
+</Event><Event ErrorLevel="0" Project="" Source="BookManage.suo" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.suo">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\BookManage.csproj" Description="项目文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\BookManage.csproj">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmBook.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmBook.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmBook.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmBook.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmBorrow.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmBorrow.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmBorrow.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmBorrow.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmLogin.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmLogin.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmLogin.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmLogin.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmMain.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmMain.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmMain.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmMain.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmReader.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmReader.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmReader.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmReader.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmReaderType.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmReaderType.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmReaderType.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmReaderType.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\Program.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\Program.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\Properties\AssemblyInfo.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\Properties\Resources.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\Properties\Settings.Designer.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\Properties\Settings.settings" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmBook.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmBook.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmBorrow.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmBorrow.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmLogin.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmLogin.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmMain.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmMain.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmReader.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmReader.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\frmReaderType.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\frmReaderType.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\Properties\Resources.resx" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\BookManage.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="BookManage" Source="BookManage\BookManage.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\BookManage.Model.csproj" Description="项目文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\BookManage.Model.csproj">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\Book.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\Book.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\Borrow.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\Borrow.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\Class1.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\Class1.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\Properties\AssemblyInfo.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\Reader.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\Reader.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\ReaderType.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.Model\ReaderType.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\BookManage.Model.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="BookManage.Model" Source="BookManage.Model\BookManage.Model.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\BookManage.DAL.csproj" Description="项目文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\BookManage.DAL.csproj">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\BookDAL.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\BookDAL.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\BorrowDAL.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\BorrowDAL.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\Class1.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\Class1.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\Properties\AssemblyInfo.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\ReaderDAL.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\ReaderDAL.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\ReaderTypeDAL.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\ReaderTypeDAL.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\SqlHelper.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.DAL\SqlHelper.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\BookManage.DAL.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="BookManage.DAL" Source="BookManage.DAL\BookManage.DAL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\BookManage.BLL.csproj" Description="项目文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\BookManage.BLL.csproj">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\BookAdmin.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\BookAdmin.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\BorrowAdmin.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\BorrowAdmin.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\Class1.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\Class1.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\Properties\AssemblyInfo.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\ReaderAdmin.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\ReaderAdmin.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\ReaderTypeAdmin.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\ReaderTypeAdmin.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\UserAdmin.cs" Description="文件已成功备份为 I:\Sql Server 课设\BookManage\Backup\BookManage.BLL\UserAdmin.cs">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\BookManage.BLL.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="BookManage.BLL" Source="BookManage.BLL\BookManage.BLL.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="BookManage.sln" Description="成功转换解决方案">
+</Event><Event ErrorLevel="3" Project="" Source="BookManage.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="BookManage" Source="BookManage\BookManage.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="BookManage.Model" Source="BookManage.Model\BookManage.Model.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="BookManage.DAL" Source="BookManage.DAL\BookManage.DAL.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="BookManage.BLL" Source="BookManage.BLL\BookManage.BLL.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>
