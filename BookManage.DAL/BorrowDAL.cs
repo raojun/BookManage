@@ -61,6 +61,25 @@ namespace BookManage.DAL
             return rows;
         }
 
+        //借书后更新读者借书本数
+        public static int UpdateBorrowNum(Reader reader)
+        {
+            int rows = 0;
+            string sql = "update Reader set rdBorrowQty=rdBorrowQty+1 where rdID=@rdID";
+            SqlParameter[] parameters ={
+                                           new SqlParameter("@rdID",reader.rdID)
+                                       };
+            try
+            {
+                rows = SqlHelper.ExecuteNonQuery(sql, parameters);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            return rows;
+        }
+
         //续借时更新借书信息
         public static int UpdateContinue(Borrow borrow)
         {

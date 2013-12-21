@@ -314,6 +314,7 @@
             this.dgvBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBook.Location = new System.Drawing.Point(13, 20);
             this.dgvBook.Name = "dgvBook";
+            this.dgvBook.ReadOnly = true;
             this.dgvBook.RowTemplate.Height = 23;
             this.dgvBook.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBook.Size = new System.Drawing.Size(480, 444);

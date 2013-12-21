@@ -334,5 +334,11 @@ namespace BookManage
                 myStream.Close();
             }          
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            Form form = new frmReport();
+            form.Show();
+        }
     }
 }

@@ -138,6 +138,7 @@ namespace BookManage
             int CanLendQty,CanLendDay,rdBorrowQty;
             string rdStatus,bkStatus;
             Borrow borrow = new Borrow();
+            Reader reader = new Reader();
             DataRow dr=null;
             DataRow ds = null;
 
@@ -196,6 +197,8 @@ namespace BookManage
                         borrowBLL.Insert(borrow);
                         txtbkName.Text = Convert.ToString(borrow.rdID);
                         borrowBLL.UpdateBook(borrow);
+                        reader.rdID = rdID;
+                        borrowBLL.UpdateBorrowNum(reader);
                         MessageBox.Show("借书成功！！！");
                     }
                 }

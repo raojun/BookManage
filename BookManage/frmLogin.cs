@@ -26,7 +26,7 @@ namespace BookManage
             loginTimes++;
             int rdID;
             rdID = Convert.ToInt32(txtUserID.Text.Trim());
-           reader = ReaderAdmin.GetReader(rdID);
+            reader = ReaderAdmin.GetReader(rdID);
 
             if (reader == null)
             {
@@ -46,6 +46,21 @@ namespace BookManage
                     lblReaderInfo.Text = "登录信息：..密码错误！{" + loginTimes.ToString() + "}";
                 }
             }
+
+            //使用下面方法会导致数据库注入登录，不安全
+            //SqlConnection conn = new SqlConnection("server=.; database=bookLibrary; integrated security=true");
+            //conn.Open();
+            //SqlCommand cmd = conn.CreateCommand();
+            //cmd.CommandText = string.Format("select count(*) from reader where rdid={0} and rdPwd='{1}'", txtUserID.Text, txtUserPwd.Text);
+            //int count = Convert.ToInt32(cmd.ExecuteScalar());
+            //if (count == 0)
+            //{
+            //    MessageBox.Show("用户登录失败！");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("嘿嘿，登录成功！");
+            //}
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -55,7 +70,7 @@ namespace BookManage
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

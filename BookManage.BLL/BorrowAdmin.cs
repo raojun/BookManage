@@ -51,6 +51,12 @@ namespace BookManage.BLL
             return (BorrowDAL.UpdateBook(borrow));
         }
 
+        //借书后更新读者借书本数
+        public int UpdateBorrowNum(Reader reader)
+        {
+            return (BorrowDAL.UpdateBorrowNum(reader));
+        }
+
         //续借时更新borrow表记录
         public int UpdateContinue(Borrow borrow)
         {

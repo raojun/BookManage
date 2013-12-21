@@ -82,6 +82,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.picboxPhoto = new System.Windows.Forms.PictureBox();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReport = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReader)).BeginInit();
@@ -104,7 +107,10 @@
             this.toolStripLabel4,
             this.toolStripSeparator1,
             this.btnToExcel,
-            this.toolStripLabel5});
+            this.toolStripLabel5,
+            this.toolStripSeparator2,
+            this.btnReport,
+            this.toolStripLabel6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(943, 33);
@@ -591,6 +597,27 @@
             this.picboxPhoto.TabIndex = 0;
             this.picboxPhoto.TabStop = false;
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 33);
+            // 
+            // btnReport
+            // 
+            this.btnReport.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.btnReport.Image = ((System.Drawing.Image)(resources.GetObject("btnReport.Image")));
+            this.btnReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(23, 30);
+            this.btnReport.Text = "toolStripButton1";
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // toolStripLabel6
+            // 
+            this.toolStripLabel6.Name = "toolStripLabel6";
+            this.toolStripLabel6.Size = new System.Drawing.Size(32, 30);
+            this.toolStripLabel6.Text = "报表";
+            // 
             // frmReader
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -670,5 +697,8 @@
         private System.Windows.Forms.PictureBox picboxPhoto;
         private System.Windows.Forms.Label labinformation;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton btnReport;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel6;
     }
 }
