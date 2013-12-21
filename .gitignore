@@ -1,7 +1,11 @@
 bin/
 obj/
+BookManage/BookLibraryDataSet.Designer.cs
 
 *.dll
 *.obj
 *.exe
 *.pdb
+*.xsc
+*.xsd
+*.xss
