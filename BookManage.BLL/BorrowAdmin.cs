@@ -67,5 +67,17 @@ namespace BookManage.BLL
         {
             return (BorrowDAL.UpdateBk(borrow));
         }
+
+        //根据读者类别rdTye获取可借书天数等信息
+        public DataTable GetReaderType(int rdType)
+        {
+            return (BorrowDAL.GetReaderType(rdType));
+        }
+
+        //根据Reader表查询证件状态
+        public DataTable GetrdStatus(int rdID)
+        {
+            return (BorrowDAL.GetrdStatus(rdID));
+        }
     }
 }

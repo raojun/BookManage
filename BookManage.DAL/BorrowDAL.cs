@@ -67,12 +67,14 @@ namespace BookManage.DAL
             int rows = 0;
             string sql = "update Borrow set "
                 + "IdContinueTimes=@IdContinueTimes+1,"
-                + "IdDateOut=@IdDateOut "
-                + "where bkID=@bkID";
+                + "IdDateOut=@IdDateOut,"
+                + "IdDateRetPlan=@IdDateRetPlan "
+                + "where BorrowId=@BorrowId";
             SqlParameter[] parameters ={
-                                           new SqlParameter("@bkID",borrow.bkID),
+                                           new SqlParameter("@BorrowId",borrow.BorrowId),
                                            new SqlParameter("@IdContinueTimes",borrow.IdContinueTimes),
-                                           new SqlParameter("@IdDateOut",borrow.IdDateOut)
+                                           new SqlParameter("@IdDateOut",borrow.IdDateOut),
+                                           new SqlParameter ("@IdDateRetPlan",borrow.IdDateRetPlan)
                                       };
             try
             {
@@ -92,11 +94,15 @@ namespace BookManage.DAL
             string sql = "update Borrow set "
                 + "IdContinueTimes=0,"
                 + "IdDateRetAct=@IdDateRetAct, "
+                + "IdOverDay=@IdOverDay,"
+                + "IdOverMoney=@IdOverMoney,"
                 + "IsHasReturn=1 "
-                + " where bkID=@bkID";
+                + " where BorrowId=@BorrowId";
             SqlParameter[] parameters ={
-                                           new SqlParameter("@bkID",borrow.bkID),
-                                           new SqlParameter("@IdDateRetAct",borrow.IdDateRetAct)
+                                           new SqlParameter("@BorrowId",borrow.BorrowId),
+                                           new SqlParameter("@IdDateRetAct",borrow.IdDateRetAct),
+                                           new SqlParameter("@IdOverDay",borrow.IdOverDay),
+                                           new SqlParameter("@IdOverMoney",borrow.IdOverMoney)
                                       };
             try
             {
@@ -202,7 +208,7 @@ namespace BookManage.DAL
             }
             else
             {
-                sql = "select Book.bkID,Book.bkName,Book.bkAuthor,Borrow.IdContinueTimes,Borrow.IdDateOut,Borrow.IdDateRetPlan,Borrow.IdOverDay,Borrow.IdOverMoney "
+                sql = "select Borrow.BorrowId,Book.bkID,Book.bkName,Book.bkAuthor,Borrow.IdContinueTimes,Borrow.IdDateOut,Borrow.IdDateRetPlan,Borrow.IdOverDay,Borrow.IdOverMoney "
                         + "from Book, Borrow  where Book.bkID=Borrow.bkID and Borrow.rdID=@rdID and Borrow.IsHasReturn=0";
                 SqlParameter[] parameters ={
                                               new SqlParameter ("@rdID",rdID)
@@ -246,6 +252,27 @@ namespace BookManage.DAL
                                              new  SqlParameter ("@rdID",rdID)
                                           };
            return SqlHelper.GetDataTable(sql, parameters, "Borrow");
+       }
+
+        //根据读者类别rdTye获取可借书天数等信息
+       public static DataTable GetReaderType(int rdType)
+       {
+           string sql = "select CanLendQty,CanLendDay,CanContinueTimes,PunishRate "
+                            +"from ReaderType where rdType=@rdType";
+           SqlParameter[] parameters ={
+                                          new SqlParameter ("@rdType",rdType)
+                                     };
+           return SqlHelper.GetDataTable(sql, parameters, "ReaderType");
+       }
+
+        //根据Reader表查询证件状态
+       public static DataTable GetrdStatus(int rdID)
+       {
+           string sql = "select rdStatus,rdBorrowQty from Reader where rdID=@rdID";
+           SqlParameter[] parameters ={
+                                          new SqlParameter ("@rdID",rdID)
+                                      };
+           return SqlHelper.GetDataTable(sql, parameters, "Reader");
        }
     }
 }

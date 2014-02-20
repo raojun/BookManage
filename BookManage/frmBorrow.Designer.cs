@@ -124,7 +124,7 @@
             // 
             // btnSelectbkID
             // 
-            this.btnSelectbkID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSelectbkID.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnSelectbkID.Image = ((System.Drawing.Image)(resources.GetObject("btnSelectbkID.Image")));
             this.btnSelectbkID.Location = new System.Drawing.Point(175, 19);
             this.btnSelectbkID.Name = "btnSelectbkID";
