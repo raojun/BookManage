@@ -79,5 +79,11 @@ namespace BookManage.BLL
         {
             return (BorrowDAL.GetrdStatus(rdID));
         }
+
+        //根据Book表查询图书状态
+        public DataTable GetbkStatus(int bkID)
+        {
+            return (BorrowDAL.GetbkStatus(bkID));
+        }
     }
 }

@@ -274,5 +274,15 @@ namespace BookManage.DAL
                                       };
            return SqlHelper.GetDataTable(sql, parameters, "Reader");
        }
+
+        //根据Book表查询图书状态
+       public static DataTable GetbkStatus(int bkID)
+       {
+           string sql = "select bkStatus from Book where bkID=@bkID";
+           SqlParameter[] parameters ={
+                                          new SqlParameter ("@bkID",bkID)
+                                      };
+           return SqlHelper.GetDataTable(sql, parameters, "Book");
+       }
     }
 }

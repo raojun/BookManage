@@ -120,7 +120,7 @@
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel1.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel1.Text = "首记录";
             // 
             // toolStripSeparator1
@@ -141,7 +141,7 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel2.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel2.Text = "下记录";
             // 
             // toolStripSeparator2
@@ -162,7 +162,7 @@
             // toolStripLabel3
             // 
             this.toolStripLabel3.Name = "toolStripLabel3";
-            this.toolStripLabel3.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel3.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel3.Text = "上记录";
             // 
             // toolStripSeparator3
@@ -183,7 +183,7 @@
             // toolStripLabel4
             // 
             this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(44, 22);
+            this.toolStripLabel4.Size = new System.Drawing.Size(41, 22);
             this.toolStripLabel4.Text = "尾记录";
             // 
             // toolStripSeparator4
@@ -204,7 +204,7 @@
             // toolStripLabel5
             // 
             this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel5.Size = new System.Drawing.Size(29, 22);
             this.toolStripLabel5.Text = "添加";
             // 
             // toolStripSeparator5
@@ -225,7 +225,7 @@
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel6.Size = new System.Drawing.Size(29, 22);
             this.toolStripLabel6.Text = "修改";
             // 
             // toolStripSeparator6
@@ -246,7 +246,7 @@
             // toolStripLabel7
             // 
             this.toolStripLabel7.Name = "toolStripLabel7";
-            this.toolStripLabel7.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel7.Size = new System.Drawing.Size(29, 22);
             this.toolStripLabel7.Text = "删除";
             // 
             // toolStripSeparator7
@@ -267,7 +267,7 @@
             // toolStripLabel8
             // 
             this.toolStripLabel8.Name = "toolStripLabel8";
-            this.toolStripLabel8.Size = new System.Drawing.Size(32, 22);
+            this.toolStripLabel8.Size = new System.Drawing.Size(29, 22);
             this.toolStripLabel8.Text = "返回";
             // 
             // label1
@@ -291,7 +291,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(249, 51);
+            this.label3.Location = new System.Drawing.Point(472, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 12);
             this.label3.TabIndex = 3;
@@ -351,7 +351,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(472, 49);
+            this.label5.Location = new System.Drawing.Point(250, 51);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 11;

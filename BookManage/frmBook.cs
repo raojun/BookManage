@@ -142,8 +142,15 @@ namespace BookManage
         private void btnBookDelete_Click(object sender, EventArgs e)
         {
             SetTextToBook();
-            bookBLL.Delete(book);
-            labAddInformation.Text = "添加状态：已删除！";
+            if (book.bkStatus == "借出")
+            {
+                labAddInformation.Text = "添加状态：该书以借出，暂时无法删除！";
+            }
+            else
+            {
+                bookBLL.Delete(book);
+                labAddInformation.Text = "添加状态：已删除！";
+            }
         }
 
         private void btnOutExcel_Click(object sender, EventArgs e)

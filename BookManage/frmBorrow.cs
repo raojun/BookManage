@@ -134,9 +134,9 @@ namespace BookManage
         //借书
         private void btnBorrowBook_Click(object sender, EventArgs e)
         {
-            int rdID,rdType;
+            int rdID,rdType,bkID;
             int CanLendQty,CanLendDay,rdBorrowQty;
-            string rdStatus;
+            string rdStatus,bkStatus;
             Borrow borrow = new Borrow();
             DataRow dr=null;
             DataRow ds = null;
@@ -149,43 +149,55 @@ namespace BookManage
             {
                 ds = (dgvReader.SelectedRows[j].DataBoundItem as DataRowView).Row;
             }
+            
             rdID = Convert.ToInt32(txtrdID.Text);   
             rdType = Convert.ToInt32(ds.ItemArray[3]);
+
             dt = borrowBLL.GetReaderType(rdType);
+            CanLendQty=Convert.ToInt32(dt.Rows[0][0]);
+            CanLendDay = Convert.ToInt32(dt.Rows[0][1]);
+
             dm = borrowBLL.GetrdStatus(rdID);
             rdStatus = Convert.ToString(dm.Rows[0][0]);
             rdBorrowQty=Convert.ToInt32(dm.Rows[0][1]);
-            CanLendQty=Convert.ToInt32(dt.Rows[0][0]);
-            CanLendDay = Convert.ToInt32(dt.Rows[0][1]);
+
+            bkStatus = Convert.ToString(dr.ItemArray[15]);
             
             if (rdStatus != "有效")
             {
-                MessageBox.Show("借书证无效，无法借书！");
+                MessageBox.Show("借书证无效，无法借书，无法借书！");
             }
             else
             {
-                if (rdBorrowQty >= CanLendQty)
+                if (bkStatus != "在馆")
                 {
-                    MessageBox.Show("已借书数超出最大可借书量，无法借书！");
+                    MessageBox.Show("对不起，该书已不在馆！！");
                 }
                 else
-                {
-                    borrow.rdID = rdID;
-                    borrow.bkID = Convert.ToInt32(dr.ItemArray[0]);
-                    borrow.IdContinueTimes = 0;
-                    borrow.IdDateOut = DateTime.Now;
-                    borrow.IdDateRetPlan = DateTime.Now.AddDays(CanLendDay);
-                    borrow.IdDateRetAct = DateTime.Now;
-                    borrow.IdOverDay = 0;
-                    borrow.IdOverMoney = 0;
-                    borrow.IdPunishMoney = 0;
-                    borrow.IsHasReturn = false;
-                    borrow.OperatorLend = Convert.ToString(ds.ItemArray[1]);
-                    borrow.OperatorRet = Convert.ToString(ds.ItemArray[1]);
-                    borrowBLL.Insert(borrow);
-                    txtbkName.Text = Convert.ToString(borrow.rdID);
-                    borrowBLL.UpdateBook(borrow);
-                    MessageBox.Show("借书成功！！！");
+                {   
+                    if (rdBorrowQty >= CanLendQty)
+                    {
+                        MessageBox.Show("已借书数超出最大可借书量，无法借书！");
+                    }
+                    else
+                    {
+                        borrow.rdID = rdID;
+                        borrow.bkID = Convert.ToInt32(dr.ItemArray[0]);
+                        borrow.IdContinueTimes = 0;
+                        borrow.IdDateOut = DateTime.Now;
+                        borrow.IdDateRetPlan = DateTime.Now.AddDays(CanLendDay);
+                        borrow.IdDateRetAct = DateTime.Now;
+                        borrow.IdOverDay = 0;
+                        borrow.IdOverMoney = 0;
+                        borrow.IdPunishMoney = 0;
+                        borrow.IsHasReturn = false;
+                        borrow.OperatorLend = Convert.ToString(ds.ItemArray[1]);
+                        borrow.OperatorRet = Convert.ToString(ds.ItemArray[1]);
+                        borrowBLL.Insert(borrow);
+                        txtbkName.Text = Convert.ToString(borrow.rdID);
+                        borrowBLL.UpdateBook(borrow);
+                        MessageBox.Show("借书成功！！！");
+                    }
                 }
             }           
         }
@@ -262,8 +274,7 @@ namespace BookManage
             }
 
             borrow.BorrowId = Convert.ToInt32(dr.ItemArray[0]);//根据BorrowId确定更新哪条信息
-            //borrow.rdID = Convert.ToInt32(ds.ItemArray[0]);
-            //borrow.bkID = Convert.ToInt32(dr.ItemArray[1]);
+            borrow.bkID = Convert.ToInt32(dr.ItemArray[1]);
             borrow.IdDateRetAct = DateTime.Now;
             borrow.IdOverDay = OverDay;
             borrow.IdOverMoney = OverMoney;
